@@ -120,8 +120,19 @@ def main():
     # The direct Vita SDK imports are supplied by the other platform stubs.
     cmake_file = directory / "CMakeLists.txt"
     cmake_data = cmake_file.read_text()
-    if "  SceLibcBridge_stub\n" in cmake_data:
-        cmake_file.write_text(cmake_data.replace("  SceLibcBridge_stub\n", ""))
+    cmake_data = cmake_data.replace("  SceLibcBridge_stub\n", "")
+    # Modern libsndfile pulls in optional codecs; C++ static libraries
+    # also need stdc++ after their final consumers (static link order).
+    marker = "  SceMotion_stub\n)"
+    replacement = ("  SceMotion_stub\n"
+                   "  mpg123\n"
+                   "  mp3lame\n"
+                   "  opus\n"
+                   "  stdc++\n"
+                   "  m\n)")
+    if cmake_data.count(marker) != 1:
+        parser.error("unexpected Vita CMake link library footer")
+    cmake_file.write_text(cmake_data.replace(marker, replacement))
     so_util = directory / "loader" / "so_util.c"
     original = so_util.read_text()
     if "void *vglGetProcAddress(const char *name);" not in original:
