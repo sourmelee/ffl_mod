@@ -1,5 +1,13 @@
 # Vita ARM32 compatibility profile (1.1.3)
 
+## Original port authors and licenses
+
+**This is an experimental enhancement to [Rinnegatamante's original PlayStation Vita port, ffd-vita](https://github.com/Rinnegatamante/ffd-vita), not a new Vita port.** The original Vita loader, application/platform integration, graphics, input and VPK packaging are his original project. Controller and widescreen ideas were adapted from the **[upstream Android fflmod/ffl_mod](https://github.com/fflmod/ffl_mod)**.
+
+The original Vita README additionally credits **[TheOfficialFloW](https://github.com/TheOfficialFloW)** (TheFloW) for the shared-library loader, **[frangarcj's ff5_vita](https://github.com/frangarcj/ff5_vita)** for code reused by the original port, **withLogic** and **Hans** for testing, and **Brandonheat8** for the original LiveArea graphics. The original Vita MIT license names **Andy Nguyen** as copyright holder.
+
+See [complete attribution and source links](../../PORTABLE_CONSOLE_CREDITS.md) and [copyright and license notices](../../PORTABLE_CONSOLE_NOTICES.txt). The upstream authors are not implied to have endorsed this experimental build.
+
 This directory records read-only analysis of the user's own library, not a modified or redistributed game binary.
 
 - ELF32 / ARMv5TE Thumb-1 / soft-float EABI5. Compatible with Vita's ARMv7 ISA.
