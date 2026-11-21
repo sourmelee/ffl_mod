@@ -28,7 +28,7 @@ jobs:
           echo "DEVKITPRO=$DEVKITPRO"
           make -C ffd_nx -j2
           test -s ffd_nx/ffd_nx.nro
-          file ffd_nx/ffd_nx.nro
+          ls -lh ffd_nx/ffd_nx.nro
       - name: Upload Switch NRO
         if: success()
         uses: actions/upload-artifact@v4
