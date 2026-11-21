@@ -1,6 +1,6 @@
 # Switch portable enhancements — uploaded ARM64 candidate for game version 1.1.9
 
-**Status: source-only experimental controller and 16:9 rendering adapters, not a released NRO.** The user's library is an Android ELF64 AArch64 shared object with many native engine exports. The supplied version is believed to be 1.1.9, but **version 1.1.9 is not independently encoded or verified in the ELF**. Compatibility is instead pinned to the full binary hash.
+**Status: experimental controller and 16:9 rendering adapters; a development NRO has compiled successfully, not a stable release.** The user's library is an Android ELF64 AArch64 shared object with many native engine exports. The supplied version is believed to be 1.1.9, but **version 1.1.9 is not independently encoded or verified in the ELF**. Compatibility is instead pinned to the full binary hash.
 
 - SHA-256: `4c6dec4cec9cb58dddcb85a7dd70e289356d55564902949da2a21844b38ef93e`
 - GNU build ID: `ed387bde786c58d236de2ac14f6953c224326d34`
@@ -57,6 +57,6 @@ This first Switch contribution profiles native `MainScene::SetViewPort`, `MtxGra
 ## Safety and release gates
 
 - The upstream `ffd_nx` loader is not changed on GitHub: this patch lives in a branch of `sourmelee/ffl_mod`, which contains the portable source.
-- No NRO build, on-device runtime verification, scene smoke tests or performance profiling has been completed.
+- Experimental NRO **cross-compiled successfully** in GitHub Actions [build 44944582813](https://github.com/sourmelee/ffl_mod/actions/runs/44944582813). No on-device runtime verification, scene smoke tests or performance profiling has been completed.
 - Do not distribute the original game `.so` or `.obb`.
 - This is developmental source and NOT a completed gamepad/widescreen release. Keep backups and test an expendable save.
