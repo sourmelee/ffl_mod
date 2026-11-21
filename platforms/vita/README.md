@@ -1,5 +1,9 @@
 # Vita ARM32 compatibility profile (1.1.3)
 
+## Install the experimental VPK and launch it
+
+The end-user instructions (including VitaShell installation, Vita LiveArea launch, kernel plugins, libshacccg, legally owned game files, configuration, backup and rollback) are in **[Portable console installation guide](../../PORTABLE_CONSOLE_INSTALLATION.md#playstation-vita--installation-and-launch)**. The original upstream author is [Rinnegatamante](https://github.com/Rinnegatamante/ffd-vita). The compiled preview VPK is on the [experimental release](https://github.com/sourmelee/ffl_mod/releases/tag/console-preview-2026-11-21).
+
 ## Original port authors and licenses
 
 **This is an experimental enhancement to [Rinnegatamante's original PlayStation Vita port, ffd-vita](https://github.com/Rinnegatamante/ffd-vita), not a new Vita port.** The original Vita loader, application/platform integration, graphics, input and VPK packaging are his original project. Controller and widescreen ideas were adapted from the **[upstream Android fflmod/ffl_mod](https://github.com/fflmod/ffl_mod)**.
