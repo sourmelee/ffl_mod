@@ -23,6 +23,10 @@ jobs:
         run: |
           cc -std=c11 -O2 -Wall -Wextra -Werror -pedantic platforms/switch/test_menu_layout.c -lm -o /tmp/ffd-switch-nav-test
           /tmp/ffd-switch-nav-test
+      - name: Compile Switch staging loader/GOT hook tests
+        run: |
+          cc -std=c11 -O2 -Wall -Wextra -Werror -pedantic platforms/switch/test_staging_hooks.c -o /tmp/ffd-switch-hooks-test
+          /tmp/ffd-switch-hooks-test
       - name: Check Switch Python scripts
         run: |
           python3 -m py_compile platforms/switch/apply_switch_loader.py platforms/switch/verify_switch_profile.py
