@@ -1,5 +1,9 @@
 # Switch portable enhancements — uploaded ARM64 candidate for game version 1.1.9
 
+## Install the experimental NRO and launch it
+
+The end-user instructions (including SD card layout, Homebrew Menu full-memory launch, necessary legally owned game files, configuration, backup and rollback) are in **[Portable console installation guide](../../PORTABLE_CONSOLE_INSTALLATION.md#nintendo-switch--installation-and-launch)**. The original upstream author is [NaGaa95](https://github.com/NaGaa95/ffd_nx). The compiled preview NRO is on the [experimental release](https://github.com/sourmelee/ffl_mod/releases/tag/console-preview-2026-11-21).
+
 ## Original port authors and licenses
 
 **This is an experimental enhancement to [NaGaa95's original Nintendo Switch port, ffd_nx](https://github.com/NaGaa95/ffd_nx), not a new Switch port.** NaGaa95 created and maintains the foundational Switch loader and its game/platform integration. The experimental controller and expanded-rendering logic derives from the **[original Android fflmod/ffl_mod project](https://github.com/fflmod/ffl_mod)**.
