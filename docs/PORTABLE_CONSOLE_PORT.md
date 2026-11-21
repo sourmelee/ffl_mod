@@ -2,7 +2,7 @@
 
 **Scope:** Only game-aware controller navigation and expanded field rendering. No gameplay patches, translations, job changes, save changes, or game asset redistribution.
 
-**Status (updated):** User-supplied ARM32 Vita and ARM64 Switch game libraries have been inspected read-only. Their symbol/GOT hook locations are recorded in `platforms/vita/vita_113_profile.json` and `platforms/switch/switch_119_profile.json`. Opt-in Switch navigation and 16:9 rendering hook experiments, a source installer and host-side tests exist, but **no console build or device gameplay verification has yet been completed**. The existing 1.1.9 Switch and 1.1.3 Vita game versions remain unchanged; the 1.1.9 Switch label has not been independently verified from ELF metadata.
+**Status (updated):** User-supplied ARM32 Vita and ARM64 Switch game libraries have been inspected read-only. Their symbol/GOT hook locations are recorded in `platforms/vita/vita_113_profile.json` and `platforms/switch/switch_119_profile.json`. Opt-in Switch navigation and 16:9 rendering hook experiments, a source installer and host-side tests exist, and both experimental builds have **cross-compiled successfully** in CI (Switch NRO and Vita VPK); **neither has been verified through device gameplay**. The existing 1.1.9 Switch and 1.1.3 Vita game versions remain unchanged; the 1.1.9 Switch label has not been independently verified from ELF metadata.
 
 ## Files
 
