@@ -25,9 +25,13 @@ RULES = [
      'void patch_game(void) {\n'
      '\tfv_install_navigation(&main_mod);\n'
      '\tfv_install_widescreen(&main_mod);\n}'),
-    ('\t\tsceCtrlPeekBufferPositive(0, &pad, 1);',
+    ('\t\tSceCtrlData pad;\n'
      '\t\tsceCtrlPeekBufferPositive(0, &pad, 1);\n'
-     '\t\tint enhanced_controls = fv_pad_frame(pad.buttons);'),
+     '\t\tfakeInput(SCE_CTRL_LEFT, 78.0f, 389.0f, 5);',
+     '\t\tSceCtrlData pad;\n'
+     '\t\tsceCtrlPeekBufferPositive(0, &pad, 1);\n'
+     '\t\tint enhanced_controls = fv_pad_frame(pad.buttons);\n'
+     '\t\tfakeInput(SCE_CTRL_LEFT, 78.0f, 389.0f, 5);'),
     ('\t\tfakeInput(SCE_CTRL_LEFT, 78.0f, 389.0f, 5);',
      '\t\tif (!enhanced_controls) {\n'
      '\t\t\tfakeInput(SCE_CTRL_LEFT, 78.0f, 389.0f, 5);'),
