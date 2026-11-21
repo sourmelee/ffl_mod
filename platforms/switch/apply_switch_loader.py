@@ -65,7 +65,7 @@ def main():
         ap.error("already patched; refusing to apply twice")
     output = patch(data)
     if a.dry_run:
-        print("OK: all seven upstream anchors verified; no files modified")
+        print("OK: all ten upstream anchors verified; no files modified")
         return
     backup = main_path.with_suffix(".c.ffd-bak")
     if backup.exists():
