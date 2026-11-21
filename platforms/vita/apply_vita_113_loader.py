@@ -86,7 +86,23 @@ def main():
         return
     shutil.copy2(loader, loader.with_suffix(".c.ffd-bak"))
     for src, dest in REQUIRED.items():
-        shutil.copy2(ROOT / src, directory / "loader" / dest)
+        dst = directory / "loader" / dest
+        if dest == "ffd_display_transform.h":
+            # The shared header normally lives in portable/, so its original
+            # relative include must be rewritten for loader/ placement.
+            data = (ROOT / src).read_text()
+            needle = '#include "../src/display_geometry.h"'
+            if data.count(needle) != 1:
+                parser.error("unexpected portable display include")
+            dst.write_text(data.replace(needle, '#include "display_geometry.h"'))
+        else:
+            shutil.copy2(ROOT / src, dst)
+    # Upstream dialog.c omits string.h. Modern softfp GCC rejects the
+    # resulting implicit memset declaration; make the fix only in this clone.
+    dialog = directory / "loader" / "dialog.c"
+    dialog_text = dialog.read_text()
+    if "#include <string.h>" not in dialog_text:
+        dialog.write_text('#include <string.h>\n' + dialog_text)
     loader.write_text(modified)
     print("Experimental Vita 1.1.3 source patched. Both features off by default.")
 
