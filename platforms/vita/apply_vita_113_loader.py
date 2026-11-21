@@ -103,7 +103,28 @@ def main():
     dialog_text = dialog.read_text()
     if "#include <string.h>" not in dialog_text:
         dialog.write_text('#include <string.h>\n' + dialog_text)
+    # Upstream 2024 compatibility with current VitaSDK headers: avoid
+    # collision with libc's clock_gettime and the changed vitaGL draw API.
+    needle = "int clock_gettime(int clk_ik, struct timespec *t) {"
+    if modified.count(needle) != 1:
+        parser.error("unexpected clock_gettime shim")
+    modified = modified.replace(needle,
+        "int ffd_clock_gettime(int clk_ik, struct timespec *t) {")
+    modified = modified.replace('&clock_gettime },', '&ffd_clock_gettime },')
+    needle = 'vglDrawObjects(GL_TRIANGLE_STRIP, 4, GL_TRUE);'
+    if modified.count(needle) != 1:
+        parser.error("unexpected vitaGL draw API")
+    modified = modified.replace(needle, 'vglDrawObjects(GL_TRIANGLE_STRIP, 4);')
     loader.write_text(modified)
+    so_util = directory / "loader" / "so_util.c"
+    original = so_util.read_text()
+    if "void *vglGetProcAddress(const char *name);" not in original:
+        insert = '#include "so_util.h"'
+        if original.count(insert) != 1:
+            parser.error("unexpected so_util includes")
+        so_util.write_text(original.replace(insert,
+            insert + '\\n/* Legacy vitaGL resolver declaration. */\\n'
+            'void *vglGetProcAddress(const char *name);'))
     print("Experimental Vita 1.1.3 source patched. Both features off by default.")
 
 if __name__ == "__main__":
