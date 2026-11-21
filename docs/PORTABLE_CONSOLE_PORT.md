@@ -2,7 +2,7 @@
 
 **Scope:** Only game-aware controller navigation and expanded field rendering. No gameplay patches, translations, job changes, save changes, or game asset redistribution.
 
-**Status (updated):** User-supplied ARM32 Vita and ARM64 Switch game libraries have been inspected read-only. Their symbol/GOT hook locations are recorded in `platforms/vita/vita_113_profile.json` and `platforms/switch/switch_119_profile.json`. An opt-in Switch navigation hook adapter and source installer exist, but **no console build or device gameplay verification has yet been completed**. The existing 1.1.9 Switch and 1.1.3 Vita game versions remain unchanged; the 1.1.9 Switch label has not been independently verified from ELF metadata.
+**Status (updated):** User-supplied ARM32 Vita and ARM64 Switch game libraries have been inspected read-only. Their symbol/GOT hook locations are recorded in `platforms/vita/vita_113_profile.json` and `platforms/switch/switch_119_profile.json`. Opt-in Switch navigation and 16:9 rendering hook experiments, a source installer and host-side tests exist, but **no console build or device gameplay verification has yet been completed**. The existing 1.1.9 Switch and 1.1.3 Vita game versions remain unchanged; the 1.1.9 Switch label has not been independently verified from ELF metadata.
 
 ## Files
 
@@ -26,7 +26,7 @@ cc -std=c11 -Wall -Wextra -Werror -pedantic tests/portable_port_test.c -lm -o /t
 2. Identify `GameClass::KeyState/KeyTrigger/KeyRepeat`, `MenuWidget::Update/Draw`, touch-panel access, and graphics/field projection hooks by symbols and disassembly. Validate original functions and relocation slots against the exact executable image.
 3. Implement an optional patch installer in `source/main.c` after `ffd_resolve_imports(&game_mod)` and before `so_finalize(&game_mod)`; abort patch installation without affecting the original game if required hooks are missing.
 4. After original `MenuWidget::Update`, enumerate live/active/visible/touchable items into `FfdNavCandidate[]`. Feed debounced directions to `ffd_nav_step()` only if the game has not already processed a native key; translate its output into correctly timed engine touch events. Preserve physical touch and existing fallback controls.
-5. Adapt FFLmod's `MainScene::SetViewPort`, `Set2DModeMatrix`, `FieldClass::DrawMapField`, far-background, fill, minimap and widget-position hooks for 1.1.9. `display_geometry()` gives the layout, **but expanded map camera/tile culling needs real engine hooks**.
+5. A first experimental 1.1.9 16:9 rendering bridge now hooks viewport, projection, fullscreen image/fill, far background and minimap; finish and verify map camera/tile-culling behavior, HUD/dialogue and transition alignment, and battle effects. `display_geometry()` alone never guarantees a complete expanded field.
 6. Add separate off-by-default `enhanced_navigation` and `expanded_field` settings and runtime diagnostics. Avoid in-place ARM64 function hooks without a verified trampoline, or prefer validated GOT interception.
 
 Existing port infrastructure: `source/so_util.c` has ARM64 symbol lookup and `hook_arm64`; `source/main.c` already sends simulated touches. Do not directly call overwritten prologues after function interception.
