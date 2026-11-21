@@ -28,7 +28,9 @@ jobs:
           command -v arm-vita-eabi-gcc
           arm-vita-eabi-gcc --version | head -1
       - name: Configure Vita source
-        run: cmake -S ffd-vita -B ffd-vita/build -DCMAKE_BUILD_TYPE=Release
+        run: |
+          cmake -S ffd-vita -B ffd-vita/build -DCMAKE_BUILD_TYPE=Release \
+            -DCMAKE_C_FLAGS="-Wno-error=implicit-function-declaration -Wno-error=int-conversion -Wno-error=incompatible-pointer-types -Wno-error=return-mismatch"
       - name: Build Vita VPK
         run: |
           cmake --build ffd-vita/build --parallel 2
