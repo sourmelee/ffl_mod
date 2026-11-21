@@ -1,5 +1,11 @@
 # FFD Portable Controls + True Widescreen (development prototype)
 
+## Upstream authorship
+
+The Switch and Vita executables in this preview are built from **[NaGaa95's ffd_nx](https://github.com/NaGaa95/ffd_nx)** and **[Rinnegatamante's ffd-vita](https://github.com/Rinnegatamante/ffd-vita)**, respectively. Both preexisting community ports and their original authors must remain prominently credited. The controller and widescreen enhancements adapt work from **[fflmod/ffl_mod](https://github.com/fflmod/ffl_mod)**. These are derivative experiments, not newly written console ports.
+
+The full original-project acknowledgments, upstream source links and license notices are in [PORTABLE_CONSOLE_CREDITS.md](../PORTABLE_CONSOLE_CREDITS.md) and [PORTABLE_CONSOLE_NOTICES.txt](../PORTABLE_CONSOLE_NOTICES.txt).
+
 **Scope:** Only game-aware controller navigation and expanded field rendering. No gameplay patches, translations, job changes, save changes, or game asset redistribution.
 
 **Status (updated):** User-supplied ARM32 Vita and ARM64 Switch game libraries have been inspected read-only. Their symbol/GOT hook locations are recorded in `platforms/vita/vita_113_profile.json` and `platforms/switch/switch_119_profile.json`. Opt-in Switch navigation and 16:9 rendering hook experiments, a source installer and host-side tests exist, and both experimental builds have **cross-compiled successfully** in CI (Switch NRO and Vita VPK); **neither has been verified through device gameplay**. The existing 1.1.9 Switch and 1.1.3 Vita game versions remain unchanged; the 1.1.9 Switch label has not been independently verified from ELF metadata.
