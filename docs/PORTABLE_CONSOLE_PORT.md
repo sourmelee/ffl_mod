@@ -2,7 +2,7 @@
 
 **Scope:** Only game-aware controller navigation and expanded field rendering. No gameplay patches, translations, job changes, save changes, or game asset redistribution.
 
-**Status:** Portable C logic has host tests; neither console's proprietary game binary has been supplied or reverse-engineered here, so **no Vita or Switch runtime hooks or playable builds exist yet**. The existing 1.1.9 Switch and 1.1.3 Vita binaries are intentionally retained.
+**Status (updated):** User-supplied ARM32 Vita and ARM64 Switch game libraries have been inspected read-only. Their symbol/GOT hook locations are recorded in `platforms/vita/vita_113_profile.json` and `platforms/switch/switch_119_profile.json`. An opt-in Switch navigation hook adapter and source installer exist, but **no console build or device gameplay verification has yet been completed**. The existing 1.1.9 Switch and 1.1.3 Vita game versions remain unchanged; the 1.1.9 Switch label has not been independently verified from ELF metadata.
 
 ## Files
 
@@ -22,7 +22,7 @@ cc -std=c11 -Wall -Wextra -Werror -pedantic tests/portable_port_test.c -lm -o /t
 
 ## Switch (ffd_nx, ARM64, Android game version 1.1.9)
 
-1. Inspect the user's legally obtained 1.1.9 `libjniproxy.so`; create a guarded hash/profile. **Never assume 1.2.0 addresses match 1.1.9.**
+1. Use the recorded exact SHA-256 and symbol/GOT map for the user-supplied Switch candidate library. Confirm that it is the intended 1.1.9 build with the user's installed game before deploying; **never assume 1.2.0 addresses match**.
 2. Identify `GameClass::KeyState/KeyTrigger/KeyRepeat`, `MenuWidget::Update/Draw`, touch-panel access, and graphics/field projection hooks by symbols and disassembly. Validate original functions and relocation slots against the exact executable image.
 3. Implement an optional patch installer in `source/main.c` after `ffd_resolve_imports(&game_mod)` and before `so_finalize(&game_mod)`; abort patch installation without affecting the original game if required hooks are missing.
 4. After original `MenuWidget::Update`, enumerate live/active/visible/touchable items into `FfdNavCandidate[]`. Feed debounced directions to `ffd_nav_step()` only if the game has not already processed a native key; translate its output into correctly timed engine touch events. Preserve physical touch and existing fallback controls.
@@ -33,7 +33,7 @@ Existing port infrastructure: `source/so_util.c` has ARM64 symbol lookup and `ho
 
 ## Vita (ffd-vita, ARMv6, Android game version 1.1.3)
 
-1. Independently inspect the 32-bit 1.1.3 `libjniproxy.so` and validate function signatures/layouts.
+1. Refer to the recorded 32-bit Vita 1.1.3 compatibility profile and verify function signatures/layouts against the exact installed library.
 2. Use `loader/main.c::patch_game()` after the existing relocation and symbol resolver, with ARMv6/Thumb-appropriate branch/trampoline handling. **Do not transplant ARM64 patch instructions.**
 3. Reuse the same portable candidate algorithm/display geometry, but build Vita-specific menu enumeration, input adapters and widescreen hooks. Test Vita's 960x544 viewport and limited GPU/memory resources.
 4. Preserve original touch input and drawing when any required patch site fails validation.
