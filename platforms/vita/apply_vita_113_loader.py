@@ -1,0 +1,90 @@
+#!/usr/bin/env python3
+"""Reproducibly prepare an experimental Vita loader source tree.
+No copyrighted Android binaries are copied into the generated project.
+"""
+from pathlib import Path
+import argparse
+import shutil
+
+HERE = Path(__file__).resolve()
+ROOT = HERE.parents[2]
+REQUIRED = {
+    "platforms/vita/ffd_vita_profile.h": "ffd_vita_profile.h",
+    "platforms/vita/ffd_vita_nav_adapter.h": "ffd_vita_nav_adapter.h",
+    "platforms/vita/ffd_vita_wide_adapter.h": "ffd_vita_wide_adapter.h",
+    "portable/ffd_nav.h": "ffd_nav.h",
+    "portable/ffd_display_transform.h": "ffd_display_transform.h",
+    "src/display_geometry.h": "display_geometry.h",
+}
+RULES = [
+    ('so_module main_mod;',
+     'so_module main_mod;\n'
+     '#include "ffd_vita_nav_adapter.h"\n'
+     '#include "ffd_vita_wide_adapter.h"'),
+    ('void patch_game(void) {\n\t\n}',
+     'void patch_game(void) {\n'
+     '\tfv_install_navigation(&main_mod);\n'
+     '\tfv_install_widescreen(&main_mod);\n}'),
+    ('\t\tsceCtrlPeekBufferPositive(0, &pad, 1);',
+     '\t\tsceCtrlPeekBufferPositive(0, &pad, 1);\n'
+     '\t\tint enhanced_controls = fv_pad_frame(pad.buttons);'),
+    ('\t\tfakeInput(SCE_CTRL_LEFT, 78.0f, 389.0f, 5);',
+     '\t\tif (!enhanced_controls) {\n'
+     '\t\t\tfakeInput(SCE_CTRL_LEFT, 78.0f, 389.0f, 5);'),
+    ('\t\tfakeInput(SCE_CTRL_CROSS, 1.0f, 1.0f, 10);',
+     '\t\t\tfakeInput(SCE_CTRL_CROSS, 1.0f, 1.0f, 10);\n'
+     '\t\t}\n'
+     '\t\tfakeInput(SCE_CTRL_TRIANGLE, 846.0f, 37.0f, 9);'),
+]
+# The preceding replacement would duplicate the original Triangle line.
+RULES[-1] = ('\t\tfakeInput(SCE_CTRL_TRIANGLE, 846.0f, 37.0f, 9);\n'
+             '\t\tfakeInput(SCE_CTRL_CROSS, 1.0f, 1.0f, 10);',
+             '\t\t\tfakeInput(SCE_CTRL_CROSS, 1.0f, 1.0f, 10);\n'
+             '\t\t}\n'
+             '\t\t/* Triangle remains a legacy menu shortcut. */\n'
+             '\t\tfakeInput(SCE_CTRL_TRIANGLE, 846.0f, 37.0f, 9);')
+RULES += [
+    ('\t\tMainActivity_render(fake_env, NULL);',
+     '\t\tfv_send_touch(MainActivity_touch, fake_env, i);\n'
+     '\t\tfv_before_render();\n'
+     '\t\tMainActivity_render(fake_env, NULL);'),
+]
+
+def patch(text):
+    if 'fv_install_navigation(&main_mod)' in text:
+        raise ValueError("loader already patched")
+    for old, new in RULES:
+        if text.count(old) != 1:
+            raise ValueError(f"expected one upstream anchor, found {text.count(old)}: {old[:90]!r}")
+        text = text.replace(old, new, 1)
+    return text
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("vita_dir", type=Path)
+    parser.add_argument("--dry-run", action="store_true")
+    args = parser.parse_args()
+    directory = args.vita_dir.resolve()
+    loader = directory / "loader/main.c"
+    if not loader.is_file() or not (directory / "CMakeLists.txt").is_file():
+        parser.error("expected a Rinnegatamante/ffd-vita source checkout")
+    try:
+        modified = patch(loader.read_text())
+    except ValueError as exc:
+        parser.error(str(exc))
+    for path, name in REQUIRED.items():
+        if not (ROOT / path).is_file():
+            parser.error(f"patch source missing: {path}")
+        if (directory / "loader" / name).exists():
+            parser.error(f"patch destination already exists: {name}")
+    if args.dry_run:
+        print("PASS: all source anchors and supporting headers verified")
+        return
+    shutil.copy2(loader, loader.with_suffix(".c.ffd-bak"))
+    for src, dest in REQUIRED.items():
+        shutil.copy2(ROOT / src, directory / "loader" / dest)
+    loader.write_text(modified)
+    print("Experimental Vita 1.1.3 source patched. Both features off by default.")
+
+if __name__ == "__main__":
+    main()
