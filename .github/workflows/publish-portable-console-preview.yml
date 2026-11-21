@@ -1,0 +1,142 @@
+name: Publish Portable Console Preview Release
+
+on:
+  push:
+    branches:
+      - feature/portable-controller-widescreen
+    paths:
+      - '.github/workflows/publish-portable-console-preview.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out release source revision
+        uses: actions/checkout@v4
+
+      - name: Fetch verified Nintendo Switch build
+        uses: actions/download-artifact@v4
+        with:
+          name: ffd-switch-enhanced-experimental
+          run-id: 44944582813
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path: release-input/switch
+
+      - name: Fetch verified PlayStation Vita build
+        uses: actions/download-artifact@v4
+        with:
+          name: ffd-vita-enhanced-experimental
+          run-id: 44945275143
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path: release-input/vita
+
+      - name: Validate artifacts and prepare release notes
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p release-files
+          cp release-input/switch/ffd_nx.nro release-files/ffd_nx_enhanced_experimental.nro
+          cp release-input/vita/ffd.vpk release-files/ffd_vita_enhanced_experimental.vpk
+
+          printf '%s  %s\n' \
+            '77b015ae652f42acf2cbd1cf375be3a23ba70c0a9a88a32e4af6f87d505b0047' \
+            'release-files/ffd_nx_enhanced_experimental.nro' \
+            '569f5202ead88c5e15a97324649a09270b1c35d7c46e207c601eea7009f89536' \
+            'release-files/ffd_vita_enhanced_experimental.vpk' \
+            | sha256sum --check
+
+          python3 - <<'PY'
+          from pathlib import Path
+          import zipfile
+          nro = Path('release-files/ffd_nx_enhanced_experimental.nro').read_bytes()
+          assert b'NRO0' in nro[:64], 'Not a Nintendo Switch NRO'
+          with zipfile.ZipFile('release-files/ffd_vita_enhanced_experimental.vpk') as z:
+              assert {'eboot.bin', 'sce_sys/param.sfo'}.issubset(z.namelist()), 'Invalid Vita VPK'
+              assert z.testzip() is None, 'Corrupt Vita VPK'
+          print('Both pre-release console artifacts passed packaging checks.')
+          PY
+
+          cat > RELEASE_NOTES.md <<'NOTES'
+          ## Experimental controller and widescreen prototypes for Final Fantasy Dimensions
+
+          Two separately compiled console ports, published for development testing.
+
+          | Platform | Download | Tested build configuration |
+          | --- | --- | --- |
+          | Nintendo Switch | `ffd_nx_enhanced_experimental.nro` | devkitA64, existing Android 1.1.9-targeted game wrapper |
+          | PlayStation Vita | `ffd_vita_enhanced_experimental.vpk` | VitaSDK soft-float, Android 1.1.3-targeted game wrapper |
+
+          **Both builds cross-compiled successfully. Neither has been verified on a physical console.**
+          This release is **experimental, not stable**.
+
+          ### What's inside
+          - Opt-in game-aware controller menu selection using real game widget candidates.
+          - Opt-in native expanded viewport/projection experiment; true widescreen is **not yet fully validated** (field culling, backgrounds, HUD, dialogue, battle effects, touch mapping).
+          - Existing controller/touch support retained where the experiments are disabled.
+          - Binary-specific compatibility and relocation guards for each console.
+
+          ### Feature switches (both OFF by default)
+
+          Switch: place `enhanced.txt` alongside `config.txt` at `/switch/ffd/`:
+
+          ```ini
+          game_aware_navigation=0
+          experimental_widescreen=0
+          ```
+
+          Vita: place `ffdvita_enhanced.cfg` in `ux0:data/ffd/` with the same two keys.
+
+          For initial testing, verify game boot and saves with both settings disabled. Then turn on controller navigation alone; next, switch it off and test widescreen alone. Back up saves and keep your previously working port binaries.
+
+          **The release contains no Square Enix game binary or game data.** Each port still needs the legally obtained original `libjniproxy.so`, `main.obb` and assets specified by the upstream projects.
+
+          ### Source and reproducible build records
+          - Source branch: [feature/portable-controller-widescreen](https://github.com/sourmelee/ffl_mod/tree/feature/portable-controller-widescreen)
+          - Draft source PR: [#1](https://github.com/sourmelee/ffl_mod/pull/1)
+          - [Switch successful build](https://github.com/sourmelee/ffl_mod/actions/runs/44944582813)
+          - [Vita successful build](https://github.com/sourmelee/ffl_mod/actions/runs/44945275143)
+
+          ### SHA-256
+          ```text
+          77b015ae652f42acf2cbd1cf375be3a23ba70c0a9a88a32e4af6f87d505b0047  ffd_nx_enhanced_experimental.nro
+          569f5202ead88c5e15a97324649a09270b1c35d7c46e207c601eea7009f89536  ffd_vita_enhanced_experimental.vpk
+          ```
+          NOTES
+
+      - name: Create pre-release tagged at this feature branch commit
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          TAG='console-preview-2026-11-21'
+          if gh release view "$TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "Release exists; refreshing only the two console binary assets."
+            gh release upload "$TAG" release-files/ffd_nx_enhanced_experimental.nro release-files/ffd_vita_enhanced_experimental.vpk \
+              --repo "$GITHUB_REPOSITORY" --clobber
+          else
+            gh release create "$TAG" \
+              release-files/ffd_nx_enhanced_experimental.nro \
+              release-files/ffd_vita_enhanced_experimental.vpk \
+              --repo "$GITHUB_REPOSITORY" \
+              --target "$GITHUB_SHA" \
+              --title 'Portable Console Enhancements — Switch + Vita Preview (2026-11-21)' \
+              --prerelease \
+              --notes-file RELEASE_NOTES.md
+          fi
+
+      - name: Verify public release assets
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh release view console-preview-2026-11-21 --repo "$GITHUB_REPOSITORY" \
+             --json tagName,isPrerelease,targetCommitish,assets \
+             --jq '{tag:.tagName,prerelease:.isPrerelease,target:.targetCommitish,assets:[.assets[].name]}'
