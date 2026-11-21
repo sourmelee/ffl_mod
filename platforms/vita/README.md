@@ -8,7 +8,7 @@ This directory records read-only analysis of the user's own library, not a modif
 - Version designation: 1.1.3, as specified for the Vita port. The ELF build identity and SHA-256 remain authoritative for binary-hook compatibility.
 - The original Rinnegatamante/ffd-vita README documents the 1.1.3 game version. Basic startup with the uploaded binary has not been verified.
 
-The 15 native functions and their R_ARM_JUMP_SLOT positions are in [vita_130_profile.json](vita_130_profile.json) (legacy filename; version corrected here). [ffd_vita_profile.h](ffd_vita_profile.h) checks exported symbols, relocation ownership and unmodified GOT values before loader hooks. Actual Vita adapter code is experimental and needs hardware testing.
+The 15 native functions and their R_ARM_JUMP_SLOT positions are in [vita_113_profile.json](vita_113_profile.json). [ffd_vita_profile.h](ffd_vita_profile.h) checks exported symbols, relocation ownership and unmodified GOT values before loader hooks. Actual Vita adapter code is experimental and needs hardware testing.
 
 **Navigation:** MenuWidget::Draw uses a linked-list head at widget+0x10; node+0x8 points to MenuItem; ordinary item geometry begins at item+0x1c according to ARM Thumb disassembly. Specialized battle/job list subitems still need inspection.
 
