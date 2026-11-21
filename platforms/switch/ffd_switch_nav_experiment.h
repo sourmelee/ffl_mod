@@ -7,6 +7,7 @@
  */
 #ifndef FFD_SWITCH_NAV_EXPERIMENT_H
 #define FFD_SWITCH_NAV_EXPERIMENT_H
+#include <stdio.h>
 #include "../../portable/ffd_nav.h"
 #include "../../portable/ffd_display_transform.h"
 #include "ffd_switch_profile.h"
