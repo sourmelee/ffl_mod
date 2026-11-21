@@ -1,0 +1,45 @@
+name: Build Vita Enhanced Prototype
+on:
+  push:
+    branches: [feature/portable-controller-widescreen]
+    paths:
+      - 'platforms/vita/**'
+      - 'portable/**'
+      - 'src/display_geometry.h'
+      - '.github/workflows/build-vita-enhanced.yml'
+  workflow_dispatch:
+jobs:
+  vita:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    container:
+      image: vitasdk/vitasdk-softfp:latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch original Vita loader
+        run: git clone --depth 1 https://github.com/Rinnegatamante/ffd-vita.git ffd-vita
+      - name: Apply Vita 1.1.3 experimental adapter
+        run: |
+          python3 platforms/vita/apply_vita_113_loader.py ffd-vita --dry-run
+          python3 platforms/vita/apply_vita_113_loader.py ffd-vita
+      - name: Inspect toolchain
+        run: |
+          echo "VITASDK=$VITASDK"
+          command -v arm-vita-eabi-gcc
+          arm-vita-eabi-gcc --version | head -1
+      - name: Configure Vita source
+        run: |
+          cmake -S ffd-vita -B ffd-vita/build -DCMAKE_BUILD_TYPE=Release \
+            -DCMAKE_C_FLAGS="-Wno-error=implicit-function-declaration -Wno-error=int-conversion -Wno-error=incompatible-pointer-types -Wno-error=return-mismatch"
+      - name: Build Vita VPK
+        run: |
+          cmake --build ffd-vita/build --parallel 2
+          test -s ffd-vita/build/ffd.vpk
+          ls -lh ffd-vita/build/ffd.vpk
+      - name: Upload Vita VPK
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ffd-vita-enhanced-experimental
+          path: ffd-vita/build/ffd.vpk
+          if-no-files-found: error

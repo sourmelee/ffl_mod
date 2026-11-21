@@ -1,0 +1,38 @@
+name: Build Switch Enhanced Prototype
+on:
+  push:
+    branches: [feature/portable-controller-widescreen]
+    paths:
+      - 'platforms/switch/**'
+      - 'portable/**'
+      - 'src/display_geometry.h'
+      - '.github/workflows/build-switch-enhanced.yml'
+  workflow_dispatch:
+jobs:
+  switch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    container:
+      image: devkitpro/devkita64:latest
+    steps:
+      - name: Checkout portable modifications
+        uses: actions/checkout@v4
+      - name: Fetch upstream ffd_nx
+        run: git clone --depth 1 https://github.com/NaGaa95/ffd_nx.git ffd_nx
+      - name: Apply opt-in enhanced loader source
+        run: |
+          python3 platforms/switch/apply_switch_loader.py ffd_nx --dry-run
+          python3 platforms/switch/apply_switch_loader.py ffd_nx
+      - name: Build Switch NRO
+        run: |
+          echo "DEVKITPRO=$DEVKITPRO"
+          make -C ffd_nx -j2
+          test -s ffd_nx/ffd_nx.nro
+          ls -lh ffd_nx/ffd_nx.nro
+      - name: Upload Switch NRO
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ffd-switch-enhanced-experimental
+          path: ffd_nx/ffd_nx.nro
+          if-no-files-found: error
