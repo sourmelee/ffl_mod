@@ -11,8 +11,8 @@ android {
         applicationId = "io.github.fflmod.fflmod"
         minSdk = 24
         targetSdk = 34
-        versionCode = 11
-        versionName = "1.1"
+        versionCode = 12
+        versionName = "1.1.15-en1"
     }
 
     // 公開用の署名。鍵は GitHub の Secrets から release ワークフローが渡す（リポジトリには入れない）。

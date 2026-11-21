@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generated from translations/catalog.json. English is the non-Japanese fallback. -->
+<resources>
+    <string name="manager_ff89962242" formatted="false">"FFレジェンズ mod導入アプリ"</string>
+    <string name="manager_826dfe1be9" formatted="false">"確認の画面を出せませんでした"</string>
+    <string name="manager_2b226235e6" formatted="false">"modを導入"</string>
+    <string name="manager_4d317c8ecb" formatted="false">"modを更新"</string>
+    <string name="manager_0c56af39c8" formatted="false">"セーブを書き出す"</string>
+    <string name="manager_70a602ed0c" formatted="false">"セーブを取り込む"</string>
+    <string name="manager_5b0fb11e05" formatted="false">"試験版を受け取ります"</string>
+    <string name="manager_b96d1ec1fa" formatted="false">"試験版を受け取りません"</string>
+    <string name="manager_fc885bbb4d" formatted="false">"（版を読めませんでした）"</string>
+    <string name="manager_23b9b1c924" formatted="false">"（調べられませんでした）"</string>
+    <string name="manager_44ff697ecd" formatted="false">"なし"</string>
+    <string name="manager_54b1f3d50f" formatted="false">"現在バージョン："</string>
+    <string name="manager_a98e734b90" formatted="false">"\n最新バージョン："</string>
+    <string name="manager_2c201069ad" formatted="false">"確認しています…"</string>
+    <string name="manager_8312c0f9f9" formatted="false">"確認できませんでした"</string>
+    <string name="manager_0fc0b5593c" formatted="false">"（試験版を含む）"</string>
+    <string name="manager_321771e517" formatted="false">"\n最新版です。"</string>
+    <string name="manager_35981549ed" formatted="false">"\nアップデートがあります。「modを更新」から入れられます。"</string>
+    <string name="manager_e5cd356be8" formatted="false">"ゲームの状態を調べられませんでした。"</string>
+    <string name="manager_70dfd1dddb" formatted="false">"FFレジェンズが入っていません。"</string>
+    <string name="manager_8cb1797535" formatted="false">"正規版（1.2.0）が入っています。\nmodを導入できます。"</string>
+    <string name="manager_40464cf82e" formatted="false">"正規版が入っていますが、対応していない版です。"</string>
+    <string name="manager_3cc336541f" formatted="false">"modが導入されています。"</string>
+    <string name="manager_93769bcac1" formatted="false">"正規版とも fflmod とも違う署名のアプリが入っています。"</string>
+    <string name="manager_483c1721e2" formatted="false">"正規版の削除が取り消されました。"</string>
+    <string name="manager_c457019e38" formatted="false">"modを入れたAPKを作っています…"</string>
+    <string name="manager_c7e6687460" formatted="false">"APKを作成できませんでした。"</string>
+    <string name="manager_6f02e58234" formatted="false">"modの更新を準備しています…"</string>
+    <string name="manager_130897d40e" formatted="false">"更新できませんでした。"</string>
+    <string name="manager_109b75d0fa" formatted="false">"同じ版です"</string>
+    <string name="manager_a580145ee5">"fflmod %1$s はすでに入っています。入れ直しますか？"</string>
+    <string name="manager_1230dda998" formatted="false">"入れ直す"</string>
+    <string name="manager_3eefdf40e6" formatted="false">"やめる"</string>
+    <string name="manager_a33a1528a2" formatted="false">"この版は「modを更新」では入れられません。セーブを書き出してから、modを入れ直してください。"</string>
+    <string name="manager_a7372f32aa" formatted="false">"正規版を削除します"</string>
+    <string name="manager_96d9f3a967" formatted="false">"modを導入するには、いま入っている正規版をいったん削除する必要があります。削除すると、この端末にあるセーブデータも消えます。先にゲームのクラウドセーブで保存しておくと、導入後に Google データ エクスポートを使って取り込めます。"</string>
+    <string name="manager_56b8d59b66" formatted="false">"続ける"</string>
+    <string name="manager_3c072ca7b3" formatted="false">"セーブデータは保存しましたか？"</string>
+    <string name="manager_abfd1659d9" formatted="false">"削除したセーブデータは元に戻せません。"</string>
+    <string name="manager_f17ccd9811" formatted="false">"削除する"</string>
+    <string name="manager_9c6a140bd3" formatted="false">"導入できませんでした。正規版は Google Play から入れ直せます。"</string>
+    <string name="manager_e216616b97" formatted="false">"作ったAPKが見つかりません"</string>
+    <string name="manager_05bd258fe5" formatted="false">"このアプリにアプリのインストールを許可してください。"</string>
+    <string name="manager_81ddfa9624" formatted="false">"modを更新しています…"</string>
+    <string name="manager_f568d6d810" formatted="false">"modを導入しています…"</string>
+    <string name="manager_fcf6e26970" formatted="false">"ゲームの画面を開けませんでした。"</string>
+    <string name="manager_24e1a87354" formatted="false">"対応している正規版が入っていません"</string>
+    <string name="manager_35278869c4" formatted="false">"作業用のフォルダを作れません"</string>
+    <string name="manager_bbbe8663a1">"空き容量が足りません（あと %1$sMB 必要です）"</string>
+    <string name="manager_ff84efdff8" formatted="false">"差分一式を取得しています…"</string>
+    <string name="manager_97695ec2a8" formatted="false">"AndroidManifest.xml がありません"</string>
+    <string name="manager_c9ad8de8de" formatted="false">"正規版の manifest が想定と違います"</string>
+    <string name="manager_ba051593d6" formatted="false">"manifest の書き換えの結果が想定と違います"</string>
+    <string name="manager_8273d32799">"%1$s を作っています…"</string>
+    <string name="manager_2d3176180b" formatted="false">"この版は更新では入れられません"</string>
+    <string name="manager_9aff273425" formatted="false">"fflmod が入っていません"</string>
+    <string name="manager_e03e2751c1" formatted="false">"split_config.arm64_v8a.apk がありません"</string>
+    <string name="manager_a7a85c0749" formatted="false">"mod の dex が見つかりません"</string>
+    <string name="manager_f39ec316f0">"%1$s を作っています…"</string>
+    <string name="manager_584e19c1d4">"files.json の形式 %1$s には対応していません"</string>
+    <string name="manager_99795bac71">"interface %1$s には対応していません"</string>
+    <string name="manager_91c5e10d32" formatted="false">"この Release は、管理アプリが対応しているゲームの版と違います"</string>
+    <string name="manager_e2a333a2c7">"%1$s が Release にありません"</string>
+    <string name="manager_622863d65c">"%1$s が files.json と一致しません"</string>
+    <string name="manager_8db746790c" formatted="false">"Release が見つかりません"</string>
+    <string name="manager_c0aca8b5e6">"転送先が多すぎます: %1$s"</string>
+    <string name="manager_6f92cf3c15">"fflmod %1$s に更新しました。"</string>
+    <string name="manager_bd23c7dc4a">"fflmod %1$s を導入しました。\nセーブを取り込むときは「セーブを取り込む」を押してください。"</string>
+</resources>

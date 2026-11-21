@@ -1,0 +1,8 @@
+# CSV spaces and mixed record/cell newlines are translation data.
+*.csv -text -whitespace
+
+# These generated files are compared byte-for-byte by the localization check.
+src/english_text.h text eol=lf
+src/smali/FFLModText.smali text eol=lf
+manager/app/src/main/res/values/strings.xml text eol=lf
+manager/app/src/main/res/values-ja/strings.xml text eol=lf

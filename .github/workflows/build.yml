@@ -6,6 +6,33 @@ on:
   workflow_dispatch:
 
 jobs:
+  payload:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Test English overlays
+        run: |
+          mkdir -p out
+          clang -std=c11 -Wall -Wextra -Wno-unused-function tests/localization_test.c -o out/localization-test
+          out/localization-test
+          clang -std=c11 -Wall -Wextra -Wno-unused-function tests/display_test.c -o out/display-test
+          out/display-test
+      - name: Build native and injected DEX payloads
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y -q clang lld
+          curl -fsSL -o out/apktool.jar https://github.com/iBotPeaches/Apktool/releases/download/v2.10.0/apktool_2.10.0.jar
+          echo 'c0350abbab5314248dfe2ee0c907def4edd14f6faef1f5d372d3d4abd28f0431  out/apktool.jar' | sha256sum -c -
+          APKTOOL="$PWD/out/apktool.jar" sh tools/build.sh - out/native
+          python3 tools/mkpatch.py out/native/work out/payload 1.1.15-en1
+      - uses: actions/upload-artifact@v6
+        with:
+          name: fflmod-english-payload
+          path: out/payload/*
   manager:
     runs-on: ubuntu-24.04
     steps:

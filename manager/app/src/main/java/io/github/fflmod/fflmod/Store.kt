@@ -44,10 +44,10 @@ object Store {
         val update = mode(ctx) == "update"
         if (ok) {
             buildDir(ctx).deleteRecursively()
-            setMessage(ctx, if (update) "fflmod ${version(ctx)} に更新しました。"
-                else "fflmod ${version(ctx)} を導入しました。\nセーブを取り込むときは「セーブを取り込む」を押してください。", "")
+            setMessage(ctx, if (update) Texts.get(R.string.manager_6f92cf3c15, version(ctx))
+                else Texts.get(R.string.manager_bd23c7dc4a, version(ctx)), "")
         } else {
-            setMessage(ctx, if (update) "更新できませんでした。" else "導入できませんでした。正規版は Google Play から入れ直せます。",
+            setMessage(ctx, if (update) Texts.get(R.string.manager_130897d40e) else Texts.get(R.string.manager_9c6a140bd3),
                 reason ?: "")
         }
     }

@@ -10,7 +10,7 @@ import java.security.MessageDigest
 
 /** GitHub Releases から差分一式（files.json、fflmod.dex、libfflmod.so）を取ってくる */
 object Release {
-    private const val API = "https://api.github.com/repos/fflmod/ffl_mod/releases"
+    private const val API = "https://api.github.com/repos/sourmelee/ffl_mod/releases"
     const val FORMAT = 2
     const val INTERFACE = 1
 
@@ -32,21 +32,21 @@ object Release {
         val tag = rel.getString("tag_name")
         log("Release $tag")
         val info = JSONObject(String(get(asset(rel, "files.json")!!), Charsets.UTF_8))
-        if (info.getInt("format") != FORMAT) throw IOException("files.json の形式 ${info.getInt("format")} には対応していません")
-        if (info.getInt("interface") != INTERFACE) throw IOException("interface ${info.getInt("interface")} には対応していません")
+        if (info.getInt("format") != FORMAT) throw IOException(Texts.get(R.string.manager_584e19c1d4, info.getInt("format")))
+        if (info.getInt("interface") != INTERFACE) throw IOException(Texts.get(R.string.manager_99795bac71, info.getInt("interface")))
         val game = info.getJSONObject("game")
         val sha = game.getJSONObject("sha256")
         if (game.getString("package") != Game.PKG || game.getLong("versionCode") != Game.VERSION_CODE ||
             sha.getString("base.apk") != Game.SHA_BASE || sha.getString("split_config.arm64_v8a.apk") != Game.SHA_ARM64
-        ) throw IOException("この Release は、管理アプリが対応しているゲームの版と違います")
+        ) throw IOException(Texts.get(R.string.manager_91c5e10d32))
         val files = info.getJSONObject("files")
         val data = HashMap<String, ByteArray>()
         for (name in listOf("fflmod.dex", "libfflmod.so")) {
             val meta = files.getJSONObject(name)
-            val url = asset(rel, name) ?: throw IOException("$name が Release にありません")
+            val url = asset(rel, name) ?: throw IOException(Texts.get(R.string.manager_e2a333a2c7, name))
             val d = get(url)
             if (d.size.toLong() != meta.getLong("size") || sha256(d) != meta.getString("sha256"))
-                throw IOException("$name が files.json と一致しません")
+                throw IOException(Texts.get(R.string.manager_622863d65c, name))
             log("$name ${d.size} bytes")
             data[name] = d
         }
@@ -71,7 +71,7 @@ object Release {
             if (r.optBoolean("prerelease") && !includePre) continue
             if (rel == null || r.optString("published_at") > rel.optString("published_at")) rel = r
         }
-        return rel ?: throw IOException("Release が見つかりません")
+        return rel ?: throw IOException(Texts.get(R.string.manager_8db746790c))
     }
 
     private fun asset(rel: JSONObject, name: String): String? {
@@ -106,7 +106,7 @@ object Release {
                 c.disconnect()
             }
         }
-        throw IOException("転送先が多すぎます: $url")
+        throw IOException(Texts.get(R.string.manager_c0aca8b5e6, url))
     }
 
     fun sha256(d: ByteArray): String = Game.hex(MessageDigest.getInstance("SHA-256").digest(d))

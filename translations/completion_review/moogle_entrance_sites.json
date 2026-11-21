@@ -1,0 +1,68 @@
+[
+  {
+    "group": 0,
+    "map": 2517,
+    "event": 6,
+    "dest": 3000
+  },
+  {
+    "group": 1,
+    "map": 902,
+    "event": 8,
+    "dest": 1400
+  },
+  {
+    "group": 2,
+    "map": 902,
+    "event": 8,
+    "dest": 1400
+  },
+  {
+    "group": 3,
+    "map": 900,
+    "event": 7,
+    "dest": 1600
+  },
+  {
+    "group": 3,
+    "map": 910,
+    "event": 7,
+    "dest": 1600
+  },
+  {
+    "group": 4,
+    "map": 200,
+    "event": 36,
+    "dest": 2000
+  },
+  {
+    "group": 5,
+    "map": 302,
+    "event": 5,
+    "dest": 2000
+  },
+  {
+    "group": 6,
+    "map": 801,
+    "event": 4,
+    "dest": 2000
+  },
+  {
+    "group": 7,
+    "map": 300,
+    "event": 22,
+    "dest": -1
+  },
+  {
+    "group": 8,
+    "map": 1009,
+    "event": 3,
+    "dest": -1
+  },
+  {
+    "group": 9,
+    "map": 501,
+    "event": 4,
+    "dest": -1
+  }
+]

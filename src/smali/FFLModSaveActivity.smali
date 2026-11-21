@@ -359,7 +359,8 @@
 
     if-nez v0, :has_save
 
-    const-string v0, "セーブデータが見つかりません。ゲームで一度セーブしてから書き出してください。"
+    invoke-static {p0}, Lcom/square_enix/android_googleplay/ffl_gp/FFLModText;->save_dialog_4d7c60b538(Landroid/app/Activity;)Ljava/lang/String;
+    move-result-object v0
 
     invoke-direct {p0, v0}, Lcom/square_enix/android_googleplay/ffl_gp/FFLModSaveActivity;->toastFinish(Ljava/lang/String;)V
 
@@ -428,7 +429,8 @@
     :catch_0
     move-exception v2
 
-    const-string v2, "書き出しに失敗しました。保存先を変えてもう一度お試しください。"
+    invoke-static {p0}, Lcom/square_enix/android_googleplay/ffl_gp/FFLModText;->save_dialog_0f63abbcef(Landroid/app/Activity;)Ljava/lang/String;
+    move-result-object v2
 
     invoke-direct {p0, v2}, Lcom/square_enix/android_googleplay/ffl_gp/FFLModSaveActivity;->toastFinish(Ljava/lang/String;)V
 
@@ -481,7 +483,8 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catch_0
 
-    const-string v0, "セーブデータを書き出しました。"
+    invoke-static {p0}, Lcom/square_enix/android_googleplay/ffl_gp/FFLModText;->save_dialog_c181bb0788(Landroid/app/Activity;)Ljava/lang/String;
+    move-result-object v0
 
     invoke-direct {p0, v0}, Lcom/square_enix/android_googleplay/ffl_gp/FFLModSaveActivity;->toastFinish(Ljava/lang/String;)V
 
@@ -491,7 +494,8 @@
     move-exception v0
 
     :fail
-    const-string v0, "書き出しに失敗しました。保存先を変えてもう一度お試しください。"
+    invoke-static {p0}, Lcom/square_enix/android_googleplay/ffl_gp/FFLModText;->save_dialog_0f63abbcef(Landroid/app/Activity;)Ljava/lang/String;
+    move-result-object v0
 
     invoke-direct {p0, v0}, Lcom/square_enix/android_googleplay/ffl_gp/FFLModSaveActivity;->toastFinish(Ljava/lang/String;)V
 
@@ -528,7 +532,8 @@
     :catch_0
     move-exception v1
 
-    const-string v1, "ファイルを読み込めませんでした。"
+    invoke-static {p0}, Lcom/square_enix/android_googleplay/ffl_gp/FFLModText;->save_dialog_e1f2ac561c(Landroid/app/Activity;)Ljava/lang/String;
+    move-result-object v1
 
     invoke-direct {p0, v1}, Lcom/square_enix/android_googleplay/ffl_gp/FFLModSaveActivity;->toastFinish(Ljava/lang/String;)V
 
@@ -605,7 +610,8 @@
     return-void
 
     :notsave
-    const-string v0, "このファイルはFFレジェンズのセーブデータではありません。"
+    invoke-static {p0}, Lcom/square_enix/android_googleplay/ffl_gp/FFLModText;->save_dialog_4c0c678f5d(Landroid/app/Activity;)Ljava/lang/String;
+    move-result-object v0
 
     invoke-direct {p0, v0}, Lcom/square_enix/android_googleplay/ffl_gp/FFLModSaveActivity;->toastFinish(Ljava/lang/String;)V
 
@@ -615,7 +621,8 @@
     move-exception v0
 
     :readfail
-    const-string v0, "ファイルを読み込めませんでした。"
+    invoke-static {p0}, Lcom/square_enix/android_googleplay/ffl_gp/FFLModText;->save_dialog_e1f2ac561c(Landroid/app/Activity;)Ljava/lang/String;
+    move-result-object v0
 
     invoke-direct {p0, v0}, Lcom/square_enix/android_googleplay/ffl_gp/FFLModSaveActivity;->toastFinish(Ljava/lang/String;)V
 
@@ -768,24 +775,29 @@
 
     new-instance v9, Ljava/lang/StringBuilder;
 
-    const-string v10, "Google データ エクスポートのクラウドセーブ"
+    invoke-static {p0}, Lcom/square_enix/android_googleplay/ffl_gp/FFLModText;->save_dialog_7d0775b142(Landroid/app/Activity;)Ljava/lang/String;
+    move-result-object v10
 
     invoke-direct {v9, v10}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     if-eqz v8, :no_date
 
-    const-string v10, "（最終更新："
+    invoke-static {p0}, Lcom/square_enix/android_googleplay/ffl_gp/FFLModText;->save_dialog_250bd3ad36(Landroid/app/Activity;)Ljava/lang/String;
+    move-result-object v10
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v9, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v10, "）"
+    invoke-static {p0}, Lcom/square_enix/android_googleplay/ffl_gp/FFLModText;->date_close(Landroid/app/Activity;)Ljava/lang/String;
+
+    move-result-object v10
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :no_date
-    const-string v10, "を取り込みます。"
+    invoke-static {p0}, Lcom/square_enix/android_googleplay/ffl_gp/FFLModText;->save_dialog_597919fc78(Landroid/app/Activity;)Ljava/lang/String;
+    move-result-object v10
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -802,7 +814,8 @@
 
     if-eqz v4, :zip_notfound
 
-    const-string v8, "このファイルにはセーブデータが入っていません。一緒に届いたもう一つのzipファイルを選んでください。"
+    invoke-static {p0}, Lcom/square_enix/android_googleplay/ffl_gp/FFLModText;->save_dialog_c585303770(Landroid/app/Activity;)Ljava/lang/String;
+    move-result-object v8
 
     const/4 v9, 0x3
 
@@ -811,7 +824,8 @@
     return-void
 
     :zip_notfound
-    const-string v8, "このzipファイルにはFFレジェンズのセーブデータが入っていません。"
+    invoke-static {p0}, Lcom/square_enix/android_googleplay/ffl_gp/FFLModText;->save_dialog_9c1dec2d3e(Landroid/app/Activity;)Ljava/lang/String;
+    move-result-object v8
 
     invoke-direct {p0, v8}, Lcom/square_enix/android_googleplay/ffl_gp/FFLModSaveActivity;->toastFinish(Ljava/lang/String;)V
 
@@ -820,7 +834,8 @@
     :catch_0
     move-exception v8
 
-    const-string v8, "ファイルを読み込めませんでした。"
+    invoke-static {p0}, Lcom/square_enix/android_googleplay/ffl_gp/FFLModText;->save_dialog_e1f2ac561c(Landroid/app/Activity;)Ljava/lang/String;
+    move-result-object v8
 
     invoke-direct {p0, v8}, Lcom/square_enix/android_googleplay/ffl_gp/FFLModSaveActivity;->toastFinish(Ljava/lang/String;)V
 
@@ -842,13 +857,17 @@
     goto :rest
 
     :no_prefix
-    const-string v1, "選んだセーブデータを取り込みます。"
+    invoke-static {p0}, Lcom/square_enix/android_googleplay/ffl_gp/FFLModText;->save_dialog_9c7c18ecb5(Landroid/app/Activity;)Ljava/lang/String;
+    move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     # 1.0-pre18: Takeout のときは前の1文と重なるので「選んだセーブデータを取り込みます。」を付けない
     :rest
-    const-string v1, "今のセーブデータは上書きされます。必要な場合は、先に書き出しておいてください。取り込んだあと、ゲームを終了します。"
+    const-string v1, "\n\n"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p0}, Lcom/square_enix/android_googleplay/ffl_gp/FFLModText;->save_dialog_2962a5338c(Landroid/app/Activity;)Ljava/lang/String;
+    move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -862,7 +881,8 @@
 
     invoke-direct {v0, p0, v2}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;I)V
 
-    const-string v2, "セーブデータの取り込み"
+    invoke-static {p0}, Lcom/square_enix/android_googleplay/ffl_gp/FFLModText;->save_dialog_d535dca5e3(Landroid/app/Activity;)Ljava/lang/String;
+    move-result-object v2
 
     invoke-virtual {v0, v2}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
@@ -878,7 +898,8 @@
 
     invoke-direct {v2, p0, v3}, Lcom/square_enix/android_googleplay/ffl_gp/FFLModSaveActivity$Click;-><init>(Lcom/square_enix/android_googleplay/ffl_gp/FFLModSaveActivity;I)V
 
-    const-string v3, "取り込む"
+    invoke-static {p0}, Lcom/square_enix/android_googleplay/ffl_gp/FFLModText;->save_dialog_94ad857900(Landroid/app/Activity;)Ljava/lang/String;
+    move-result-object v3
 
     invoke-virtual {v0, v3, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -888,7 +909,8 @@
 
     invoke-direct {v2, p0, v3}, Lcom/square_enix/android_googleplay/ffl_gp/FFLModSaveActivity$Click;-><init>(Lcom/square_enix/android_googleplay/ffl_gp/FFLModSaveActivity;I)V
 
-    const-string v3, "やめる"
+    invoke-static {p0}, Lcom/square_enix/android_googleplay/ffl_gp/FFLModText;->save_dialog_a56331c3d8(Landroid/app/Activity;)Ljava/lang/String;
+    move-result-object v3
 
     invoke-virtual {v0, v3, v2}, Landroid/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -950,7 +972,8 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catch_0
 
-    const-string v0, "取り込みの準備ができました。ゲームを終了します。次にゲームを起動したときに反映されます。"
+    invoke-static {p0}, Lcom/square_enix/android_googleplay/ffl_gp/FFLModText;->save_dialog_78087f06a3(Landroid/app/Activity;)Ljava/lang/String;
+    move-result-object v0
 
     const/4 v1, 0x4
 
@@ -962,7 +985,8 @@
     move-exception v0
 
     :fail
-    const-string v0, "取り込みに失敗しました。"
+    invoke-static {p0}, Lcom/square_enix/android_googleplay/ffl_gp/FFLModText;->save_dialog_a30871d8bb(Landroid/app/Activity;)Ljava/lang/String;
+    move-result-object v0
 
     invoke-direct {p0, v0}, Lcom/square_enix/android_googleplay/ffl_gp/FFLModSaveActivity;->toastFinish(Ljava/lang/String;)V
 
@@ -986,7 +1010,8 @@
 
     if-ne p1, v0, :not2
 
-    const-string v1, "取り込みを取りやめました。"
+    invoke-static {p0}, Lcom/square_enix/android_googleplay/ffl_gp/FFLModText;->save_dialog_e532b24c6b(Landroid/app/Activity;)Ljava/lang/String;
+    move-result-object v1
 
     invoke-direct {p0, v1}, Lcom/square_enix/android_googleplay/ffl_gp/FFLModSaveActivity;->toastFinish(Ljava/lang/String;)V
 
@@ -1049,12 +1074,14 @@
 
     if-ne p1, v1, :cancel_import
 
-    const-string v2, "書き出しを取りやめました。"
+    invoke-static {p0}, Lcom/square_enix/android_googleplay/ffl_gp/FFLModText;->save_dialog_603127c025(Landroid/app/Activity;)Ljava/lang/String;
+    move-result-object v2
 
     goto :cancel_show
 
     :cancel_import
-    const-string v2, "取り込みを取りやめました。"
+    invoke-static {p0}, Lcom/square_enix/android_googleplay/ffl_gp/FFLModText;->save_dialog_e532b24c6b(Landroid/app/Activity;)Ljava/lang/String;
+    move-result-object v2
 
     :cancel_show
     invoke-direct {p0, v2}, Lcom/square_enix/android_googleplay/ffl_gp/FFLModSaveActivity;->toastFinish(Ljava/lang/String;)V

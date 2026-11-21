@@ -1,0 +1,226 @@
+[
+  {
+    "bank": 0,
+    "count": 1069,
+    "signatures": [
+      {
+        "id": 1,
+        "english": "Here you can use tents or cottages and also save your game."
+      },
+      {
+        "id": 424,
+        "english": "Leaving Harmonia is something you slugs only dream of."
+      }
+    ]
+  },
+  {
+    "bank": 1,
+    "count": 872,
+    "signatures": [
+      {
+        "id": 1,
+        "english": "Here you can use tents or cottages and also save your game."
+      },
+      {
+        "id": 243,
+        "english": "Go!"
+      }
+    ]
+  },
+  {
+    "bank": 2,
+    "count": 872,
+    "signatures": [
+      {
+        "id": 1,
+        "english": "Here you can use tents or cottages and also save your game."
+      },
+      {
+        "id": 243,
+        "english": "Go!"
+      }
+    ]
+  },
+  {
+    "bank": 3,
+    "count": 872,
+    "signatures": [
+      {
+        "id": 1,
+        "english": "Here you can use tents or cottages and also save your game."
+      },
+      {
+        "id": 248,
+        "english": "Woof, woof!"
+      }
+    ]
+  },
+  {
+    "bank": 4,
+    "count": 877,
+    "signatures": [
+      {
+        "id": 1,
+        "english": "Here you can use tents or cottages and also save your game."
+      },
+      {
+        "id": 320,
+        "english": "(Don't worry, <cha6>.)"
+      }
+    ]
+  },
+  {
+    "bank": 5,
+    "count": 877,
+    "signatures": [
+      {
+        "id": 1,
+        "english": "Here you can use tents or cottages and also save your game."
+      },
+      {
+        "id": 226,
+        "english": "Discretion is the better part of valor! Retreat!"
+      }
+    ]
+  },
+  {
+    "bank": 6,
+    "count": 877,
+    "signatures": [
+      {
+        "id": 1,
+        "english": "Here you can uses tents or cottages and also save your game."
+      },
+      {
+        "id": 322,
+        "english": "Vata! That low down, no good...!"
+      }
+    ]
+  },
+  {
+    "bank": 7,
+    "count": 1104,
+    "signatures": [
+      {
+        "id": 1,
+        "english": "Here you can use tents or cottages and also save your game."
+      },
+      {
+        "id": 516,
+        "english": "Never turn your back on an enemy!"
+      }
+    ]
+  },
+  {
+    "bank": 8,
+    "count": 872,
+    "signatures": [
+      {
+        "id": 1,
+        "english": "Here you can use tents or cottages and also save your game."
+      },
+      {
+        "id": 485,
+        "english": "I will protect you, even if it means my very life!"
+      }
+    ]
+  },
+  {
+    "bank": 9,
+    "count": 872,
+    "signatures": [
+      {
+        "id": 1,
+        "english": "Here you can use tents or cottages and also save your game."
+      },
+      {
+        "id": 350,
+        "english": "..."
+      }
+    ]
+  },
+  {
+    "bank": 10,
+    "count": 1315,
+    "signatures": [
+      {
+        "id": 1,
+        "english": "Here you can use tents or cottages and also save your game."
+      },
+      {
+        "id": 613,
+        "english": "We have no time for idle chatter!"
+      }
+    ]
+  },
+  {
+    "bank": 11,
+    "count": 2511,
+    "signatures": [
+      {
+        "id": 1,
+        "english": "Here you can use tents or cottages and also save your game."
+      },
+      {
+        "id": 936,
+        "english": "What exactly do you expect us to say? \"Here you go\"?"
+      }
+    ]
+  },
+  {
+    "bank": 12,
+    "count": 1417,
+    "signatures": [
+      {
+        "id": 1,
+        "english": "Here you can use tents or cottages and also save your game."
+      },
+      {
+        "id": 610,
+        "english": "Where are we?"
+      }
+    ]
+  },
+  {
+    "bank": 13,
+    "count": 1315,
+    "signatures": [
+      {
+        "id": 1,
+        "english": "Here you can use tents or cottages and also save your game."
+      },
+      {
+        "id": 613,
+        "english": "We have no time for idle chatter!"
+      }
+    ]
+  },
+  {
+    "bank": 14,
+    "count": 1272,
+    "signatures": [
+      {
+        "id": 8,
+        "english": "<cha0>! <cha3>!"
+      },
+      {
+        "id": 900,
+        "english": "FINAL FANTASY DIMENSIONS"
+      }
+    ]
+  },
+  {
+    "bank": 15,
+    "count": 1390,
+    "signatures": [
+      {
+        "id": 1,
+        "english": "Here you can use tents or cottages and also save your game."
+      },
+      {
+        "id": 173,
+        "english": "Would you like to attempt Ω Weapon Lv. 4?"
+      }
+    ]
+  }
+]

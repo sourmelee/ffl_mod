@@ -66,7 +66,7 @@ class InstallReceiver : BroadcastReceiver() {
                     intent.getParcelableExtra(Intent.EXTRA_INTENT, Intent::class.java)
                 else intent.getParcelableExtra(Intent.EXTRA_INTENT)
                 if (confirm != null) Installer.Result.NeedUser(confirm)
-                else Installer.Result.Failure("確認の画面を出せませんでした")
+                else Installer.Result.Failure(Texts.get(R.string.manager_826dfe1be9))
             }
             PackageInstaller.STATUS_SUCCESS -> Installer.Result.Success
             else -> Installer.Result.Failure(

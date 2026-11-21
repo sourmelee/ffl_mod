@@ -15,8 +15,29 @@ orig/
 # 手元だけの追加
 src/local.c
 __pycache__/
+*.py[cod]
+*.class
+*.o
+*.obj
 # 管理アプリ
 manager/.gradle/
 manager/build/
 manager/app/build/
 manager/local.properties
+
+# Local Gradle/Kotlin and Android Studio state
+.gradle/
+.kotlin/
+/.idea/
+/manager/.idea/
+*.iml
+
+# Extracted game assets and generated review outputs
+# Keep translation CSV/JSON inputs and runtime src/ headers trackable.
+/translations/asset_review/
+/translations/extended_asset_review/
+/translations/completion_review/patched_message_dat/
+/translations/completion_review/integration/
+/translations/completion_review/all_map_text_references.json
+/translations/completion_review/core_text_references.json
+/translations/*.zip

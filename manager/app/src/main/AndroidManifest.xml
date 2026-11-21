@@ -13,7 +13,8 @@
     </queries>
 
     <application
-        android:label="FFレジェンズ mod導入アプリ"
+        android:name=".ModApplication"
+        android:label="@string/manager_ff89962242"
         android:icon="@mipmap/ic_launcher"
         android:theme="@android:style/Theme.Material.Light"
         android:allowBackup="false">

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generated from translations/catalog.json. English is the non-Japanese fallback. -->
+<resources>
+    <string name="manager_ff89962242" formatted="false">"FF Dimensions Mod Installer"</string>
+    <string name="manager_826dfe1be9" formatted="false">"Could not open the confirmation screen."</string>
+    <string name="manager_2b226235e6" formatted="false">"Install mod"</string>
+    <string name="manager_4d317c8ecb" formatted="false">"Update mod"</string>
+    <string name="manager_0c56af39c8" formatted="false">"Export save"</string>
+    <string name="manager_70a602ed0c" formatted="false">"Import save"</string>
+    <string name="manager_5b0fb11e05" formatted="false">"Pre-release updates enabled."</string>
+    <string name="manager_b96d1ec1fa" formatted="false">"Pre-release updates disabled."</string>
+    <string name="manager_fc885bbb4d" formatted="false">"(Could not read version)"</string>
+    <string name="manager_23b9b1c924" formatted="false">"(Could not check)"</string>
+    <string name="manager_44ff697ecd" formatted="false">"None"</string>
+    <string name="manager_54b1f3d50f" formatted="false">"Current version: "</string>
+    <string name="manager_a98e734b90" formatted="false">"\nLatest version: "</string>
+    <string name="manager_2c201069ad" formatted="false">"Checking..."</string>
+    <string name="manager_8312c0f9f9" formatted="false">"Could not check for updates."</string>
+    <string name="manager_0fc0b5593c" formatted="false">" (including pre-releases)"</string>
+    <string name="manager_321771e517" formatted="false">"\nYou are up to date."</string>
+    <string name="manager_35981549ed" formatted="false">"\nAn update is available. Select \"Update mod\" to install it."</string>
+    <string name="manager_e5cd356be8" formatted="false">"Could not check the game\'s installation status."</string>
+    <string name="manager_70dfd1dddb" formatted="false">"FF Dimensions is not installed."</string>
+    <string name="manager_8cb1797535" formatted="false">"The original game (1.2.0) is installed.\nYou can install the mod."</string>
+    <string name="manager_40464cf82e" formatted="false">"The original game is installed, but this version is not supported."</string>
+    <string name="manager_3cc336541f" formatted="false">"The mod is installed."</string>
+    <string name="manager_93769bcac1" formatted="false">"The installed app\'s signature matches neither the original game nor fflmod."</string>
+    <string name="manager_483c1721e2" formatted="false">"Uninstalling the original game was canceled."</string>
+    <string name="manager_c457019e38" formatted="false">"Building the modded APKs..."</string>
+    <string name="manager_c7e6687460" formatted="false">"Could not build the APKs."</string>
+    <string name="manager_6f02e58234" formatted="false">"Preparing the mod update..."</string>
+    <string name="manager_130897d40e" formatted="false">"Could not update the mod."</string>
+    <string name="manager_109b75d0fa" formatted="false">"Already installed"</string>
+    <string name="manager_a580145ee5">"fflmod %1$s is already installed. Reinstall it?"</string>
+    <string name="manager_1230dda998" formatted="false">"Reinstall"</string>
+    <string name="manager_3eefdf40e6" formatted="false">"Cancel"</string>
+    <string name="manager_a33a1528a2" formatted="false">"This version cannot be installed using \"Update mod\". Export your save, then reinstall the mod."</string>
+    <string name="manager_a7372f32aa" formatted="false">"Uninstall the original game"</string>
+    <string name="manager_96d9f3a967" formatted="false">"To install the mod, you must first uninstall the original game. This will also delete the save data on this device. Save to the cloud in the game first so you can import your save using Google Takeout after installing the mod."</string>
+    <string name="manager_56b8d59b66" formatted="false">"Continue"</string>
+    <string name="manager_3c072ca7b3" formatted="false">"Have you backed up your save data?"</string>
+    <string name="manager_abfd1659d9" formatted="false">"Deleted save data cannot be recovered."</string>
+    <string name="manager_f17ccd9811" formatted="false">"Uninstall"</string>
+    <string name="manager_9c6a140bd3" formatted="false">"Could not install the mod. You can reinstall the original game from Google Play."</string>
+    <string name="manager_e216616b97" formatted="false">"Could not find the built APKs."</string>
+    <string name="manager_05bd258fe5" formatted="false">"Allow this app to install apps."</string>
+    <string name="manager_81ddfa9624" formatted="false">"Updating the mod..."</string>
+    <string name="manager_f568d6d810" formatted="false">"Installing the mod..."</string>
+    <string name="manager_fcf6e26970" formatted="false">"Could not open the game\'s screen."</string>
+    <string name="manager_24e1a87354" formatted="false">"A supported version of the original game is not installed."</string>
+    <string name="manager_35278869c4" formatted="false">"Could not create the working folder."</string>
+    <string name="manager_bbbe8663a1">"Not enough free space (%1$sMB more required)."</string>
+    <string name="manager_ff84efdff8" formatted="false">"Downloading the mod patch files..."</string>
+    <string name="manager_97695ec2a8" formatted="false">"AndroidManifest.xml is missing."</string>
+    <string name="manager_c9ad8de8de" formatted="false">"The original game\'s manifest does not match the expected version."</string>
+    <string name="manager_ba051593d6" formatted="false">"The patched manifest does not match the expected result."</string>
+    <string name="manager_8273d32799">"Building %1$s..."</string>
+    <string name="manager_2d3176180b" formatted="false">"This version cannot be installed as an update."</string>
+    <string name="manager_9aff273425" formatted="false">"fflmod is not installed."</string>
+    <string name="manager_e03e2751c1" formatted="false">"split_config.arm64_v8a.apk is missing."</string>
+    <string name="manager_a7a85c0749" formatted="false">"Could not find the mod\'s DEX file."</string>
+    <string name="manager_f39ec316f0">"Building %1$s..."</string>
+    <string name="manager_584e19c1d4">"Unsupported files.json format: %1$s"</string>
+    <string name="manager_99795bac71">"Unsupported interface version: %1$s"</string>
+    <string name="manager_91c5e10d32" formatted="false">"This release targets a different game version from the one supported by the manager."</string>
+    <string name="manager_e2a333a2c7">"%1$s is missing from the release."</string>
+    <string name="manager_622863d65c">"%1$s does not match files.json."</string>
+    <string name="manager_8db746790c" formatted="false">"Could not find a release."</string>
+    <string name="manager_c0aca8b5e6">"Too many redirects: %1$s"</string>
+    <string name="manager_6f92cf3c15">"Updated to fflmod %1$s."</string>
+    <string name="manager_bd23c7dc4a">"Installed fflmod %1$s.\nTo import your save data, select \"Import save\"."</string>
+</resources>

@@ -1,0 +1,43 @@
+{
+  "source_commit": "7fe105ff91aa028860876e3501b7325ede4567e8",
+  "runtime_files": 28,
+  "story_banks": 16,
+  "story_records": 18384,
+  "maps_scanned": 1679,
+  "events_scanned": 18833,
+  "commands_scanned": 166863,
+  "moogle_entrance_sites": 11,
+  "core_text_reference_sites": 243,
+  "unique_base_text_gaps": 254,
+  "base_text_gaps_completed": 213,
+  "base_text_gaps_official_reuse": 158,
+  "base_text_gaps_new_drafts": 55,
+  "original_credit_or_other_gaps_remaining": 41,
+  "speaker_gap_entries": 24,
+  "speakers_completed": 24,
+  "core_missing_translations": 0,
+  "uncovered_literal_lines": 0,
+  "map_scan_errors": 0,
+  "completed_catalog_entries": 352,
+  "core_field_override_slots": 161,
+  "map_name_overrides": 1,
+  "copied_ability_names_verified_English": 11,
+  "patched_message_files": 14,
+  "csv_updates": [
+    {
+      "file": "asset_review/restored_dialogue.csv",
+      "rows": 7,
+      "changed": 0
+    },
+    {
+      "file": "extended_asset_review/maps/dialogue_candidates.csv",
+      "rows": 17,
+      "changed": 0
+    }
+  ],
+  "limitations": [
+    "Static reference coverage is not execution reachability or a complete playthrough.",
+    "Original staff credit blocks and other unscoped gaps are inventoried separately.",
+    "Runtime hook wiring, native Android build, and visual layout verification are not performed by this data generator."
+  ]
+}

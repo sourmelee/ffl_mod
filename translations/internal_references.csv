@@ -1,0 +1,6 @@
+﻿"id","category","japanese","english","locations","symbols","encodings"
+"diagnostic-660a08b923","diagnostic","memories: ability %d is not メモリーズ (%02x %02x %02x %02x), cost unchanged","memories: ability %d is not Recollect (%02x %02x %02x %02x), cost unchanged","src/fflmod.c:5710","","utf-8"
+"internal-reference-11d3cd0756","internal_reference","単体の行動を遅くする","Slows one target.","src/fflmod.c:4191 | src/fflmod.c:4193","k_slowOldSJ | k_slowOldU8","shift_jis | utf-8"
+"internal-reference-9a8a0e0cde","internal_reference","魔人","Magus","src/fflmod.c:4429 | src/fflmod.c:4430","","shift_jis | utf-8"
+"internal-reference-ddd55fcb44","internal_reference","DEBUG用","For debugging","src/fflmod.c:4556 | src/fflmod.c:4556","","shift_jis | utf-8"
+"internal-reference-7305851beb","internal_reference","メモリーズ","Recollect","src/fflmod.c:5696 | src/fflmod.c:5696","k_memSJ | k_memU8","shift_jis | utf-8"

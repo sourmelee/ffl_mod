@@ -1,0 +1,732 @@
+﻿"id","category","japanese","english","scope","method","references","provenance","english_alternatives"
+"in-game-cdf0567b7e","in_game","単体/全体の行動を遅くする","Slows one or all targets.","mod_source","existing_draft","src/fflmod.c:4192 | src/fflmod.c:4194","",""
+"in-game-6fae7f3d03","in_game","魔女","Witch","mod_source","existing_draft","src/fflmod.c:4415 | src/fflmod.c:4415","",""
+"in-game-5a3a3c81a9","in_game","スティクス","Styx","mod_source","existing_draft","src/fflmod.c:4416 | src/fflmod.c:4416","",""
+"in-game-22741c5a87","in_game","青魔法","Blue Magic","mod_source","existing_draft","src/fflmod.c:4417 | src/fflmod.c:4417","",""
+"in-game-3e1b5e22c3","in_game","覚えた敵の技を使う","Uses learned enemy abilities.","mod_source","existing_draft","src/fflmod.c:4418 | src/fflmod.c:4418","",""
+"in-game-22b504ab8d","in_game","単体/全体に水属性のダメージ","Deals water damage to one or all targets.","mod_source","existing_draft","src/fflmod.c:4438 | src/fflmod.c:4439","",""
+"in-game-d527feb020","in_game","敵全体に水属性のダメージを与え「スリップ」状態にする","Deals water damage and inflicts Sap on all enemies.","mod_source","existing_draft","src/fflmod.c:4440 | src/fflmod.c:4441","",""
+"in-game-17ce912c32","in_game","単体を「バーサク」状態にする","Inflicts Berserk on one target.","mod_source","existing_draft","src/fflmod.c:4442 | src/fflmod.c:4443","",""
+"in-game-30ce9976ce","in_game","敵全体を「スタン」状態にする","Inflicts Stun on all enemies.","mod_source","existing_draft","src/fflmod.c:4444 | src/fflmod.c:4445","",""
+"in-game-d61a92b509","in_game","敵全体を「カエル」「こびと」「沈黙」のいずれかにする","Inflicts Toad, Mini, or Silence on all enemies.","mod_source","existing_draft","src/fflmod.c:4446 | src/fflmod.c:4447","",""
+"in-game-e86c50ff02","in_game","敵全体を「混乱」状態にする","Inflicts Confusion on all enemies.","mod_source","existing_draft","src/fflmod.c:4448 | src/fflmod.c:4449","",""
+"in-game-4514752c71","in_game","習得している青魔法を使用/確認します","Use or view learned blue magic.","mod_source","existing_draft","src/fflmod.c:4576 | src/fflmod.c:4577","",""
+"in-game-c61e21bec4","in_game","アラーム","Alarm","mod_source","existing_draft","src/fflmod.c:5419 | src/fflmod.c:5419","",""
+"in-game-92469c9aa7","in_game","モンスターを呼び寄せる","Summons monsters.","mod_source","existing_draft","src/fflmod.c:5420 | src/fflmod.c:5421","",""
+"in-game-8ad2c2385d","in_game","ダッシュ ON","Dash ON","mod_source","existing_draft","src/fflmod.c:5749 | src/fflmod.c:5750","",""
+"in-game-f984263479","in_game","ダッシュ OFF","Dash OFF","mod_source","existing_draft","src/fflmod.c:5749 | src/fflmod.c:5750","",""
+"in-game-976b6fd6be","in_game","獲得経験値","EXP Earned","mod_source","existing_draft","src/fflmod.c:6038 | src/fflmod.c:6039","",""
+"in-game-1fc9c1e25f","in_game","獲得ギル","Gil Earned","mod_source","existing_draft","src/fflmod.c:6038 | src/fflmod.c:6039","",""
+"in-game-840638c13e","in_game","獲得AP","AP Earned","mod_source","existing_draft","src/fflmod.c:6038 | src/fflmod.c:6039","",""
+"in-game-3e6d99108c","in_game","戦闘で手に入る経験値の倍率を選べます","Choose the multiplier for EXP earned in battle.","mod_source","existing_draft","src/fflmod.c:6040 | src/fflmod.c:6042","",""
+"in-game-8c3c2f2ac7","in_game","戦闘で手に入るギルの倍率を選べます","Choose the multiplier for gil earned in battle.","mod_source","existing_draft","src/fflmod.c:6040 | src/fflmod.c:6043","",""
+"in-game-c249b52d0c","in_game","戦闘で手に入るAPの倍率を選べます","Choose the multiplier for AP earned in battle.","mod_source","existing_draft","src/fflmod.c:6040 | src/fflmod.c:6044","",""
+"in-game-de4b2b8ea7","in_game","コンフィグ４","Config 4","mod_source","existing_draft","src/fflmod.c:6045 | src/fflmod.c:6045","",""
+"manager-ff89962242","manager","FFレジェンズ mod導入アプリ","FF Dimensions Mod Installer","mod_source","existing_draft","manager/app/src/main/AndroidManifest.xml:16","",""
+"manager-826dfe1be9","manager","確認の画面を出せませんでした","Could not open the confirmation screen.","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/Installer.kt:69","",""
+"manager-2b226235e6","manager","modを導入","Install mod","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:60","",""
+"manager-4d317c8ecb","manager","modを更新","Update mod","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:62","",""
+"manager-0c56af39c8","manager","セーブを書き出す","Export save","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:64","",""
+"manager-70a602ed0c","manager","セーブを取り込む","Import save","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:66","",""
+"manager-5b0fb11e05","manager","試験版を受け取ります","Pre-release updates enabled.","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:105","",""
+"manager-b96d1ec1fa","manager","試験版を受け取りません","Pre-release updates disabled.","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:105","",""
+"manager-fc885bbb4d","manager","（版を読めませんでした）","(Could not read version)","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:115","",""
+"manager-23b9b1c924","manager","（調べられませんでした）","(Could not check)","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:116","",""
+"manager-44ff697ecd","manager","なし","None","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:117","",""
+"manager-54b1f3d50f","manager","現在バージョン：","Current version: ","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:120","",""
+"manager-a98e734b90","manager","
+最新バージョン：","
+Latest version: ","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:120","",""
+"manager-2c201069ad","manager","確認しています…","Checking...","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:122","",""
+"manager-8312c0f9f9","manager","確認できませんでした","Could not check for updates.","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:123","",""
+"manager-0fc0b5593c","manager","（試験版を含む）"," (including pre-releases)","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:126","",""
+"manager-321771e517","manager","
+最新版です。","
+You are up to date.","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:128","",""
+"manager-35981549ed","manager","
+アップデートがあります。「modを更新」から入れられます。","
+An update is available. Select ""Update mod"" to install it.","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:128","",""
+"manager-e5cd356be8","manager","ゲームの状態を調べられませんでした。","Could not check the game's installation status.","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:143","",""
+"manager-70dfd1dddb","manager","FFレジェンズが入っていません。","FF Dimensions is not installed.","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:144","",""
+"manager-8cb1797535","manager","正規版（1.2.0）が入っています。
+modを導入できます。","The original game (1.2.0) is installed.
+You can install the mod.","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:146","",""
+"manager-40464cf82e","manager","正規版が入っていますが、対応していない版です。","The original game is installed, but this version is not supported.","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:147","",""
+"manager-3cc336541f","manager","modが導入されています。","The mod is installed.","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:149","",""
+"manager-93769bcac1","manager","正規版とも fflmod とも違う署名のアプリが入っています。","The installed app's signature matches neither the original game nor fflmod.","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:150","",""
+"manager-483c1721e2","manager","正規版の削除が取り消されました。","Uninstalling the original game was canceled.","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:157 | manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:345","",""
+"manager-c457019e38","manager","modを入れたAPKを作っています…","Building the modded APKs...","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:211","",""
+"manager-c7e6687460","manager","APKを作成できませんでした。","Could not build the APKs.","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:222","",""
+"manager-6f02e58234","manager","modの更新を準備しています…","Preparing the mod update...","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:242","",""
+"manager-130897d40e","manager","更新できませんでした。","Could not update the mod.","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:253 | manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:272 | manager/app/src/main/java/io/github/fflmod/fflmod/Store.kt:50","",""
+"manager-109b75d0fa","manager","同じ版です","Already installed","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:257","",""
+"manager-a580145ee5","manager","fflmod ${p.version} はすでに入っています。入れ直しますか？","fflmod ${p.version} is already installed. Reinstall it?","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:258","",""
+"manager-1230dda998","manager","入れ直す","Reinstall","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:259","",""
+"manager-3eefdf40e6","manager","やめる","Cancel","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:260 | manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:306 | manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:310","",""
+"manager-a33a1528a2","manager","この版は「modを更新」では入れられません。セーブを書き出してから、modを入れ直してください。","This version cannot be installed using ""Update mod"". Export your save, then reinstall the mod.","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:276","",""
+"manager-a7372f32aa","manager","正規版を削除します","Uninstall the original game","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:299","",""
+"manager-96d9f3a967","manager","modを導入するには、いま入っている正規版をいったん削除する必要があります。削除すると、この端末にあるセーブデータも消えます。先にゲームのクラウドセーブで保存しておくと、導入後に Google データ エクスポートを使って取り込めます。","To install the mod, you must first uninstall the original game. This will also delete the save data on this device. Save to the cloud in the game first so you can import your save using Google Takeout after installing the mod.","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:300","",""
+"manager-56b8d59b66","manager","続ける","Continue","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:301","",""
+"manager-3c072ca7b3","manager","セーブデータは保存しましたか？","Have you backed up your save data?","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:303","",""
+"manager-abfd1659d9","manager","削除したセーブデータは元に戻せません。","Deleted save data cannot be recovered.","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:304","",""
+"manager-f17ccd9811","manager","削除する","Uninstall","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:305","",""
+"manager-9c6a140bd3","manager","導入できませんでした。正規版は Google Play から入れ直せます。","Could not install the mod. You can reinstall the original game from Google Play.","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:358 | manager/app/src/main/java/io/github/fflmod/fflmod/Store.kt:50","",""
+"manager-e216616b97","manager","作ったAPKが見つかりません","Could not find the built APKs.","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:358","",""
+"manager-05bd258fe5","manager","このアプリにアプリのインストールを許可してください。","Allow this app to install apps.","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:364","",""
+"manager-81ddfa9624","manager","modを更新しています…","Updating the mod...","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:371","",""
+"manager-f568d6d810","manager","modを導入しています…","Installing the mod...","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:371","",""
+"manager-fcf6e26970","manager","ゲームの画面を開けませんでした。","Could not open the game's screen.","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt:400","",""
+"manager-24e1a87354","manager","対応している正規版が入っていません","A supported version of the original game is not installed.","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/ModBuild.kt:25","",""
+"manager-35278869c4","manager","作業用のフォルダを作れません","Could not create the working folder.","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/ModBuild.kt:29 | manager/app/src/main/java/io/github/fflmod/fflmod/ModBuild.kt:89","",""
+"manager-bbbe8663a1","manager","空き容量が足りません（あと ${(need - free + (1 shl 20) - 1) shr 20}MB 必要です）","Not enough free space (${(need - free + (1 shl 20) - 1) shr 20}MB more required).","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/ModBuild.kt:33 | manager/app/src/main/java/io/github/fflmod/fflmod/ModBuild.kt:93","",""
+"manager-ff84efdff8","manager","差分一式を取得しています…","Downloading the mod patch files...","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/ModBuild.kt:35","",""
+"manager-97695ec2a8","manager","AndroidManifest.xml がありません","AndroidManifest.xml is missing.","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/ModBuild.kt:40 | manager/app/src/main/java/io/github/fflmod/fflmod/ModBuild.kt:97","",""
+"manager-c9ad8de8de","manager","正規版の manifest が想定と違います","The original game's manifest does not match the expected version.","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/ModBuild.kt:42","",""
+"manager-ba051593d6","manager","manifest の書き換えの結果が想定と違います","The patched manifest does not match the expected result.","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/ModBuild.kt:44","",""
+"manager-8273d32799","manager","$name を作っています…","Building $name...","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/ModBuild.kt:54","",""
+"manager-2d3176180b","manager","この版は更新では入れられません","This version cannot be installed as an update.","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/ModBuild.kt:76","",""
+"manager-9aff273425","manager","fflmod が入っていません","fflmod is not installed.","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/ModBuild.kt:82","",""
+"manager-e03e2751c1","manager","split_config.arm64_v8a.apk がありません","split_config.arm64_v8a.apk is missing.","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/ModBuild.kt:86","",""
+"manager-a7a85c0749","manager","mod の dex が見つかりません","Could not find the mod's DEX file.","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/ModBuild.kt:105","",""
+"manager-f39ec316f0","manager","${src.name} を作っています…","Building ${src.name}...","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/ModBuild.kt:115","",""
+"manager-584e19c1d4","manager","files.json の形式 ${info.getInt(""format"")} には対応していません","Unsupported files.json format: ${info.getInt(""format"")}","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/Release.kt:35","",""
+"manager-99795bac71","manager","interface ${info.getInt(""interface"")} には対応していません","Unsupported interface version: ${info.getInt(""interface"")}","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/Release.kt:36","",""
+"manager-91c5e10d32","manager","この Release は、管理アプリが対応しているゲームの版と違います","This release targets a different game version from the one supported by the manager.","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/Release.kt:41","",""
+"manager-e2a333a2c7","manager","$name が Release にありません","$name is missing from the release.","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/Release.kt:46","",""
+"manager-622863d65c","manager","$name が files.json と一致しません","$name does not match files.json.","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/Release.kt:49","",""
+"manager-8db746790c","manager","Release が見つかりません","Could not find a release.","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/Release.kt:74","",""
+"manager-c0aca8b5e6","manager","転送先が多すぎます: $url","Too many redirects: $url","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/Release.kt:109","",""
+"manager-6f92cf3c15","manager","fflmod ${version(ctx)} に更新しました。","Updated to fflmod ${version(ctx)}.","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/Store.kt:47","",""
+"manager-bd23c7dc4a","manager","fflmod ${version(ctx)} を導入しました。
+セーブを取り込むときは「セーブを取り込む」を押してください。","Installed fflmod ${version(ctx)}.
+To import your save data, select ""Import save"".","mod_source","existing_draft","manager/app/src/main/java/io/github/fflmod/fflmod/Store.kt:48","",""
+"save-dialog-4d7c60b538","save_dialog","セーブデータが見つかりません。ゲームで一度セーブしてから書き出してください。","No save data found. Save in the game at least once before exporting.","mod_source","existing_draft","src/smali/FFLModSaveActivity.smali:362","",""
+"save-dialog-0f63abbcef","save_dialog","書き出しに失敗しました。保存先を変えてもう一度お試しください。","Export failed. Choose a different location and try again.","mod_source","existing_draft","src/smali/FFLModSaveActivity.smali:431 | src/smali/FFLModSaveActivity.smali:494","",""
+"save-dialog-c181bb0788","save_dialog","セーブデータを書き出しました。","Save data exported.","mod_source","existing_draft","src/smali/FFLModSaveActivity.smali:484","",""
+"save-dialog-e1f2ac561c","save_dialog","ファイルを読み込めませんでした。","Could not read the file.","mod_source","existing_draft","src/smali/FFLModSaveActivity.smali:531 | src/smali/FFLModSaveActivity.smali:618 | src/smali/FFLModSaveActivity.smali:823","",""
+"save-dialog-4c0c678f5d","save_dialog","このファイルはFFレジェンズのセーブデータではありません。","This file is not FF Dimensions save data.","mod_source","existing_draft","src/smali/FFLModSaveActivity.smali:608","",""
+"save-dialog-7d0775b142","save_dialog","Google データ エクスポートのクラウドセーブ","The cloud save from Google Takeout","mod_source","existing_draft","src/smali/FFLModSaveActivity.smali:771","",""
+"save-dialog-250bd3ad36","save_dialog","（最終更新："," （Last updated: ","mod_source","existing_draft","src/smali/FFLModSaveActivity.smali:777","",""
+"save-dialog-597919fc78","save_dialog","を取り込みます。"," will be imported.","mod_source","existing_draft","src/smali/FFLModSaveActivity.smali:788","",""
+"save-dialog-c585303770","save_dialog","このファイルにはセーブデータが入っていません。一緒に届いたもう一つのzipファイルを選んでください。","This file contains no save data. Select the other ZIP file included in your export.","mod_source","existing_draft","src/smali/FFLModSaveActivity.smali:805","",""
+"save-dialog-9c1dec2d3e","save_dialog","このzipファイルにはFFレジェンズのセーブデータが入っていません。","This ZIP file contains no FF Dimensions save data.","mod_source","existing_draft","src/smali/FFLModSaveActivity.smali:814","",""
+"save-dialog-9c7c18ecb5","save_dialog","選んだセーブデータを取り込みます。","The selected save data will be imported.","mod_source","existing_draft","src/smali/FFLModSaveActivity.smali:845","",""
+"save-dialog-2962a5338c","save_dialog","今のセーブデータは上書きされます。必要な場合は、先に書き出しておいてください。取り込んだあと、ゲームを終了します。","Your current save data will be overwritten. Export it first if you want to keep it. The game will close after the import.","mod_source","existing_draft","src/smali/FFLModSaveActivity.smali:851","",""
+"save-dialog-d535dca5e3","save_dialog","セーブデータの取り込み","Import save data","mod_source","existing_draft","src/smali/FFLModSaveActivity.smali:865","",""
+"save-dialog-94ad857900","save_dialog","取り込む","Import","mod_source","existing_draft","src/smali/FFLModSaveActivity.smali:881","",""
+"save-dialog-a56331c3d8","save_dialog","やめる","Cancel","mod_source","existing_draft","src/smali/FFLModSaveActivity.smali:891","",""
+"save-dialog-78087f06a3","save_dialog","取り込みの準備ができました。ゲームを終了します。次にゲームを起動したときに反映されます。","The import is ready. The game will now close. Your save data will be applied the next time you start the game.","mod_source","existing_draft","src/smali/FFLModSaveActivity.smali:953","",""
+"save-dialog-a30871d8bb","save_dialog","取り込みに失敗しました。","Import failed.","mod_source","existing_draft","src/smali/FFLModSaveActivity.smali:965","",""
+"save-dialog-e532b24c6b","save_dialog","取り込みを取りやめました。","Import canceled.","mod_source","existing_draft","src/smali/FFLModSaveActivity.smali:989 | src/smali/FFLModSaveActivity.smali:1057","",""
+"save-dialog-603127c025","save_dialog","書き出しを取りやめました。","Export canceled.","mod_source","existing_draft","src/smali/FFLModSaveActivity.smali:1052","",""
+"story-gap-868310e193d1","story_text","なし","None","supplemental_base_gap","draft_translation","msg0.dat:0:text | msg1.dat:0:text | msg2.dat:0:text | msg3.dat:0:text | msg4.dat:0:text | msg5.dat:0:text | msg6.dat:0:text | msg7.dat:0:text | msg8.dat:0:text | msg9.dat:0:text | msg10.dat:0:text | msg11.dat:0:text | msg12.dat:0:text | msg13.dat:0:text | msg15.dat:0:text","translations/additional_english_drafts.json","[]"
+"story-gap-9d7e29ed21a5","story_text","ＨＰが回復した！","Your HP has been restored!","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg0.dat:3:text | msg4.dat:3:text | msg5.dat:3:text | msg7.dat:3:text | msg10.dat:3:text | msg12.dat:3:text | msg13.dat:3:text | msg15.dat:3:text","msg1.dat:3:text","[""Your HP has been restored!""]"
+"story-gap-0845438dcbfb","story_text","<cha0>たちは
+５ＪＰ（ジョブポイント）を
+手に入れた！","<cha0>'s party receives 5 JP (Job Points)!","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg0.dat:6:text | msg12.dat:6:text | msg15.dat:6:text","msg1.dat:6:text","[""<cha0>'s party receives 5 JP (Job Points)!""]"
+"story-gap-8d270b5030fe","story_text","【チャレンジダンジョン】に
+行けるようになった！
+
+どこかにいるモーグリに
+話しかけてみてください。","You can now visit the
+Challenge Dungeon!
+
+Speak to a moogle
+to find out more.","supplemental_base_gap","draft_translation","msg0.dat:7:text | msg1.dat:7:text | msg2.dat:7:text | msg3.dat:7:text | msg4.dat:7:text | msg5.dat:7:text | msg6.dat:7:text | msg7.dat:7:text | msg8.dat:7:text | msg9.dat:7:text | msg11.dat:7:text | msg12.dat:7:text","translations/additional_english_drafts.json","[]"
+"story-gap-b995fd101e90","story_text","「ボクはみなさんを
+　さらなる戦いの場に導く
+　モーグリですクポ。
+　もうちょっと冒険を進めたら
+　忘れずにまた
+　会いにきてほしいクポ！」","Mog can take you somewhere to find further challenges! Come see me again once you've done a bit more adventuring, kupo!","mod_related_story","existing_game_English_exact_Japanese_match","msg0.dat:32:text | msg1.dat:490:text | msg2.dat:490:text | msg3.dat:33:text | msg4.dat:580:text | msg4.dat:581:text | msg5.dat:40:text | msg6.dat:33:text | msg7.dat:33:text | msg8.dat:33:text | msg9.dat:33:text","msg12.dat:95:text","[""Mog can take you somewhere to find further challenges! Come see me again once you've done a bit more adventuring, kupo!""]"
+"story-gap-886d6a2c6585","story_text","「クポポ！
+　お待ちしてましたクポ！
+
+　ボクはみなさんを
+　さらなる戦いの場に
+　導くことができるクポ。","Kupopo! Mog has been waiting for you to come back and see him! I can bring you new challenges, kupo!","mod_related_story","existing_game_English_exact_Japanese_match","msg0.dat:33:text | msg1.dat:491:text | msg2.dat:491:text | msg3.dat:34:text | msg4.dat:582:text | msg5.dat:41:text | msg6.dat:34:text | msg7.dat:34:text | msg8.dat:34:text | msg9.dat:34:text","msg12.dat:96:text","[""Kupopo! Mog has been waiting for you to come back and see him! I can bring you new challenges, kupo!""]"
+"story-gap-31898a14935e","story_text","　さあ、『チャレンジダンジョン』に
+　挑戦するクポ？」","Ready to take on the
+Challenge Dungeon, kupo?","mod_related_story","draft_translation","msg0.dat:34:text | msg1.dat:492:text | msg2.dat:492:text | msg3.dat:35:text | msg4.dat:583:text | msg5.dat:42:text | msg6.dat:35:text | msg7.dat:35:text | msg8.dat:35:text | msg9.dat:35:text","translations/additional_english_drafts.json","[]"
+"story-gap-a3e4f3acd960","story_text","「わかりましたクポ！
+　では、気をつけて
+　いってらっしゃいクポ～！」","Okay! Make sure you don't get hurt, kupo!","mod_related_story","existing_game_English_exact_Japanese_match","msg0.dat:35:text | msg1.dat:493:text | msg2.dat:493:text | msg3.dat:36:text | msg4.dat:584:text | msg5.dat:43:text | msg6.dat:36:text | msg7.dat:36:text | msg8.dat:36:text | msg9.dat:36:text","msg12.dat:98:text","[""Okay! Make sure you don't get hurt, kupo!""]"
+"story-gap-c0c47c93aeaa","story_text","「クポポ…残念ですクポ。
+　行きたくなったら
+　また話しかけてほしいクポ！」","Awww...
+
+
+Well, Mog is always here if you change your mind, kupo!","mod_related_story","existing_game_English_exact_Japanese_match","msg0.dat:36:text | msg1.dat:494:text | msg2.dat:494:text | msg3.dat:37:text | msg4.dat:585:text | msg5.dat:44:text | msg6.dat:37:text | msg7.dat:37:text | msg8.dat:37:text | msg9.dat:37:text","msg12.dat:99:text","[""Awww...\n\n\nWell, Mog is always here if you change your mind, kupo!""]"
+"story-gap-299cd06f27a8","story_text","<cha0>たちのＨＰとＭＰが回復した！","<cha0>'s party's HP and MP have been restored!","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg0.dat:37:text","msg1.dat:41:text","[""<cha0>'s party's HP and MP have been restored!""]"
+"story-gap-aa406750a356","story_text","「お待ちしてましたクポ！
+　さあ、『チャレンジダンジョン』に
+　挑戦するクポ？」","Mog has been waiting for you, kupo!
+Ready to take on the
+Challenge Dungeon?","mod_related_story","draft_translation","msg0.dat:48:text | msg1.dat:495:text | msg2.dat:495:text | msg3.dat:38:text | msg4.dat:586:text | msg5.dat:45:text | msg6.dat:38:text | msg7.dat:38:text | msg8.dat:38:text | msg9.dat:38:text","translations/additional_english_drafts.json","[]"
+"story-gap-b1bd6f813db0","story_text","ダンジョンから脱出しますか？","Leave the dungeon?","mod_related_story","existing_game_English_exact_Japanese_match","msg0.dat:49:text | msg3.dat:39:text | msg4.dat:49:text | msg5.dat:49:text | msg6.dat:39:text | msg7.dat:39:text | msg8.dat:39:text | msg9.dat:39:text","msg1.dat:49:text","[""Leave the dungeon?""]"
+"story-gap-1c98dae10a10","story_text","「さ、急ごうぜ。
+　陽が暮れちまう」","Come on, let's hurry.
+It'll be dark soon.","supplemental_base_gap","draft_translation","msg0.dat:93:text","translations/additional_english_drafts.json","[]"
+"story-gap-d5056aa50884","story_text","暁の章","Prologue","supplemental_base_gap","draft_translation","msg0.dat:358:text","translations/additional_english_drafts.json","[]"
+"story-gap-565ea87d393b","story_text","「…勝手にしてくれ」","...Do as you like.","supplemental_base_gap","draft_translation","msg0.dat:378:text","translations/additional_english_drafts.json","[]"
+"story-gap-b1688c1a4301","story_text","「……！」","!","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg0.dat:427:text | msg4.dat:173:text","msg0.dat:51:text","[""!"",""..."",""...!"",""(Last survivors!?)"",""Look!"",""(No!)"",""It's reacting to something!""]"
+"story-gap-d97c553c4e89","story_text","「ここに囚われている
+　確証はありません。
+
+　でも、調べてみる価値は
+　あります」","We have no proof that
+they're being held here.
+
+But it's worth investigating.","supplemental_base_gap","draft_translation","msg0.dat:651:text","translations/additional_english_drafts.json","[]"
+"story-gap-8973037a2105","story_text","「おお、ありがたい！
+
+
+　私は、旅の商人。
+　お礼といってはなんですが
+　役立つものをお売りしましょう！」","Oh, thank you!
+
+I'm a traveling merchant.
+As a small token of my gratitude,
+let me sell you some useful goods!","supplemental_base_gap","draft_translation","msg0.dat:685:text","translations/additional_english_drafts.json","[]"
+"story-gap-2a47f8a88fa9","story_text","「クッ…！！」","I cannot control it!","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg0.dat:1000:text | msg1.dat:54:text | msg2.dat:54:text","msg0.dat:745:text","[""I cannot control it!""]"
+"story-gap-87f84acb6bcd","story_text","「おのれ、貴様ら！」","Time to die!","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg0.dat:1001:text | msg1.dat:55:text | msg2.dat:55:text","msg0.dat:1055:text","[""Time to die!""]"
+"story-gap-2cdc455a650d","story_text","「争ってる場合かよ！」","But the ship--!","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg0.dat:1002:text | msg1.dat:56:text | msg2.dat:56:text","msg0.dat:1056:text","[""But the ship--!""]"
+"story-gap-9260202d3e00","story_text","「問答無用！」","No excuses from the likes of you!","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg0.dat:1003:text | msg1.dat:57:text | msg2.dat:57:text","msg0.dat:1057:text","[""No excuses from the likes of you!""]"
+"story-gap-1f0f593b2df3","story_text","「エルゴ！？」","Elgo!?","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg0.dat:1006:text | msg1.dat:60:text | msg2.dat:60:text","msg0.dat:1060:text","[""Elgo!?""]"
+"story-gap-6d820b255d03","story_text","「行け…」","Go.","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg0.dat:1007:text | msg1.dat:61:text | msg2.dat:61:text","msg0.dat:1061:text","[""Go.""]"
+"story-gap-f0f652985256","story_text","「そんな…！」","No, they can't be--","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg0.dat:1008:text | msg1.dat:62:text | msg2.dat:62:text","msg0.dat:495:text","[""No, they can't be--"",""If that's true, it's unforgivable!"",""How can you say such a thing!"",""But--"",""You can't!"",""Mother, I--"",""No!"",""How could the Empire have moved so quickly!?"",""Then everyone here s-suffered the same fate as those in Mysidia."",""By the Crystals... What happened?""]"
+"story-gap-2cc23bff229e","story_text","「行け…！」","Go!","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg0.dat:1009:text | msg1.dat:63:text | msg2.dat:63:text","msg0.dat:1063:text","[""Go!""]"
+"story-gap-d1f0173a9c02","story_text","「どうするつもりだ」","What are you--","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg0.dat:1010:text | msg1.dat:64:text | msg2.dat:64:text","msg0.dat:1064:text","[""What are you--""]"
+"story-gap-ffc9eb892dd8","story_text","「これが…私の役目…
+　光の戦士を探し…
+　思いを…託…す…」","This is my...duty. To find and serve...the Warriors of Light.","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg1.dat:50:text | msg2.dat:50:text","msg0.dat:741:text","[""This is my...duty. To find and serve...the Warriors of Light.""]"
+"story-gap-6c960a9faf48","story_text","「エルゴさん…」","Elgo...","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg1.dat:51:text | msg2.dat:51:text","msg0.dat:742:text","[""Elgo...""]"
+"story-gap-7cfc69437415","story_text","「よかったよ…
+　光の戦士が…
+　君たち…で…」","I'm glad that... you kind-hearted souls are...the chosen ones.","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg1.dat:52:text | msg2.dat:52:text","msg0.dat:743:text","[""I'm glad that... you kind-hearted souls are...the chosen ones.""]"
+"story-gap-1f0ba41eba77","story_text","「エルゴ！？
+　エルゴー…ッ！！」","Elgo? Elgo!!!","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg1.dat:53:text | msg2.dat:53:text","msg0.dat:744:text","[""Elgo? Elgo!!!""]"
+"story-gap-99a43f111533","story_text","「脱出しろ…
+　私は、舵を…！」","I'll steer the ship. Just get out of here!","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg1.dat:66:text | msg2.dat:66:text","msg0.dat:1066:text","[""I'll steer the ship. Just get out of here!""]"
+"story-gap-2189bb1df3e9","story_text","「そんな…」","Elgo, why!?","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg1.dat:67:text | msg2.dat:67:text","msg0.dat:1067:text","[""Elgo, why!?"",""Why must we give up hope?"",""You musn't blame yourself."",""They've got us cornered!"",""It can't be!"",""They used you!"",""Too many lives have been lost already."",""How is that--?"",""Tragedy upon tragedy..."",""After all we've been through!""]"
+"story-gap-aed04a7690db","story_text","「さあ、行くのだ
+　光の戦士たちよ…！」","Hurry, Warriors of Light!","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg1.dat:68:text | msg2.dat:68:text","msg0.dat:1068:text","[""Hurry, Warriors of Light!""]"
+"story-gap-5c4176489ff7","story_text","獣の動きを思い出しますか？","Recall the beast's movements?","mod_related_story","draft_translation","msg3.dat:24:text","translations/additional_english_drafts.json","[]"
+"story-gap-c0dfce485081","story_text","「き、貴様…！」","Y-you...!","supplemental_base_gap","draft_translation","msg3.dat:339:text","translations/additional_english_drafts.json","[]"
+"story-gap-10abe3d351f4","story_text","「これも…
+　予言どおりか…？」","Was this, too...
+foretold in the prophecy...?","supplemental_base_gap","draft_translation","msg3.dat:340:text","translations/additional_english_drafts.json","[]"
+"story-gap-a137a3bb8891","story_text","また、お越しください。","Please come again.","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg4.dat:8:text | msg5.dat:8:text","msg1.dat:8:text","[""Please come again.""]"
+"story-gap-ced55e9f2951","story_text","お客さん、お金が足りませんよ。","You don't have enough gil.","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg4.dat:9:text | msg5.dat:9:text","msg1.dat:9:text","[""You don't have enough gil.""]"
+"story-gap-8747b7a1edbf","story_text","黒チョコボみーっけ！","You catch a black chocobo!","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg4.dat:37:text | msg10.dat:9:text | msg11.dat:9:text | msg12.dat:9:text | msg13.dat:9:text","msg0.dat:9:text","[""You catch a black chocobo!"",""You catch a chocobo!""]"
+"story-gap-f1feabcef8e8","story_text","黒チョコボは空を飛んで移動できますが
+海や山など飛べない場所もあります。
+森にのみ着陸できます。","Black chocobos can fly, but they cannot cross mountains or oceans, and can land only in forests.","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg4.dat:38:text | msg10.dat:11:text | msg11.dat:11:text | msg12.dat:11:text | msg13.dat:11:text","msg0.dat:846:text","[""Black chocobos can fly, but they cannot cross mountains or oceans, and can land only in forests.""]"
+"story-gap-a9d9522fef40","story_text","経度：<tmp0>
+緯度：<tmp1>","Lon: <tmp0>
+Lat: <tmp1>","mod_related_story","draft_translation","msg4.dat:39:text","translations/additional_english_drafts.json","[]"
+"story-gap-ca86d20650d9","story_text","幽霊船の位置
+　　経度：<tmp2>
+　　緯度：<tmp3>","Ghost ship location
+Lon: <tmp2>
+Lat: <tmp3>","mod_related_story","draft_translation","msg4.dat:40:text","translations/additional_english_drafts.json","[]"
+"story-gap-418528790a6a","story_text","宝箱には
+【コンパス】が入っていた！
+
+船に乗って決定キーを押すと
+幽霊船の位置を調べることができます。","Found a Compass in the chest!
+
+While aboard the ship, press
+the confirm button to check
+the ghost ship's location.","mod_related_story","draft_translation","msg4.dat:41:text","translations/additional_english_drafts.json","[]"
+"story-gap-7a69d31837e5","story_text","「海をさまよう幽霊船を見つけて
+　お宝をゲットするクポ！
+
+　まずは外にある船に乗って
+　【コンパス】を探すといいクポ。
+
+　【コンパス】を使えば
+　幽霊船の位置がわかるクポ！」","Find the ghost ship roaming
+the seas and claim its treasure, kupo!
+
+First, board the ship outside
+and look for a Compass.
+
+The Compass will show you
+the ghost ship's location, kupo!","mod_related_story","draft_translation","msg4.dat:42:text","translations/additional_english_drafts.json","[]"
+"story-gap-3ad7ca1859db","story_text","「海をさまよう幽霊船を見つけて
+　お宝をゲットするクポ！
+
+　【コンパス】を手に入れたクポ？
+　船に乗って決定キーを押せば
+　幽霊船の位置がわかるクポ！」","Find the ghost ship roaming
+the seas and claim its treasure, kupo!
+
+Have you found a Compass?
+Board the ship and press
+the confirm button to check
+the ghost ship's location, kupo!","mod_related_story","draft_translation","msg4.dat:43:text","translations/additional_english_drafts.json","[]"
+"story-gap-fca2fe4ece8a","story_text","「むにゃむにゃ…
+　誰も通さないぞ…」","Mmm... No one gets past me...","supplemental_base_gap","draft_translation","msg4.dat:316:text","translations/additional_english_drafts.json","[]"
+"story-gap-c142d80872dc","story_text","カルマ
+<tmp0>点","Karma
+<tmp0>","mod_related_story","draft_translation","msg5.dat:46:text","translations/additional_english_drafts.json","[]"
+"story-gap-233eaf3f1a3f","story_text","<cha4>たちは
+５ＪＰ（ジョブポイント）を
+手に入れた！","<cha4>'s party receives 5 JP (Job Points)!","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg5.dat:356:text | msg11.dat:25:text | msg12.dat:25:text | msg15.dat:25:text","msg3.dat:6:text","[""<cha4>'s party receives 5 JP (Job Points)!""]"
+"story-gap-62a98760ab94","story_text","「たくさんいる魔物を倒して
+　カルマ（得点）をためるクポ！
+
+　カルマをたくさんためてから
+　ボスを倒すと良いものがもらえる
+　確率が上がるクポ。
+　でもカルマが下がっちゃう
+　魔物もいるから
+　戦いすぎには注意するクポ！」","Defeat monsters to earn
+Karma points, kupo!
+
+The more Karma you have when
+you defeat the boss, the better
+your chances of a valuable reward.
+
+But some monsters lower your Karma,
+so don't get carried away, kupo!","mod_related_story","draft_translation","msg5.dat:430:text","translations/additional_english_drafts.json","[]"
+"story-gap-bf688b212af7","story_text","「カルマ（得点）の基準は…
+　　Ｓ　９００点以上
+　　Ａ　６００点以上
+　　Ｂ　４００点以上
+　　Ｃ　２００点以上
+　　Ｄ　１００点以上
+　こんな感じになってるクポ！
+　最低でも１００点あれば
+　ゲットできないお宝はないクポ」","Here are the Karma ranks, kupo!
+S: 900 points or more
+A: 600 points or more
+B: 400 points or more
+C: 200 points or more
+D: 100 points or more
+
+With at least 100 points,
+you have a chance at any treasure!","mod_related_story","draft_translation","msg5.dat:431:text","translations/additional_english_drafts.json","[]"
+"story-gap-2964c96a6612","story_text","カルマ：<tmp0>点","Karma: <tmp0>","mod_related_story","draft_translation","msg5.dat:435:text","translations/additional_english_drafts.json","[]"
+"story-gap-d646fa355235","story_text","ダンジョンから脱出しますか？
+カルマは次回に持ち越せません。","Leave the dungeon?
+Your Karma will not carry over
+to your next visit.","mod_related_story","draft_translation","msg5.dat:438:text","translations/additional_english_drafts.json","[]"
+"story-gap-8246e52521d8","story_text","現在のカルマでボスへ行きますか？","Face the boss with your current Karma?","mod_related_story","draft_translation","msg5.dat:439:text","translations/additional_english_drafts.json","[]"
+"story-gap-59aab688312f","story_text","「ヘッヘ！
+　少しは腕を上げたな！
+
+　だが、ガキどもは
+　どうかな！？」","Heh heh!
+You've improved a little!
+
+But what about these brats!?","supplemental_base_gap","draft_translation","msg5.dat:522:text","translations/additional_english_drafts.json","[]"
+"story-gap-45894a1330ef","story_text","「いかん…！」","No...!","supplemental_base_gap","draft_translation","msg5.dat:523:text","translations/additional_english_drafts.json","[]"
+"story-gap-bbf0f59fb107","story_text","「！！」","!!","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg5.dat:524:text","msg0.dat:513:text","[""!!"",""!""]"
+"story-gap-22da88a9a0c8","story_text","【シグルドの兜】を
+手に入れた！","Obtained Sigurd's Helm!","supplemental_base_gap","draft_translation","msg5.dat:525:text","translations/additional_english_drafts.json","[]"
+"story-gap-a611ef7dcdc2","story_text","【シグルドの小手】を
+手に入れた！","Obtained Sigurd's Armlet!","supplemental_base_gap","draft_translation","msg5.dat:526:text","translations/additional_english_drafts.json","[]"
+"story-gap-30f7fcfe43c6","story_text","元の状態に戻しますか？","Restore the original state?","supplemental_base_gap","draft_translation","msg6.dat:42:text","translations/additional_english_drafts.json","[]"
+"story-gap-a3f60883d706","story_text","ボタンを押しても反応がない。","Nothing happens when you press the button.","supplemental_base_gap","draft_translation","msg6.dat:464:text","translations/additional_english_drafts.json","[]"
+"story-gap-6bebd8e88d6d","story_text","宝箱には
+カジノコインが<tmp0>枚入っていた！","Found <tmp0> Casino Coins
+in the chest!","supplemental_base_gap","draft_translation","msg7.dat:23:text","translations/additional_english_drafts.json","[]"
+"story-gap-f9169504a3e0","story_text","「……」","(I-I hope so...)","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg7.dat:220:text","msg0.dat:146:text","[""(I-I hope so...)"",""..."",""(blink, blink)"",""(silence)"",""(Something's wrong with this picture.)"",""Zzz..."",""......""]"
+"story-gap-6ce38286efc3","story_text","返事がない…。","There is no response...","supplemental_base_gap","draft_translation","msg7.dat:328:text","translations/additional_english_drafts.json","[]"
+"story-gap-06a48764dc91","story_text","「コインをいくつ使いますか？」","How many coins would you like to use?","supplemental_base_gap","draft_translation","msg7.dat:792:text","translations/additional_english_drafts.json","[]"
+"story-gap-c0e3f4063c54","story_text","×50　　　×30　　　×20
+
+×10　　　×5　　　 ×1","x50     x30     x20
+
+x10     x5      x1","supplemental_base_gap","draft_translation","msg7.dat:1004:text","translations/additional_english_drafts.json","[]"
+"story-gap-5812d9a7dfd8","story_text","いらっしゃいませ。
+一泊<tmp0>ギルですが
+お泊まりになりますか？","Welcome. It costs <tmp0> gil for a room. Would you like to rest?","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg8.dat:26:text","msg6.dat:26:text","[""Welcome. It costs <tmp0> gil for a room. Would you like to rest?""]"
+"story-gap-c3c4aeb00772","story_text","またお越しください。","Please come again.","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg8.dat:27:text","msg6.dat:27:text","[""Please come again.""]"
+"story-gap-6f00abe50b15","story_text","お金が足りませんよ。","You don't have enough gil.","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg8.dat:28:text","msg6.dat:28:text","[""You don't have enough gil.""]"
+"story-gap-78bd820d526a","story_text","<cha4>たちは
+４ＪＰ（ジョブポイント）を
+手に入れた！","<cha4>'s party receives 4 JP (Job Points)!","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg9.dat:22:text","msg3.dat:22:text","[""<cha4>'s party receives 4 JP (Job Points)!""]"
+"story-gap-6fc7d57225a7","story_text","ＭＰが回復した！","Your MP has been restored!","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg10.dat:4:text | msg12.dat:4:text | msg13.dat:4:text | msg15.dat:4:text","msg0.dat:4:text","[""Your MP has been restored!""]"
+"story-gap-6d49b08ba89e","story_text","クリア後のセーブデータでは
+光の戦士と闇の戦士で操作を
+切り替えて遊ぶことができます。
+それぞれの世界にいる
+モーグリに話しかけてください。","After clearing the game, you can
+switch between the Warriors of Light
+and the Warriors of Darkness.
+Speak to the moogle in each world
+to switch parties.","supplemental_base_gap","draft_translation","msg10.dat:7:text | msg13.dat:7:text","translations/additional_english_drafts.json","[]"
+"story-gap-39a51893bdc5","story_text","白チョコボみーっけ！","You catch a white chocobo!","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg10.dat:8:text | msg11.dat:8:text | msg12.dat:8:text | msg13.dat:8:text","msg0.dat:845:text","[""You catch a white chocobo!""]"
+"story-gap-3b4655ea35a1","story_text","チョコボみーっけ！","You catch a chocobo!","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg10.dat:10:text | msg11.dat:10:text | msg12.dat:10:text | msg13.dat:10:text","msg0.dat:10:text","[""You catch a chocobo!""]"
+"story-gap-ae24a18328e6","story_text","「クエッ、クエーッ！」","Kweh, kweeeh!","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg10.dat:31:text | msg11.dat:31:text | msg12.dat:31:text | msg13.dat:31:text","msg0.dat:555:text","[""Kweh, kweeeh!""]"
+"story-gap-903c67a73634","story_text","召喚魔法【チョコボ】を
+手に入れた！","You learn the summoning spell ""Chocobo""!","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg10.dat:32:text | msg11.dat:32:text | msg12.dat:32:text | msg13.dat:32:text","msg0.dat:556:text","[""You learn the summoning spell \""Chocobo\""!""]"
+"story-gap-4b57d2b9be22","story_text","「ボクは闇の世界に
+　操作を変更できる
+　モーグリですクポ」","Mog can switch you over to
+the World of Darkness, kupo!","supplemental_base_gap","draft_translation","msg10.dat:33:text | msg13.dat:33:text","translations/additional_english_drafts.json","[]"
+"story-gap-a43f6d08f294","story_text","「<cha4>さんたちに
+　操作を変更するクポ？」","Switch to <cha4>'s party, kupo?","supplemental_base_gap","draft_translation","msg10.dat:34:text | msg13.dat:34:text","translations/additional_english_drafts.json","[]"
+"story-gap-7b10632d5adb","story_text","「<cha0>さんたちに
+　操作を変更するクポ？」","Switch to <cha0>'s party, kupo?","supplemental_base_gap","draft_translation","msg10.dat:35:text | msg13.dat:35:text","translations/additional_english_drafts.json","[]"
+"story-gap-0267c37452b5","story_text","「わかりましたクポ！」","Okay, kupo!","supplemental_base_gap","draft_translation","msg10.dat:36:text | msg13.dat:36:text","translations/additional_english_drafts.json","[]"
+"story-gap-4c86cbd7a774","story_text","「操作を変更したくなったら
+　いつでも来てほしいクポ！」","Come see Mog whenever
+you want to switch parties, kupo!","supplemental_base_gap","draft_translation","msg10.dat:37:text | msg13.dat:37:text","translations/additional_english_drafts.json","[]"
+"story-gap-98490c754a18","story_text","「ボクは光の世界に
+　操作を変更できる
+　モーグリですクポ」","Mog can switch you over to
+the World of Light, kupo!","supplemental_base_gap","draft_translation","msg10.dat:38:text | msg13.dat:38:text","translations/additional_english_drafts.json","[]"
+"story-gap-4720b4039d68","story_text","「でも今はまだできないクポ…。
+　今回の冒険を終えたら
+　また来てほしいクポ」","But Mog can't do that just yet...
+Come back once you've finished
+this adventure, kupo!","supplemental_base_gap","draft_translation","msg10.dat:39:text | msg13.dat:39:text","translations/additional_english_drafts.json","[]"
+"story-gap-7a08efbfc0cb","story_text","<cha0>たちは
+３ＪＰ（ジョブポイント）を
+手に入れた！","<cha0>'s party receives 3 JP (Job Points)!","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg11.dat:6:text","msg4.dat:16:text","[""<cha0>'s party receives 3 JP (Job Points)!"",""<cha0>'s party receives 3 JP (Job Points!)""]"
+"story-gap-4cc2569dd7f9","story_text","<cha0>たちは
+７ＪＰ（ジョブポイント）を
+手に入れた！","<cha0>'s party receives 7 JP (Job Points)!","supplemental_base_gap","draft_translation","msg11.dat:22:text | msg12.dat:22:text | msg15.dat:22:text","translations/additional_english_drafts.json","[]"
+"story-gap-9e8942f7659d","story_text","<cha4>たちは
+７ＪＰ（ジョブポイント）を
+手に入れた！","<cha4>'s party receives 7 JP (Job Points)!","supplemental_base_gap","draft_translation","msg11.dat:26:text | msg12.dat:26:text | msg15.dat:26:text","translations/additional_english_drafts.json","[]"
+"story-gap-b111b4094359","story_text","「もうちょっと冒険を進めたら
+　忘れずにまた
+　会いにきてほしいクポ！」","Don't forget to come say hi after you've adventured a bit more, kupo!","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg11.dat:33:text","msg12.dat:33:text","[""Don't forget to come say hi after you've adventured a bit more, kupo!""]"
+"story-gap-7fb8d472da7d","story_text","『終章・後編』は
+2011年8月配信予定です。","The second half of the final chapter
+is scheduled for release in August 2011.","supplemental_base_gap","draft_translation","msg11.dat:95:text","translations/additional_english_drafts.json","[]"
+"story-gap-c499279bfcc5","story_text","「この光は！？」","What is this infernal light!?","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg11.dat:100:text","msg10.dat:1200:text","[""What is this infernal light!?""]"
+"story-gap-5c63ff3fcaf9","story_text","「大長老…！」","Great Elder!","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg11.dat:101:text","msg10.dat:264:text","[""Great Elder!"",""Great Elder, are--""]"
+"story-gap-1de2fd896493","story_text","「始まったのじゃ！
+　再び…」","It has begun! Brace yourselves, heroes!","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg11.dat:102:text","msg10.dat:1202:text","[""It has begun! Brace yourselves, heroes!""]"
+"story-gap-1ec11b4ad81d","story_text","「この輝きは…！」","It's blinding!","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg11.dat:103:text","msg10.dat:1204:text","[""It's blinding!""]"
+"story-gap-684b8e5351f0","story_text","「あの時と同じ…！」","This shaking--I've felt it once before!","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg11.dat:110:text","msg10.dat:1210:text","[""This shaking--I've felt it once before!""]"
+"story-gap-97ddcd430872","story_text","「きゃあっ！」","Aaah!","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg11.dat:111:text","msg6.dat:277:text","[""Aaah!"",""Aaaaaah!""]"
+"story-gap-e7714b52bda8","story_text","「これは…！？」","How can this be!?","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg11.dat:112:text","msg10.dat:492:text","[""How can this be!?"",""What's going on?""]"
+"story-gap-aeeb2a7a2d48","story_text","「間違いない…。
+　次元変動…！」","There's no mistaking it. A dimensional shift.","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg11.dat:113:text","msg10.dat:1213:text","[""There's no mistaking it. A dimensional shift.""]"
+"story-gap-45b9752fd6d8","story_text","「世界が…！」","The world is--","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg11.dat:114:text","msg10.dat:1214:text","[""The world is--""]"
+"story-gap-078e2208a8ae","story_text","「１つに戻る…！？」","--becoming whole again!","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg11.dat:115:text","msg10.dat:1215:text","[""--becoming whole again!""]"
+"story-gap-e32b274897f2","story_text","「違う！
+　ここのドットはこう…。
+
+　はっ！
+
+
+　こんにちは！
+　この世界を楽しんでくださいね！」","No! The pixels here should be...
+
+Oh!
+
+Hello!
+I hope you enjoy this world!","supplemental_base_gap","draft_translation","msg11.dat:2505:text","translations/additional_english_drafts.json","[]"
+"story-gap-048b63d4ad5f","story_text","「きーっ！
+　きりきり…胃が！！
+
+　はっ！
+
+
+　こんにちは～。
+　これをどうぞ役立ててください！」","Aaagh! My stomach...
+It's tying itself in knots!
+
+Oh!
+
+Hello there!
+Please put this to good use!","supplemental_base_gap","draft_translation","msg11.dat:2510:text","translations/additional_english_drafts.json","[]"
+"story-gap-5727f8d5fe03","story_text","「さあ、どうするんだ？」","Well? Whaddya say?","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:40:text | msg12.dat:1311:text | msg15.dat:40:text","msg10.dat:40:text","[""Well? Whaddya say?""]"
+"story-gap-1ee0443cc045","story_text","牙を渡す","Hand over fangs.","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:41:text | msg15.dat:41:text","msg10.dat:41:text","[""Hand over fangs.""]"
+"story-gap-4c2626ed7603","story_text","アイテムをもらう","Receive items.","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:42:text | msg15.dat:42:text","msg10.dat:42:text","[""Receive items.""]"
+"story-gap-33991e0ff95e","story_text","「よく来たな。
+　オレは珍しい牙を集める
+　キバコレクターの会員さ」","Welcome to my humble abode! I'm a representative of the Gnomish Guild of Fang Collectors.","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:43:text | msg15.dat:43:text","msg10.dat:43:text","[""Welcome to my humble abode! I'm a representative of the Gnomish Guild of Fang Collectors.""]"
+"story-gap-fba72da5d086","story_text","説明を聞く","Hear more.","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:44:text | msg15.dat:44:text","msg6.dat:602:text","[""Hear more."",""Hear an explanation""]"
+"story-gap-7cbbbc451de2","story_text","「珍しい牙を持ってきてくれたら
+　キバポイント【KP】を与えるぞ。
+　こびとポイントではないぞ、キバだ。","I can exchange yer fangs for Fang Points (FP).
+""F"" as in ""Fang."" Aren't we clever?","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:45:text | msg15.dat:45:text","msg10.dat:45:text","[""I can exchange yer fangs for Fang Points (FP).\n\""F\"" as in \""Fang.\"" Aren't we clever?"",""I can exchange yer fangs for Fang Points (FP). Clever name, no?""]"
+"story-gap-77f60fb084c2","story_text","「おまえが持っている牙は
+　全部で<tmp0>KPになるぞ。
+　牙をもらってもいいか？」","The fangs in yer possession are worth <tmp0> FP.
+Wanna trade yer fangs fer FP?","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:46:text | msg15.dat:46:text","msg10.dat:46:text","[""The fangs in yer possession are worth <tmp0> FP.\nWanna trade yer fangs fer FP?""]"
+"story-gap-e5114471c48b","story_text","「おう、ありがとよ！」","Most excellent!","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:47:text | msg15.dat:47:text","msg10.dat:47:text","[""Most excellent!""]"
+"story-gap-161aefa605b3","story_text","「牙を持ってないじゃないか！」","I cannae help ya if ya dun got fangs!","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:48:text | msg15.dat:48:text","msg10.dat:48:text","[""I cannae help ya if ya dun got fangs!"",""I can't help ya if ya dun got fangs!""]"
+"story-gap-c5d487711e87","story_text","「なんだ、やめるのか…」","Aw, c'mon. What else are ya gonna do with those fangs?","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:49:text | msg12.dat:1314:text | msg15.dat:49:text","msg10.dat:49:text","[""Aw, c'mon. What else are ya gonna do with those fangs?"",""Aw, c'mon!""]"
+"story-gap-fd95d6d65918","story_text","「欲しいアイテムを選んでくれ」","What item can I get fer ya?","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:50:text | msg15.dat:50:text","msg10.dat:50:text","[""What item can I get fer ya?""]"
+"story-gap-7115f972bb49","story_text","<ite<tmp0>>　　：<tmp6>KP","<ite<tmp0>>: <tmp6> FP","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:51:text | msg15.dat:51:text","msg11.dat:51:text","[""<ite<tmp0>>: <tmp6> FP""]"
+"story-gap-430cc3c25716","story_text","<ite<tmp1>>：<tmp7>KP","<ite<tmp1>>: <tmp7> FP","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:52:text | msg15.dat:52:text","msg10.dat:52:text","[""<ite<tmp1>>: <tmp7> FP""]"
+"story-gap-6155bfa5a5a4","story_text","<ite<tmp2>>　　　：<tmp8>KP","<ite<tmp2>>: <tmp8> FP","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:53:text | msg15.dat:53:text","msg11.dat:53:text","[""<ite<tmp2>>: <tmp8> FP""]"
+"story-gap-51b449709c14","story_text","<ite<tmp3>>　　　：<tmp9>KP","<ite<tmp3>>: <tmp9> FP","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:54:text | msg15.dat:54:text","msg11.dat:54:text","[""<ite<tmp3>>: <tmp9> FP""]"
+"story-gap-1e0042f9fb86","story_text","<ite<tmp4>>：<tmp10>KP","<ite<tmp4>>: <tmp10> FP","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:55:text | msg15.dat:55:text","msg10.dat:55:text","[""<ite<tmp4>>: <tmp10> FP""]"
+"story-gap-9eccdca31ee3","story_text","次へ","Next","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:56:text","msg0.dat:18:text","[""Next""]"
+"story-gap-8fc7f899161b","story_text","戻る","Back","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:57:text","msg0.dat:19:text","[""Back""]"
+"story-gap-7ad50fe86075","story_text","<tmp30>KP","<tmp30> FP","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:58:text | msg15.dat:58:text","msg10.dat:58:text","[""<tmp30> FP""]"
+"story-gap-2d8feaeb39ff","story_text","「おっと！
+　これ以上はKPを増やせないぞ。
+
+　アイテムと交換して
+　KPを減らしてから牙を渡してくれ」","Toho! Looks like you've got too much FP!
+
+Trade 'em in for somethin' and then give me yer fangs!","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:59:text | msg15.dat:59:text","msg10.dat:82:text","[""Toho! Looks like you've got too much FP!\n\nTrade 'em in for somethin' and then give me yer fangs!"",""Toho! Looks like you've got too much FP! Trade 'em in for somethin' and then give me yer fangs!""]"
+"story-gap-d88dfe948992","story_text","【<ite<tmp0>>】でいいのか？
+戦闘での獲得経験値が２５％アップする","Ya want this <ite<tmp0>>?
+Increases EXP gained in battle by 25%.","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:60:text | msg15.dat:60:text","msg10.dat:60:text","[""Ya want this <ite<tmp0>>?\nIncreases EXP gained in battle by 25%.""]"
+"story-gap-e07a9fb3bbeb","story_text","【<ite<tmp0>>】でいいのか？
+戦闘での獲得ＡＰが２５％アップする","A <ite<tmp0>>, eh?
+Increases AP gained in battle by 25%.","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:61:text | msg15.dat:61:text","msg10.dat:61:text","[""A <ite<tmp0>>, eh?\nIncreases AP gained in battle by 25%.""]"
+"story-gap-f3a6b1cb55e6","story_text","【<ite<tmp0>>】でいいのか？
+戦闘での獲得ギルが５０％アップする","This lovely <ite<tmp0>>?
+Increases gil gained in battle by 50%.","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:62:text | msg15.dat:62:text","msg10.dat:62:text","[""This lovely <ite<tmp0>>?\nIncreases gil gained in battle by 50%.""]"
+"story-gap-f24cf1f77b1b","story_text","【<ite<tmp0>>】でいいのか？
+敵がレアアイテムを落としやすくなる","A <ite<tmp0>>? Good eye!
+Enemies more likely to drop rare items.","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:63:text | msg15.dat:63:text","msg10.dat:63:text","[""A <ite<tmp0>>? Good eye!\nEnemies more likely to drop rare items.""]"
+"story-gap-3f649c3b8a5c","story_text","【<ite<tmp0>>】でいいのか？
+常にリフレク状態","Choose <ite<tmp0>>?
+Grants permanent Reflect.","supplemental_base_gap","draft_translation","msg12.dat:64:text | msg15.dat:64:text","translations/additional_english_drafts.json","[]"
+"story-gap-3256b4c3d827","story_text","【<ite<tmp0>>】でいいのか？
+常にリジェネ状態","Choose <ite<tmp0>>?
+Grants permanent Regen.","supplemental_base_gap","draft_translation","msg12.dat:65:text | msg15.dat:65:text","translations/additional_english_drafts.json","[]"
+"story-gap-987aeb0a811e","story_text","【<ite<tmp0>>】でいいのか？
+常にシェル状態","Choose <ite<tmp0>>?
+Grants permanent Shell.","supplemental_base_gap","draft_translation","msg12.dat:66:text | msg15.dat:66:text","translations/additional_english_drafts.json","[]"
+"story-gap-740e1cdbc536","story_text","【<ite<tmp0>>】でいいのか？
+常にプロテス状態","Choose <ite<tmp0>>?
+Grants permanent Protect.","supplemental_base_gap","draft_translation","msg12.dat:67:text | msg15.dat:67:text","translations/additional_english_drafts.json","[]"
+"story-gap-f59b197098a5","story_text","【<ite<tmp0>>】でいいのか？
+敵がアイテムを落としやすくなる","Never leave home without a <ite<tmp0>>!
+Enemies more likely to drop items.","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:68:text | msg15.dat:68:text","msg10.dat:68:text","[""Never leave home without a <ite<tmp0>>!\nEnemies more likely to drop items.""]"
+"story-gap-f2cce1bacae6","story_text","「KPが足りないぞ…」","Ya don't got enough FP there!","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:70:text | msg15.dat:70:text","msg10.dat:70:text","[""Ya don't got enough FP there!"",""Ya dun got enough FP there!""]"
+"story-gap-421c0c3a1437","story_text","「ほらよ、持っていきな！」","Pleasure doin' business with ya.","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:71:text | msg12.dat:1313:text | msg15.dat:71:text","msg10.dat:71:text","[""Pleasure doin' business with ya."",""There ya go, bud! Pleasure doing business with ya.""]"
+"story-gap-d80ed3c1cd72","story_text","「悪いな、そいつは品切れだ」","Sorry folks, that one's outta stock.","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:72:text | msg15.dat:72:text","msg10.dat:72:text","[""Sorry folks, that one's outta stock.""]"
+"story-gap-9704c02db3f8","story_text","「持ち物がいっぱいだぞ」","Ya got too many things in yer inventory!","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:73:text | msg12.dat:1320:text | msg15.dat:73:text","msg10.dat:73:text","[""Ya got too many things in yer inventory!"",""You got too much there, kid!""]"
+"story-gap-fd21e5babb81","story_text","<ite<tmp0>>　：<tmp6>KP","<ite<tmp0>>: <tmp6> FP","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:74:text | msg15.dat:74:text","msg11.dat:74:text","[""<ite<tmp0>>: <tmp6> FP""]"
+"story-gap-610ac05fda1f","story_text","<ite<tmp1>>　　：<tmp7>KP","<ite<tmp1>>: <tmp7> FP","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:75:text | msg15.dat:75:text","msg11.dat:75:text","[""<ite<tmp1>>: <tmp7> FP""]"
+"story-gap-048f8cdca06a","story_text","<ite<tmp2>>　：<tmp8>KP","<ite<tmp2>>: <tmp8> FP","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:76:text | msg15.dat:76:text","msg11.dat:76:text","[""<ite<tmp2>>: <tmp8> FP""]"
+"story-gap-2d188db6c2bb","story_text","「牙コレクターはオレ以外にもいる。
+　KPはこの先の冒険にも
+　持ち越せるから安心しろ。
+　なに？しっぽだと？
+　そんなもんはただのガラクタだ！
+
+　まあ、しっぽコレクターも
+　どこかにいるかもしれないけどな。
+　とりあえず大切に持っておけ」","I'm not the only fang collector, ya know! But don't worry--your FP will carry over.
+What's this now? Tails!? Mere knick knacks. 
+
+Still, someone must want 'em. Best hold onto 'em to be safe.","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:77:text | msg15.dat:77:text","msg10.dat:77:text","[""I'm not the only fang collector, ya know! But don't worry--your FP will carry over.\nWhat's this now? Tails!? Mere knick knacks. \n\nStill, someone must want 'em. Best hold onto 'em to be safe.""]"
+"story-gap-67a707bec10f","story_text","　<ite<tmp0>>　<tmp4>KP
+　<ite<tmp1>>　<tmp5>KP
+
+　<ite<tmp2>>　<tmp6>KP
+　<ite<tmp3>>　<tmp7>KP
+
+　KPがたまったら好きなアイテムと
+　交換できるんだぜ！」","<ite<tmp0>>  <tmp4> FP
+<ite<tmp1>>  <tmp5> FP
+
+<ite<tmp2>>  <tmp6> FP
+<ite<tmp3>>  <tmp7> FP
+
+I'll trade ya some nice items when you get enough FP!","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:78:text | msg15.dat:78:text","msg10.dat:78:text","[""<ite<tmp0>>  <tmp4> FP\n<ite<tmp1>>  <tmp5> FP\n\n<ite<tmp2>>  <tmp6> FP\n<ite<tmp3>>  <tmp7> FP\n\nI'll trade ya some nice items when you get enough FP!"",""<ite<tmp0>>  <tmp4> FP\n<ite<tmp1>>  <tmp5> FP\n\n<ite<tmp2>>  <tmp6> FP\n<ite<tmp3>>  <tmp7> FP\n\nI'll trade ya some nice items when ya get enough FP!""]"
+"story-gap-210d9762423f","story_text","<ite<tmp3>>：<tmp9>KP","<ite<tmp3>>: <tmp9> FP","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:79:text | msg15.dat:79:text","msg10.dat:54:text","[""<ite<tmp3>>: <tmp9> FP""]"
+"story-gap-31062d324a09","story_text","パーティーを変更しますか？","Would you like to change your party members?","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:80:text","msg11.dat:80:text","[""Would you like to change your party members?""]"
+"story-gap-3eb48ca93911","story_text","「あんたらは…！
+
+
+　以前、オレは
+　しっぽは古い！
+　といった…。
+　だがな、やっぱり
+　オレにはしっぽしかないんだ。
+
+　悪かった。
+　このとおりだ！
+
+　てなわけで
+　珍しいしっぽを持ってくりゃあ
+　いいアイテムと交換してやるぜ！」","Is it--is it really you? I remember telling you tails were so last season, but I was wrong. Tails are all I have! Please, bring me all the tails you can find. I'll make it worth your while!","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:1300:text","msg11.dat:1300:text","[""Is it--is it really you? I remember telling you tails were so last season, but I was wrong. Tails are all I have! Please, bring me all the tails you can find. I'll make it worth your while!""]"
+"story-gap-45d1a5512730","story_text","「オレは、珍しいしっぽを
+　集めてるコレクターさ！
+
+　珍しいしっぽを持ってくりゃあ
+　いいアイテムと交換してやるぜ！」","I'm after all manner of strange tails. Remember, I'll give you some great items if you bring me some!","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:1301:text","msg11.dat:1301:text","[""I'm after all manner of strange tails. Remember, I'll give you some great items if you bring me some!""]"
+"story-gap-fcf9ea396661","story_text","「なんだよ、おい。
+　数が足りないようだぜ。
+
+　悪いけど
+　出直してきな！」","Hey, you don't have enough!
+
+Sorry, but you'll have to
+come back with more!","supplemental_base_gap","draft_translation","msg12.dat:1302:text","translations/additional_english_drafts.json","[]"
+"story-gap-9b78cdddd3fa","story_text","「しっぽってのはな
+　お尻に生えてるもんさ。
+
+　それ以外は
+　残念だがしっぽとは呼べんな」","Tails. You know, those things growing out of creatures' behinds. If it's not on something's behind, then it's not a tail!","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:1303:text","msg11.dat:1303:text","[""Tails. You know, those things growing out of creatures' behinds. If it's not on something's behind, then it's not a tail!""]"
+"story-gap-eee38951cfa7","story_text","「命をかける価値があるもの…
+　それがしっぽさ」","I would lay down my life to just see a new tail!","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:1304:text","msg11.dat:1304:text","[""I would lay down my life to just see a new tail!""]"
+"story-gap-233f18128334","story_text","「あの子のハートを射止めたいなら
+　しっぽを集めな」","You'd better give him some tails, or he'll get angry!","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:1305:text","msg11.dat:1305:text","[""You'd better give him some tails, or he'll get angry!""]"
+"story-gap-6cc95d4a53b7","story_text","「しっぽという字はな
+　【し】と【ぽ】の間に
+　【っ】があるんだ」","T-A-I-L. How much clearer can I get?","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:1306:text","msg11.dat:1306:text","[""T-A-I-L. How much clearer can I get?""]"
+"story-gap-6e0ecc37152b","story_text","「悲しいときには
+　しっぽを握りしめてみな。
+　心が安らぐぜ？」","When I'm sad, I grab on to a tail. Calms the ol' nerves.","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:1307:text","msg11.dat:1307:text","[""When I'm sad, I grab on to a tail. Calms the ol' nerves.""]"
+"story-gap-a954323f10e1","story_text","「集めたしっぽを見れば
+　そいつの人生がわかるんだ」","You can tell a lot about how a creature lived just by its tail.","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:1308:text","msg11.dat:1308:text","[""You can tell a lot about how a creature lived just by its tail.""]"
+"story-gap-216361499a68","story_text","「この世界で信じられるものは
+　しっぽだけだ」","Tails don't lie, and I'm starting to feel it's right!","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:1309:text","msg11.dat:1309:text","[""Tails don't lie, and I'm starting to feel it's right!""]"
+"story-gap-e31e059a8721","story_text","「しっぽはな…
+　長さじゃねえ。
+　太さなんだよ！」","It's not the size of the tail, it's how you use it!","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:1310:text","msg11.dat:1310:text","[""It's not the size of the tail, it's how you use it!""]"
+"story-gap-2d346fa140a1","story_text","「<ite<tmp0>>と交換するんだな？」","Trade for <ite<tmp0>>?","supplemental_base_gap","draft_translation","msg12.dat:1312:text","translations/additional_english_drafts.json","[]"
+"story-gap-b4f5972e1b7b","story_text","【<ite<tmp0>>】を手に入れた！","You receive <ite<tmp0>>!","mod_related_story","existing_game_English_exact_Japanese_match","msg12.dat:1315:text","msg5.dat:467:text","[""You receive <ite<tmp0>>!"",""You receive a <ite<tmp0>>!""]"
+"story-gap-8b8c33ce2677","story_text","<ite<tmp0>>","<ite<tmp0>>","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:1316:text","msg7.dat:274:text","[""<ite<tmp0>>""]"
+"story-gap-f4f74c755f02","story_text","<ite<tmp1>>","<ite<tmp1>>","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:1317:text","msg7.dat:275:text","[""<ite<tmp1>>""]"
+"story-gap-2c6d05970d31","story_text","<ite<tmp2>>","<ite<tmp2>>","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:1318:text","msg7.dat:276:text","[""<ite<tmp2>>""]"
+"story-gap-fa3c6803c3d5","story_text","<ite<tmp3>>","<ite<tmp3>>","supplemental_base_gap","draft_translation","msg12.dat:1319:text","translations/additional_english_drafts.json","[]"
+"story-gap-8d776621effa","story_text","【<ite<tmp1>>】
+攻撃１０１ 風属性
+ＨＰを吸収","<ite<tmp1>>
+ATK 101 Element: Wind
+Steals HP.","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:1321:text","msg11.dat:1321:text","[""<ite<tmp1>>\nATK 101 Element: Wind\nSteals HP.""]"
+"story-gap-939487c5cd7b","story_text","【<ite<tmp1>>】
+攻撃６８ 知性３ 精神３ 隊列無視 
+全体攻撃 時々混乱状態にする","<ite<tmp1>>
+ATK 68 INT 3 MND 3 Ignores rows.
+Attacks all enemies. Can cause Conf.","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:1322:text","msg11.dat:1322:text","[""<ite<tmp1>>\nATK 68 INT 3 MND 3 Ignores rows.\nAttacks all enemies. Can cause Conf.""]"
+"story-gap-0cd3a64a4a01","story_text","【<ite<tmp1>>】
+攻撃１０３ 隊列無視
+機械に有効 時々マヒ状態にする","<ite<tmp1>>
+ATK 103 Ignores rows. Strong vs.
+machines. Sometimes causes Para.","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:1323:text","msg11.dat:1323:text","[""<ite<tmp1>>\nATK 103 Ignores rows. Strong vs.\nmachines. Sometimes causes Para.""]"
+"story-gap-1b5f333c847e","story_text","【<ite<tmp1>>】
+攻撃？？ 体力３ 精神３ 聖属性
+ＨＰが満タンに近いほど攻撃力アップ","<ite<tmp1>>
+ATK ?? VIT 3 MND 3 Element: Holy.
+ATK increases with more HP.","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:1324:text","msg11.dat:1324:text","[""<ite<tmp1>>\nATK ?? VIT 3 MND 3 Element: Holy.\nATK increases with more HP.""]"
+"story-gap-488347131b8a","story_text","【<ite<tmp1>>】
+攻撃８５ 風属性 隊列無視
+全体攻撃 使うと連射","<ite<tmp1>>
+ATK 85 Element: Wind. Ignores rows.
+Attacks all enemies. On use: Doubleshot.","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:1325:text","msg11.dat:1325:text","[""<ite<tmp1>>\nATK 85 Element: Wind. Ignores rows.\nAttacks all enemies. On use: Doubleshot.""]"
+"story-gap-e92ece7455ac","story_text","【<ite<tmp1>>】
+攻撃１１５ 力４ 闇属性
+ダメージ上限アップ","<ite<tmp1>>
+ATT 115 STR 4 Element: Dark.
+Increases damage cap.","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:1326:text","msg11.dat:1326:text","[""<ite<tmp1>>\nATT 115 STR 4 Element: Dark.\nIncreases damage cap.""]"
+"story-gap-f29a51691078","story_text","【<ite<tmp1>>】
+攻撃９０ 
+詠唱・待機時間減少","<ite<tmp1>>
+ATT 90
+Decreases cast/wait time.","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:1327:text","msg11.dat:1327:text","[""<ite<tmp1>>\nATT 90\nDecreases cast/wait time.""]"
+"story-gap-ee092342ad2f","story_text","【<ite<tmp1>>】
+攻撃？？ 速さ３ 人間に有効
+ＨＰが減少しているほど攻撃力アップ","<ite<tmp1>>
+ATK ?? SPD 3 Strong vs. humans.
+ATK increases with less HP.","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:1328:text","msg11.dat:1328:text","[""<ite<tmp1>>\nATK ?? SPD 3 Strong vs. humans.\nATK increases with less HP.""]"
+"story-gap-179b461edf3a","story_text","「【<ite<tmp0>>】は
+　【<ite<tmp1>>】と
+　交換だがいいか？」","Trade your <ite<tmp0>> for my <ite<tmp1>>?","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg12.dat:1329:text","msg11.dat:1329:text","[""Trade your <ite<tmp0>> for my <ite<tmp1>>?""]"
+"story-gap-522f5420197c","story_text","<cha<tmp0>>　<job<tmp2>>
+ＬＶ　<tmp1>　ＪＬＶ　<tmp3>","<cha<tmp0>>  <job<tmp2>>
+LV <tmp1>  JLV <tmp3>","supplemental_base_gap","draft_translation","msg14.dat:500:text","translations/additional_english_drafts.json","[]"
+"story-gap-bf62bca78bb1","story_text","ファイナルファンタジー
+レジェンズ
+光と闇の戦士","FINAL FANTASY DIMENSIONS","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg14.dat:550:text","msg14.dat:900:text","[""FINAL FANTASY DIMENSIONS""]"
+"story-gap-3167ea497479","story_text","【シナリオ＆ゲームデザイン】","Scenario and Game Design","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg14.dat:555:text","msg14.dat:905:text","[""Scenario and Game Design""]"
+"story-gap-1b5a5b3954a3","story_text","時田　貴司","Takashi Tokita","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg14.dat:556:text | msg14.dat:781:text","msg14.dat:906:text","[""Takashi Tokita""]"
+"story-gap-3e1ceff95b4a","story_text","【ディレクター】","Director","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg14.dat:560:text","msg14.dat:910:text","[""Director""]"
+"story-gap-9205ad6561c7","story_text","秋山　利夫","Toshio Akiyama","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg14.dat:561:text","msg14.dat:911:text","[""Toshio Akiyama""]"
+"story-gap-60c6b74acf83","story_text","【キャラクターデザイン】","Character Design","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg14.dat:565:text","msg14.dat:915:text","[""Character Design""]"
+"story-gap-52ddd66acd72","story_text","オグロアキラ","Akira Oguro","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg14.dat:566:text","msg14.dat:916:text","[""Akira Oguro""]"
+"story-gap-f23d38b8526b","story_text","【グラフィック】","Graphics","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg14.dat:570:text","msg14.dat:995:text","[""Graphics""]"
+"story-gap-db19b41b873a","story_text","渋谷　員子","Kazuko Shibuya","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg14.dat:571:text","msg14.dat:921:text","[""Kazuko Shibuya""]"
+"story-gap-ac88f348fffb","story_text","【コンポーザー】","Composer","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg14.dat:575:text","msg14.dat:925:text","[""Composer""]"
+"story-gap-2b05b36372c6","story_text","水田　直志","Naoshi Mizuta","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg14.dat:576:text","msg14.dat:926:text","[""Naoshi Mizuta""]"
+"story-gap-93a489fe41ef","story_text","【ストーリーライティング】","Story Writing","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg14.dat:580:text","msg14.dat:930:text","[""Story Writing""]"
+"story-gap-618daf683801","story_text","手塚　一郎
+（株式会社スタジオベントスタッフ）","Ichiro Tezuka
+Studio BentStuff Co., Ltd.","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg14.dat:581:text","msg14.dat:931:text","[""Ichiro Tezuka\nStudio BentStuff Co., Ltd.""]"
+"story-gap-29e9828e3d1a","story_text","【イメージイラスト】","Illustration","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg14.dat:585:text","msg14.dat:935:text","[""Illustration""]"
+"story-gap-1952f7713f10","story_text","天野　喜孝","Yoshitaka Amano","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg14.dat:586:text","msg14.dat:936:text","[""Yoshitaka Amano""]"
+"story-gap-ebc436ef9dbe","story_text","株式会社マトリックス","MATRIX","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg14.dat:590:text","msg14.dat:940:text","[""MATRIX""]"
+"story-gap-3aa207f6b231","story_text","【コーディネーター】","Coordinator","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg14.dat:595:text","msg14.dat:945:text","[""Coordinator"",""Coordination""]"
+"story-gap-251363976529","story_text","新山　洋介","Yousuke Niiyama","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg14.dat:596:text","msg14.dat:946:text","[""Yousuke Niiyama""]"
+"story-gap-8ea61544aefd","story_text","【デザイナー】","Designers","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg14.dat:610:text","msg14.dat:960:text","[""Designers""]"
+"story-gap-8efc1651446a","story_text","【マネージャー】","Manager","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg14.dat:615:text","msg14.dat:1031:text","[""Manager""]"
+"story-gap-a249d940a6ec","story_text","株式会社スクウェア・エニックス","SQUARE ENIX CO., LTD.","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg14.dat:635:text","msg14.dat:985:text","[""SQUARE ENIX CO., LTD.""]"
+"story-gap-a4c3ef44ff72","story_text","【アシスタントディレクター】","Assistant Director","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg14.dat:640:text","msg14.dat:990:text","[""Assistant Director""]"
+"story-gap-be169f2c0951","story_text","山田　祐樹","Yuuki Yamada","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg14.dat:641:text","msg14.dat:1151:text","[""Yuuki Yamada""]"
+"story-gap-31bf73f7d4e0","story_text","寺田　恵
+小貝　壽惠子","Megumi Terada
+Sueko Kogai","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg14.dat:667:text","msg14.dat:1027:text","[""Megumi Terada\nSueko Kogai""]"
+"story-gap-b6610ba06769","story_text","【プロジェクトマネージャー】","Project Manager","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg14.dat:710:text","msg14.dat:1010:text","[""Project Manager""]"
+"story-gap-bcc5c215e71d","story_text","株式会社スクウェア・エニックス
+モバイルスタジオ","SQUARE ENIX MobileStudio CO., LTD.","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg14.dat:715:text","msg14.dat:1140:text","[""SQUARE ENIX MobileStudio CO., LTD.""]"
+"story-gap-3072e0b0694f","story_text","【スペシャルサンクス】","Special Thanks","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg14.dat:755:text","msg14.dat:1220:text","[""Special Thanks""]"
+"story-gap-e5664c8e0b05","story_text","…and All SQUARE ENIX Staff","...and all SQUARE ENIX Staff","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg14.dat:762:text","msg14.dat:1244:text","[""...and all SQUARE ENIX Staff""]"
+"story-gap-2d77782aef1e","story_text","【コーポレートエグゼクティブ】","Corporate Executive","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg14.dat:770:text","msg14.dat:1051:text","[""Corporate Executive""]"
+"story-gap-b53995426a45","story_text","原口　洋一","Yoichi Haraguchi","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg14.dat:771:text","msg14.dat:1251:text","[""Yoichi Haraguchi""]"
+"story-gap-a2749ac0d0ed","story_text","【パブリッシャー】","Publishers","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg14.dat:775:text","msg14.dat:1255:text","[""Publishers""]"
+"story-gap-b536de24f998","story_text","和田　洋一
+本多　圭司","Yoichi Wada
+Keiji Honda","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg14.dat:776:text","msg14.dat:1256:text","[""Yoichi Wada\nKeiji Honda""]"
+"story-gap-be43a882c6e3","story_text","【プロデューサー】","Producer","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg14.dat:780:text","msg14.dat:1260:text","[""Producer""]"
+"story-gap-67503993810d","story_text","POWERED BY","POWERED BY","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg14.dat:785:text","msg14.dat:1265:text","[""POWERED BY""]"
+"story-gap-541ba268ed90","story_text","PRESENTED BY","PRESENTED BY","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg14.dat:790:text","msg14.dat:1270:text","[""PRESENTED BY""]"
+"story-gap-faf25814bf5e","story_text","タイトル画面に戻ります。
+よろしいですか？","Returning to the title. OK?","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg14.dat:796:text","msg12.dat:36:text","[""Returning to the title. OK?""]"
+"story-gap-d4dc2e53f3b3","story_text","休んでいきますか？","Would you like to rest?","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg15.dat:5:text","msg0.dat:5:text","[""Would you like to rest?""]"
+"story-gap-56c1bc365a2e","story_text","武器屋","Weaponsmith","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg15.dat:12:text","msg0.dat:28:text","[""Weaponsmith""]"
+"story-gap-6ceffcc94e7c","story_text","防具屋","Armorer","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg15.dat:13:text","msg0.dat:29:text","[""Armorer"",""Armor""]"
+"story-gap-4f0781a35330","story_text","魔法屋","Spells","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg15.dat:15:text","msg0.dat:39:text","[""Spells""]"
+"story-gap-4fe131173e23","story_text","武器","Weapons","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg15.dat:16:text","msg0.dat:12:text","[""Weapons"",""Weaponsmith""]"
+"story-gap-97ac7fdbd39b","story_text","防具","Armor","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg15.dat:17:text","msg0.dat:13:text","[""Armor""]"
+"story-gap-7483f8ec95d8","story_text","道具","Sundries","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg15.dat:18:text","msg0.dat:14:text","[""Sundries""]"
+"story-gap-f92fd0c0b8c9","story_text","魔法","Magic","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg15.dat:19:text","msg0.dat:15:text","[""Magic""]"
+"story-gap-6001f93c73ac","story_text","いらっしゃいませ。","Welcome.","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg15.dat:21:text","msg0.dat:47:text","[""Welcome.""]"
+"story-gap-aae2203a9747","story_text","扉は固く閉ざされている。","The door is firmly shut.","supplemental_base_gap","existing_game_English_exact_Japanese_match","msg15.dat:23:text","msg1.dat:280:text","[""The door is firmly shut.""]"
+"speaker-868310e193d1","speaker","なし","None","supplemental_base_speaker","draft_translation","msg0.dat:0:speaker | msg1.dat:0:speaker | msg2.dat:0:speaker | msg3.dat:0:speaker | msg4.dat:0:speaker | msg5.dat:0:speaker | msg6.dat:0:speaker | msg7.dat:0:speaker | msg8.dat:0:speaker | msg9.dat:0:speaker | msg10.dat:0:speaker | msg11.dat:0:speaker | msg12.dat:0:speaker | msg13.dat:0:speaker","translations/additional_english_drafts.json",""
+"speaker-408e216c639d","speaker","モーグリ","Moogle","mod_related_speaker","existing_game_English_exact_Japanese_match","msg0.dat:32:speaker | msg0.dat:33:speaker | msg0.dat:34:speaker | msg0.dat:35:speaker | msg0.dat:36:speaker | msg0.dat:48:speaker | msg1.dat:490:speaker | msg1.dat:491:speaker | msg1.dat:492:speaker | msg1.dat:493:speaker | msg1.dat:494:speaker | msg1.dat:495:speaker | msg2.dat:490:speaker | msg2.dat:491:speaker | msg2.dat:492:speaker | msg2.dat:493:speaker | msg2.dat:494:speaker | msg2.dat:495:speaker | msg3.dat:33:speaker | msg3.dat:34:speaker | msg3.dat:35:speaker | msg3.dat:36:speaker | msg3.dat:37:speaker | msg3.dat:38:speaker | msg4.dat:42:speaker | msg4.dat:43:speaker | msg4.dat:580:speaker | msg4.dat:581:speaker | msg4.dat:582:speaker | msg4.dat:583:speaker | msg4.dat:584:speaker | msg4.dat:585:speaker | msg4.dat:586:speaker | msg5.dat:40:speaker | msg5.dat:41:speaker | msg5.dat:42:speaker | msg5.dat:43:speaker | msg5.dat:44:speaker | msg5.dat:45:speaker | msg5.dat:430:speaker | msg5.dat:431:speaker | msg6.dat:24:speaker | msg6.dat:33:speaker | msg6.dat:34:speaker | msg6.dat:35:speaker | msg6.dat:36:speaker | msg6.dat:37:speaker | msg6.dat:38:speaker | msg6.dat:40:speaker | msg6.dat:41:speaker | msg7.dat:33:speaker | msg7.dat:34:speaker | msg7.dat:35:speaker | msg7.dat:36:speaker | msg7.dat:37:speaker | msg7.dat:38:speaker | msg7.dat:41:speaker | msg10.dat:29:speaker | msg10.dat:30:speaker | msg10.dat:33:speaker | msg10.dat:34:speaker | msg10.dat:35:speaker | msg10.dat:36:speaker | msg10.dat:37:speaker | msg10.dat:38:speaker | msg10.dat:39:speaker | msg13.dat:29:speaker | msg13.dat:30:speaker | msg13.dat:33:speaker | msg13.dat:34:speaker | msg13.dat:35:speaker | msg13.dat:36:speaker | msg13.dat:37:speaker | msg13.dat:38:speaker | msg13.dat:39:speaker","msg0.dat:11:speaker",""
+"speaker-e208d4aafd3e","speaker","<cha7>","<cha7>","supplemental_base_speaker","existing_game_English_exact_Japanese_match","msg0.dat:93:speaker | msg11.dat:110:speaker","msg0.dat:71:speaker",""
+"speaker-9ba2df7e2dc8","speaker","<cha4>","<cha4>","supplemental_base_speaker","existing_game_English_exact_Japanese_match","msg0.dat:378:speaker | msg3.dat:60:speaker | msg3.dat:61:speaker | msg5.dat:524:speaker | msg11.dat:112:speaker | msg11.dat:115:speaker","msg0.dat:434:speaker",""
+"speaker-eeb87870bb8b","speaker","帝国兵","Soldier","supplemental_base_speaker","existing_game_English_exact_Japanese_match","msg0.dat:427:speaker | msg0.dat:705:speaker | msg0.dat:1001:speaker | msg0.dat:1003:speaker | msg1.dat:55:speaker | msg1.dat:57:speaker | msg2.dat:55:speaker | msg2.dat:57:speaker | msg6.dat:200:speaker","msg0.dat:17:speaker",""
+"speaker-2c24cd0b5699","speaker","<cha2>","<cha2>","supplemental_base_speaker","existing_game_English_exact_Japanese_match","msg0.dat:651:speaker | msg0.dat:1000:speaker | msg1.dat:54:speaker | msg2.dat:54:speaker | msg8.dat:673:speaker | msg8.dat:681:speaker | msg11.dat:101:speaker","msg0.dat:390:speaker",""
+"speaker-b03ebe804c83","speaker","<cha0>","<cha0>","supplemental_base_speaker","existing_game_English_exact_Japanese_match","msg0.dat:1002:speaker | msg0.dat:1006:speaker | msg0.dat:1008:speaker | msg1.dat:53:speaker | msg1.dat:56:speaker | msg1.dat:60:speaker | msg1.dat:62:speaker | msg2.dat:53:speaker | msg2.dat:56:speaker | msg2.dat:60:speaker | msg2.dat:62:speaker | msg3.dat:63:speaker | msg11.dat:103:speaker | msg11.dat:114:speaker","msg0.dat:70:speaker",""
+"speaker-20a8cee88867","speaker","エルゴ","Elgo","supplemental_base_speaker","existing_game_English_exact_Japanese_match","msg0.dat:1007:speaker | msg0.dat:1009:speaker | msg1.dat:50:speaker | msg1.dat:52:speaker | msg1.dat:61:speaker | msg1.dat:63:speaker | msg1.dat:66:speaker | msg1.dat:68:speaker | msg2.dat:50:speaker | msg2.dat:52:speaker | msg2.dat:61:speaker | msg2.dat:63:speaker | msg2.dat:66:speaker | msg2.dat:68:speaker","msg0.dat:268:speaker",""
+"speaker-5d18c621504a","speaker","<cha1>","<cha1>","supplemental_base_speaker","existing_game_English_exact_Japanese_match","msg0.dat:1010:speaker | msg1.dat:64:speaker | msg2.dat:64:speaker","msg0.dat:125:speaker",""
+"speaker-51549b1b9f74","speaker","<cha3>","<cha3>","supplemental_base_speaker","existing_game_English_exact_Japanese_match","msg1.dat:51:speaker | msg1.dat:67:speaker | msg2.dat:51:speaker | msg2.dat:67:speaker | msg4.dat:173:speaker | msg14.dat:495:speaker | msg14.dat:496:speaker","msg0.dat:420:speaker",""
+"speaker-b5711c9beafd","speaker","チョコボ","Chocobo","supplemental_base_speaker","existing_game_English_exact_Japanese_match","msg3.dat:31:speaker | msg5.dat:35:speaker | msg8.dat:31:speaker | msg9.dat:31:speaker","msg0.dat:555:speaker",""
+"speaker-239c59bd49b0","speaker","<cha6>","<cha6>","supplemental_base_speaker","existing_game_English_exact_Japanese_match","msg3.dat:62:speaker | msg11.dat:111:speaker","msg0.dat:85:speaker",""
+"speaker-bae654cc15f9","speaker","アシュマダイ","Asmodai","supplemental_base_speaker","existing_game_English_exact_Japanese_match","msg3.dat:339:speaker","msg3.dat:316:speaker",""
+"speaker-b2153d80dd81","speaker","フレイ","Freyr","supplemental_base_speaker","existing_game_English_exact_Japanese_match","msg3.dat:340:speaker","msg3.dat:321:speaker",""
+"speaker-9070bd17f8f8","speaker","海賊","Pirate","supplemental_base_speaker","existing_game_English_exact_Japanese_match","msg4.dat:193:speaker | msg4.dat:725:speaker","msg4.dat:100:speaker",""
+"speaker-d9e4a4b16b69","speaker","バウガウヴェン","Baugauven","supplemental_base_speaker","existing_game_English_exact_Japanese_match","msg5.dat:522:speaker","msg0.dat:736:speaker",""
+"speaker-9894706073b8","speaker","グラム","Graham","supplemental_base_speaker","existing_game_English_exact_Japanese_match","msg5.dat:523:speaker","msg5.dat:188:speaker",""
+"speaker-0634cc2853b8","speaker","受付","Receptionist","supplemental_base_speaker","draft_translation","msg7.dat:770:speaker | msg7.dat:774:speaker | msg7.dat:777:speaker | msg7.dat:778:speaker | msg7.dat:779:speaker | msg7.dat:786:speaker | msg7.dat:787:speaker | msg7.dat:791:speaker | msg7.dat:792:speaker | msg7.dat:794:speaker | msg7.dat:795:speaker | msg7.dat:796:speaker | msg7.dat:797:speaker","translations/additional_english_drafts.json",""
+"speaker-7befd2e91618","speaker","雷のシャンゴ","Shango","supplemental_base_speaker","existing_game_English_exact_Japanese_match","msg8.dat:573:speaker | msg11.dat:100:speaker","msg8.dat:642:speaker",""
+"speaker-ff88d4e2c3b1","speaker","大長老ソピアー","Sophia","supplemental_base_speaker","existing_game_English_exact_Japanese_match","msg11.dat:102:speaker","msg10.dat:241:speaker",""
+"speaker-1df83b6247fd","speaker","<cha5>","<cha5>","supplemental_base_speaker","existing_game_English_exact_Japanese_match","msg11.dat:113:speaker","msg0.dat:369:speaker",""
+"speaker-614b552fc363","speaker","エイマン","Eiman","supplemental_base_speaker","existing_game_English_exact_Japanese_match","msg11.dat:2505:speaker","msg11.dat:1240:speaker",""
+"speaker-6947cf6beee2","speaker","あねあね","Aneane","supplemental_base_speaker","existing_game_English_exact_Japanese_match","msg11.dat:2510:speaker","msg11.dat:1250:speaker",""
+"speaker-813fb3419f31","speaker","こびと","Gnome","supplemental_base_speaker","existing_game_English_exact_Japanese_match","msg12.dat:40:speaker | msg12.dat:43:speaker | msg12.dat:45:speaker | msg12.dat:46:speaker | msg12.dat:47:speaker | msg12.dat:48:speaker | msg12.dat:49:speaker | msg12.dat:50:speaker | msg12.dat:59:speaker | msg12.dat:60:speaker | msg12.dat:61:speaker | msg12.dat:62:speaker | msg12.dat:63:speaker | msg12.dat:64:speaker | msg12.dat:65:speaker | msg12.dat:66:speaker | msg12.dat:67:speaker | msg12.dat:68:speaker | msg12.dat:70:speaker | msg12.dat:71:speaker | msg12.dat:72:speaker | msg12.dat:73:speaker | msg12.dat:77:speaker | msg12.dat:78:speaker | msg12.dat:1300:speaker | msg12.dat:1301:speaker | msg12.dat:1302:speaker | msg12.dat:1303:speaker | msg12.dat:1304:speaker | msg12.dat:1305:speaker | msg12.dat:1306:speaker | msg12.dat:1307:speaker | msg12.dat:1308:speaker | msg12.dat:1309:speaker | msg12.dat:1310:speaker | msg12.dat:1311:speaker | msg12.dat:1312:speaker | msg12.dat:1313:speaker | msg12.dat:1314:speaker | msg12.dat:1320:speaker | msg12.dat:1329:speaker | msg15.dat:40:speaker | msg15.dat:43:speaker | msg15.dat:45:speaker | msg15.dat:46:speaker | msg15.dat:47:speaker | msg15.dat:48:speaker | msg15.dat:49:speaker | msg15.dat:50:speaker | msg15.dat:59:speaker | msg15.dat:60:speaker | msg15.dat:61:speaker | msg15.dat:62:speaker | msg15.dat:63:speaker | msg15.dat:64:speaker | msg15.dat:65:speaker | msg15.dat:66:speaker | msg15.dat:67:speaker | msg15.dat:68:speaker | msg15.dat:70:speaker | msg15.dat:71:speaker | msg15.dat:72:speaker | msg15.dat:73:speaker | msg15.dat:77:speaker | msg15.dat:78:speaker","msg0.dat:250:speaker",""
+"jp-award-10-22","JP_award","<cha0>たちは
+６ＪＰ（ジョブポイント）を
+手に入れた！","<cha0>'s party receives 7 JP (Job Points)!","mod_behavior_consistency","existing_game_English_with_7JP_correction","msg10.dat:22:text","",""
+"jp-award-10-26","JP_award","<cha4>たちは
+６ＪＰ（ジョブポイント）を
+手に入れた！","<cha4>'s party receives 7 JP (Job Points)!","mod_behavior_consistency","existing_game_English_with_7JP_correction","msg10.dat:26:text","",""
+"jp-award-13-22","JP_award","<cha0>たちは
+６ＪＰ（ジョブポイント）を
+手に入れた！","<cha0>'s party receives 7 JP (Job Points)!","mod_behavior_consistency","existing_game_English_with_7JP_correction","msg13.dat:22:text","",""
+"jp-award-13-26","JP_award","<cha4>たちは
+６ＪＰ（ジョブポイント）を
+手に入れた！","<cha4>'s party receives 7 JP (Job Points)!","mod_behavior_consistency","existing_game_English_with_7JP_correction","msg13.dat:26:text","",""
+"map-name-165","map_name","チャレンジダンジョン","Challenge Dungeon","mod_related_map_name","draft_translation","system_message.dat:section11:record165:English","",""

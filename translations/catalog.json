@@ -1,0 +1,1852 @@
+[
+  {
+    "id": "diagnostic-660a08b923",
+    "category": "diagnostic",
+    "japanese": "memories: ability %d is not メモリーズ (%02x %02x %02x %02x), cost unchanged",
+    "english": "memories: ability %d is not Recollect (%02x %02x %02x %02x), cost unchanged",
+    "occurrences": [
+      {
+        "file": "src/fflmod.c",
+        "line": 5710,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "in-game-cdf0567b7e",
+    "category": "in_game",
+    "japanese": "単体/全体の行動を遅くする",
+    "english": "Slows one or all targets.",
+    "occurrences": [
+      {
+        "file": "src/fflmod.c",
+        "line": 4192,
+        "encoding": "shift_jis",
+        "symbol": "k_slowNewSJ"
+      },
+      {
+        "file": "src/fflmod.c",
+        "line": 4194,
+        "encoding": "utf-8",
+        "symbol": "k_slowNewU8"
+      }
+    ]
+  },
+  {
+    "id": "in-game-6fae7f3d03",
+    "category": "in_game",
+    "japanese": "魔女",
+    "english": "Witch",
+    "occurrences": [
+      {
+        "file": "src/fflmod.c",
+        "line": 4415,
+        "encoding": "shift_jis",
+        "symbol": "k_majoSJ"
+      },
+      {
+        "file": "src/fflmod.c",
+        "line": 4415,
+        "encoding": "utf-8",
+        "symbol": "k_majoU8"
+      }
+    ]
+  },
+  {
+    "id": "in-game-5a3a3c81a9",
+    "category": "in_game",
+    "japanese": "スティクス",
+    "english": "Styx",
+    "occurrences": [
+      {
+        "file": "src/fflmod.c",
+        "line": 4416,
+        "encoding": "shift_jis",
+        "symbol": "k_styxSJ"
+      },
+      {
+        "file": "src/fflmod.c",
+        "line": 4416,
+        "encoding": "utf-8",
+        "symbol": "k_styxU8"
+      }
+    ]
+  },
+  {
+    "id": "in-game-22741c5a87",
+    "category": "in_game",
+    "japanese": "青魔法",
+    "english": "Blue Magic",
+    "occurrences": [
+      {
+        "file": "src/fflmod.c",
+        "line": 4417,
+        "encoding": "shift_jis",
+        "symbol": "k_bmSJ"
+      },
+      {
+        "file": "src/fflmod.c",
+        "line": 4417,
+        "encoding": "utf-8",
+        "symbol": "k_bmU8"
+      }
+    ]
+  },
+  {
+    "id": "in-game-3e1b5e22c3",
+    "category": "in_game",
+    "japanese": "覚えた敵の技を使う",
+    "english": "Uses learned enemy abilities.",
+    "occurrences": [
+      {
+        "file": "src/fflmod.c",
+        "line": 4418,
+        "encoding": "shift_jis",
+        "symbol": "k_bmDescSJ"
+      },
+      {
+        "file": "src/fflmod.c",
+        "line": 4418,
+        "encoding": "utf-8",
+        "symbol": "k_bmDescU8"
+      }
+    ]
+  },
+  {
+    "id": "in-game-22b504ab8d",
+    "category": "in_game",
+    "japanese": "単体/全体に水属性のダメージ",
+    "english": "Deals water damage to one or all targets.",
+    "occurrences": [
+      {
+        "file": "src/fflmod.c",
+        "line": 4438,
+        "encoding": "shift_jis",
+        "symbol": "k_dWaterSJ"
+      },
+      {
+        "file": "src/fflmod.c",
+        "line": 4439,
+        "encoding": "utf-8",
+        "symbol": "k_dWaterU8"
+      }
+    ]
+  },
+  {
+    "id": "in-game-d527feb020",
+    "category": "in_game",
+    "japanese": "敵全体に水属性のダメージを与え「スリップ」状態にする",
+    "english": "Deals water damage and inflicts Sap on all enemies.",
+    "occurrences": [
+      {
+        "file": "src/fflmod.c",
+        "line": 4440,
+        "encoding": "shift_jis",
+        "symbol": "k_dSlipSJ"
+      },
+      {
+        "file": "src/fflmod.c",
+        "line": 4441,
+        "encoding": "utf-8",
+        "symbol": "k_dSlipU8"
+      }
+    ]
+  },
+  {
+    "id": "in-game-17ce912c32",
+    "category": "in_game",
+    "japanese": "単体を「バーサク」状態にする",
+    "english": "Inflicts Berserk on one target.",
+    "occurrences": [
+      {
+        "file": "src/fflmod.c",
+        "line": 4442,
+        "encoding": "shift_jis",
+        "symbol": "k_dBerSJ"
+      },
+      {
+        "file": "src/fflmod.c",
+        "line": 4443,
+        "encoding": "utf-8",
+        "symbol": "k_dBerU8"
+      }
+    ]
+  },
+  {
+    "id": "in-game-30ce9976ce",
+    "category": "in_game",
+    "japanese": "敵全体を「スタン」状態にする",
+    "english": "Inflicts Stun on all enemies.",
+    "occurrences": [
+      {
+        "file": "src/fflmod.c",
+        "line": 4444,
+        "encoding": "shift_jis",
+        "symbol": "k_dStunSJ"
+      },
+      {
+        "file": "src/fflmod.c",
+        "line": 4445,
+        "encoding": "utf-8",
+        "symbol": "k_dStunU8"
+      }
+    ]
+  },
+  {
+    "id": "in-game-d61a92b509",
+    "category": "in_game",
+    "japanese": "敵全体を「カエル」「こびと」「沈黙」のいずれかにする",
+    "english": "Inflicts Toad, Mini, or Silence on all enemies.",
+    "occurrences": [
+      {
+        "file": "src/fflmod.c",
+        "line": 4446,
+        "encoding": "shift_jis",
+        "symbol": "k_dSirenSJ"
+      },
+      {
+        "file": "src/fflmod.c",
+        "line": 4447,
+        "encoding": "utf-8",
+        "symbol": "k_dSirenU8"
+      }
+    ]
+  },
+  {
+    "id": "in-game-e86c50ff02",
+    "category": "in_game",
+    "japanese": "敵全体を「混乱」状態にする",
+    "english": "Inflicts Confusion on all enemies.",
+    "occurrences": [
+      {
+        "file": "src/fflmod.c",
+        "line": 4448,
+        "encoding": "shift_jis",
+        "symbol": "k_dConfSJ"
+      },
+      {
+        "file": "src/fflmod.c",
+        "line": 4449,
+        "encoding": "utf-8",
+        "symbol": "k_dConfU8"
+      }
+    ]
+  },
+  {
+    "id": "in-game-4514752c71",
+    "category": "in_game",
+    "japanese": "習得している青魔法を使用/確認します",
+    "english": "Use or view learned blue magic.",
+    "occurrences": [
+      {
+        "file": "src/fflmod.c",
+        "line": 4576,
+        "encoding": "shift_jis",
+        "symbol": "k_bmHelpSJ"
+      },
+      {
+        "file": "src/fflmod.c",
+        "line": 4577,
+        "encoding": "utf-8",
+        "symbol": "k_bmHelpU8"
+      }
+    ]
+  },
+  {
+    "id": "in-game-c61e21bec4",
+    "category": "in_game",
+    "japanese": "アラーム",
+    "english": "Alarm",
+    "occurrences": [
+      {
+        "file": "src/fflmod.c",
+        "line": 5419,
+        "encoding": "shift_jis",
+        "symbol": "k_alarmNameSJ"
+      },
+      {
+        "file": "src/fflmod.c",
+        "line": 5419,
+        "encoding": "utf-8",
+        "symbol": "k_alarmNameU8"
+      }
+    ]
+  },
+  {
+    "id": "in-game-92469c9aa7",
+    "category": "in_game",
+    "japanese": "モンスターを呼び寄せる",
+    "english": "Summons monsters.",
+    "occurrences": [
+      {
+        "file": "src/fflmod.c",
+        "line": 5420,
+        "encoding": "shift_jis",
+        "symbol": "k_alarmHelpSJ"
+      },
+      {
+        "file": "src/fflmod.c",
+        "line": 5421,
+        "encoding": "utf-8",
+        "symbol": "k_alarmHelpU8"
+      }
+    ]
+  },
+  {
+    "id": "in-game-8ad2c2385d",
+    "category": "in_game",
+    "japanese": "ダッシュ ON",
+    "english": "Dash ON",
+    "occurrences": [
+      {
+        "file": "src/fflmod.c",
+        "line": 5749,
+        "encoding": "shift_jis",
+        "symbol": "k_dashOnSJ"
+      },
+      {
+        "file": "src/fflmod.c",
+        "line": 5750,
+        "encoding": "utf-8",
+        "symbol": "k_dashOnU8"
+      }
+    ]
+  },
+  {
+    "id": "in-game-f984263479",
+    "category": "in_game",
+    "japanese": "ダッシュ OFF",
+    "english": "Dash OFF",
+    "occurrences": [
+      {
+        "file": "src/fflmod.c",
+        "line": 5749,
+        "encoding": "shift_jis",
+        "symbol": "k_dashOffSJ"
+      },
+      {
+        "file": "src/fflmod.c",
+        "line": 5750,
+        "encoding": "utf-8",
+        "symbol": "k_dashOffU8"
+      }
+    ]
+  },
+  {
+    "id": "in-game-976b6fd6be",
+    "category": "in_game",
+    "japanese": "獲得経験値",
+    "english": "EXP Earned",
+    "occurrences": [
+      {
+        "file": "src/fflmod.c",
+        "line": 6038,
+        "encoding": "utf-8",
+        "symbol": "k_boostRowU8"
+      },
+      {
+        "file": "src/fflmod.c",
+        "line": 6039,
+        "encoding": "shift_jis",
+        "symbol": "k_boostRowSJ"
+      }
+    ]
+  },
+  {
+    "id": "in-game-1fc9c1e25f",
+    "category": "in_game",
+    "japanese": "獲得ギル",
+    "english": "Gil Earned",
+    "occurrences": [
+      {
+        "file": "src/fflmod.c",
+        "line": 6038,
+        "encoding": "utf-8",
+        "symbol": "k_boostRowU8"
+      },
+      {
+        "file": "src/fflmod.c",
+        "line": 6039,
+        "encoding": "shift_jis",
+        "symbol": "k_boostRowSJ"
+      }
+    ]
+  },
+  {
+    "id": "in-game-840638c13e",
+    "category": "in_game",
+    "japanese": "獲得AP",
+    "english": "AP Earned",
+    "occurrences": [
+      {
+        "file": "src/fflmod.c",
+        "line": 6038,
+        "encoding": "utf-8",
+        "symbol": "k_boostRowU8"
+      },
+      {
+        "file": "src/fflmod.c",
+        "line": 6039,
+        "encoding": "shift_jis",
+        "symbol": "k_boostRowSJ"
+      }
+    ]
+  },
+  {
+    "id": "in-game-3e6d99108c",
+    "category": "in_game",
+    "japanese": "戦闘で手に入る経験値の倍率を選べます",
+    "english": "Choose the multiplier for EXP earned in battle.",
+    "occurrences": [
+      {
+        "file": "src/fflmod.c",
+        "line": 6040,
+        "encoding": "utf-8",
+        "symbol": "k_boostHelpU8"
+      },
+      {
+        "file": "src/fflmod.c",
+        "line": 6042,
+        "encoding": "shift_jis",
+        "symbol": "k_boostHelpSJ"
+      }
+    ]
+  },
+  {
+    "id": "in-game-8c3c2f2ac7",
+    "category": "in_game",
+    "japanese": "戦闘で手に入るギルの倍率を選べます",
+    "english": "Choose the multiplier for gil earned in battle.",
+    "occurrences": [
+      {
+        "file": "src/fflmod.c",
+        "line": 6040,
+        "encoding": "utf-8",
+        "symbol": "k_boostHelpU8"
+      },
+      {
+        "file": "src/fflmod.c",
+        "line": 6043,
+        "encoding": "shift_jis",
+        "symbol": "k_boostHelpSJ"
+      }
+    ]
+  },
+  {
+    "id": "in-game-c249b52d0c",
+    "category": "in_game",
+    "japanese": "戦闘で手に入るAPの倍率を選べます",
+    "english": "Choose the multiplier for AP earned in battle.",
+    "occurrences": [
+      {
+        "file": "src/fflmod.c",
+        "line": 6040,
+        "encoding": "utf-8",
+        "symbol": "k_boostHelpU8"
+      },
+      {
+        "file": "src/fflmod.c",
+        "line": 6044,
+        "encoding": "shift_jis",
+        "symbol": "k_boostHelpSJ"
+      }
+    ]
+  },
+  {
+    "id": "in-game-de4b2b8ea7",
+    "category": "in_game",
+    "japanese": "コンフィグ４",
+    "english": "Config 4",
+    "occurrences": [
+      {
+        "file": "src/fflmod.c",
+        "line": 6045,
+        "encoding": "utf-8",
+        "symbol": "k_boostTitleU8"
+      },
+      {
+        "file": "src/fflmod.c",
+        "line": 6045,
+        "encoding": "shift_jis",
+        "symbol": "k_boostTitleSJ"
+      }
+    ]
+  },
+  {
+    "id": "internal-reference-11d3cd0756",
+    "category": "internal_reference",
+    "japanese": "単体の行動を遅くする",
+    "english": "Slows one target.",
+    "occurrences": [
+      {
+        "file": "src/fflmod.c",
+        "line": 4191,
+        "encoding": "shift_jis",
+        "symbol": "k_slowOldSJ"
+      },
+      {
+        "file": "src/fflmod.c",
+        "line": 4193,
+        "encoding": "utf-8",
+        "symbol": "k_slowOldU8"
+      }
+    ]
+  },
+  {
+    "id": "internal-reference-9a8a0e0cde",
+    "category": "internal_reference",
+    "japanese": "魔人",
+    "english": "Magus",
+    "occurrences": [
+      {
+        "file": "src/fflmod.c",
+        "line": 4429,
+        "encoding": "shift_jis",
+        "symbol": ""
+      },
+      {
+        "file": "src/fflmod.c",
+        "line": 4430,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "internal-reference-ddd55fcb44",
+    "category": "internal_reference",
+    "japanese": "DEBUG用",
+    "english": "For debugging",
+    "occurrences": [
+      {
+        "file": "src/fflmod.c",
+        "line": 4556,
+        "encoding": "shift_jis",
+        "symbol": ""
+      },
+      {
+        "file": "src/fflmod.c",
+        "line": 4556,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "internal-reference-7305851beb",
+    "category": "internal_reference",
+    "japanese": "メモリーズ",
+    "english": "Recollect",
+    "occurrences": [
+      {
+        "file": "src/fflmod.c",
+        "line": 5696,
+        "encoding": "shift_jis",
+        "symbol": "k_memSJ"
+      },
+      {
+        "file": "src/fflmod.c",
+        "line": 5696,
+        "encoding": "utf-8",
+        "symbol": "k_memU8"
+      }
+    ]
+  },
+  {
+    "id": "manager-ff89962242",
+    "category": "manager",
+    "japanese": "FFレジェンズ mod導入アプリ",
+    "english": "FF Dimensions Mod Installer",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/AndroidManifest.xml",
+        "line": 16,
+        "encoding": "utf-8",
+        "symbol": "android:label"
+      }
+    ]
+  },
+  {
+    "id": "manager-826dfe1be9",
+    "category": "manager",
+    "japanese": "確認の画面を出せませんでした",
+    "english": "Could not open the confirmation screen.",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/Installer.kt",
+        "line": 69,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-2b226235e6",
+    "category": "manager",
+    "japanese": "modを導入",
+    "english": "Install mod",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 60,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-4d317c8ecb",
+    "category": "manager",
+    "japanese": "modを更新",
+    "english": "Update mod",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 62,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-0c56af39c8",
+    "category": "manager",
+    "japanese": "セーブを書き出す",
+    "english": "Export save",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 64,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-70a602ed0c",
+    "category": "manager",
+    "japanese": "セーブを取り込む",
+    "english": "Import save",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 66,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-5b0fb11e05",
+    "category": "manager",
+    "japanese": "試験版を受け取ります",
+    "english": "Pre-release updates enabled.",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 105,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-b96d1ec1fa",
+    "category": "manager",
+    "japanese": "試験版を受け取りません",
+    "english": "Pre-release updates disabled.",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 105,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-fc885bbb4d",
+    "category": "manager",
+    "japanese": "（版を読めませんでした）",
+    "english": "(Could not read version)",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 115,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-23b9b1c924",
+    "category": "manager",
+    "japanese": "（調べられませんでした）",
+    "english": "(Could not check)",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 116,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-44ff697ecd",
+    "category": "manager",
+    "japanese": "なし",
+    "english": "None",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 117,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-54b1f3d50f",
+    "category": "manager",
+    "japanese": "現在バージョン：",
+    "english": "Current version: ",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 120,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-a98e734b90",
+    "category": "manager",
+    "japanese": "\n最新バージョン：",
+    "english": "\nLatest version: ",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 120,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-2c201069ad",
+    "category": "manager",
+    "japanese": "確認しています…",
+    "english": "Checking...",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 122,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-8312c0f9f9",
+    "category": "manager",
+    "japanese": "確認できませんでした",
+    "english": "Could not check for updates.",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 123,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-0fc0b5593c",
+    "category": "manager",
+    "japanese": "（試験版を含む）",
+    "english": " (including pre-releases)",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 126,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-321771e517",
+    "category": "manager",
+    "japanese": "\n最新版です。",
+    "english": "\nYou are up to date.",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 128,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-35981549ed",
+    "category": "manager",
+    "japanese": "\nアップデートがあります。「modを更新」から入れられます。",
+    "english": "\nAn update is available. Select \"Update mod\" to install it.",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 128,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-e5cd356be8",
+    "category": "manager",
+    "japanese": "ゲームの状態を調べられませんでした。",
+    "english": "Could not check the game's installation status.",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 143,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-70dfd1dddb",
+    "category": "manager",
+    "japanese": "FFレジェンズが入っていません。",
+    "english": "FF Dimensions is not installed.",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 144,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-8cb1797535",
+    "category": "manager",
+    "japanese": "正規版（1.2.0）が入っています。\nmodを導入できます。",
+    "english": "The original game (1.2.0) is installed.\nYou can install the mod.",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 146,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-40464cf82e",
+    "category": "manager",
+    "japanese": "正規版が入っていますが、対応していない版です。",
+    "english": "The original game is installed, but this version is not supported.",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 147,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-3cc336541f",
+    "category": "manager",
+    "japanese": "modが導入されています。",
+    "english": "The mod is installed.",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 149,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-93769bcac1",
+    "category": "manager",
+    "japanese": "正規版とも fflmod とも違う署名のアプリが入っています。",
+    "english": "The installed app's signature matches neither the original game nor fflmod.",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 150,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-483c1721e2",
+    "category": "manager",
+    "japanese": "正規版の削除が取り消されました。",
+    "english": "Uninstalling the original game was canceled.",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 157,
+        "encoding": "utf-8",
+        "symbol": ""
+      },
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 345,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-c457019e38",
+    "category": "manager",
+    "japanese": "modを入れたAPKを作っています…",
+    "english": "Building the modded APKs...",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 211,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-c7e6687460",
+    "category": "manager",
+    "japanese": "APKを作成できませんでした。",
+    "english": "Could not build the APKs.",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 222,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-6f02e58234",
+    "category": "manager",
+    "japanese": "modの更新を準備しています…",
+    "english": "Preparing the mod update...",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 242,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-130897d40e",
+    "category": "manager",
+    "japanese": "更新できませんでした。",
+    "english": "Could not update the mod.",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 253,
+        "encoding": "utf-8",
+        "symbol": ""
+      },
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 272,
+        "encoding": "utf-8",
+        "symbol": ""
+      },
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/Store.kt",
+        "line": 50,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-109b75d0fa",
+    "category": "manager",
+    "japanese": "同じ版です",
+    "english": "Already installed",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 257,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-a580145ee5",
+    "category": "manager",
+    "japanese": "fflmod ${p.version} はすでに入っています。入れ直しますか？",
+    "english": "fflmod ${p.version} is already installed. Reinstall it?",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 258,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-1230dda998",
+    "category": "manager",
+    "japanese": "入れ直す",
+    "english": "Reinstall",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 259,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-3eefdf40e6",
+    "category": "manager",
+    "japanese": "やめる",
+    "english": "Cancel",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 260,
+        "encoding": "utf-8",
+        "symbol": ""
+      },
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 306,
+        "encoding": "utf-8",
+        "symbol": ""
+      },
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 310,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-a33a1528a2",
+    "category": "manager",
+    "japanese": "この版は「modを更新」では入れられません。セーブを書き出してから、modを入れ直してください。",
+    "english": "This version cannot be installed using \"Update mod\". Export your save, then reinstall the mod.",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 276,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-a7372f32aa",
+    "category": "manager",
+    "japanese": "正規版を削除します",
+    "english": "Uninstall the original game",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 299,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-96d9f3a967",
+    "category": "manager",
+    "japanese": "modを導入するには、いま入っている正規版をいったん削除する必要があります。削除すると、この端末にあるセーブデータも消えます。先にゲームのクラウドセーブで保存しておくと、導入後に Google データ エクスポートを使って取り込めます。",
+    "english": "To install the mod, you must first uninstall the original game. This will also delete the save data on this device. Save to the cloud in the game first so you can import your save using Google Takeout after installing the mod.",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 300,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-56b8d59b66",
+    "category": "manager",
+    "japanese": "続ける",
+    "english": "Continue",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 301,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-3c072ca7b3",
+    "category": "manager",
+    "japanese": "セーブデータは保存しましたか？",
+    "english": "Have you backed up your save data?",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 303,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-abfd1659d9",
+    "category": "manager",
+    "japanese": "削除したセーブデータは元に戻せません。",
+    "english": "Deleted save data cannot be recovered.",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 304,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-f17ccd9811",
+    "category": "manager",
+    "japanese": "削除する",
+    "english": "Uninstall",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 305,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-9c6a140bd3",
+    "category": "manager",
+    "japanese": "導入できませんでした。正規版は Google Play から入れ直せます。",
+    "english": "Could not install the mod. You can reinstall the original game from Google Play.",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 358,
+        "encoding": "utf-8",
+        "symbol": ""
+      },
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/Store.kt",
+        "line": 50,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-e216616b97",
+    "category": "manager",
+    "japanese": "作ったAPKが見つかりません",
+    "english": "Could not find the built APKs.",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 358,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-05bd258fe5",
+    "category": "manager",
+    "japanese": "このアプリにアプリのインストールを許可してください。",
+    "english": "Allow this app to install apps.",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 364,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-81ddfa9624",
+    "category": "manager",
+    "japanese": "modを更新しています…",
+    "english": "Updating the mod...",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 371,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-f568d6d810",
+    "category": "manager",
+    "japanese": "modを導入しています…",
+    "english": "Installing the mod...",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 371,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-fcf6e26970",
+    "category": "manager",
+    "japanese": "ゲームの画面を開けませんでした。",
+    "english": "Could not open the game's screen.",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/MainActivity.kt",
+        "line": 400,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-24e1a87354",
+    "category": "manager",
+    "japanese": "対応している正規版が入っていません",
+    "english": "A supported version of the original game is not installed.",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/ModBuild.kt",
+        "line": 25,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-35278869c4",
+    "category": "manager",
+    "japanese": "作業用のフォルダを作れません",
+    "english": "Could not create the working folder.",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/ModBuild.kt",
+        "line": 29,
+        "encoding": "utf-8",
+        "symbol": ""
+      },
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/ModBuild.kt",
+        "line": 89,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-bbbe8663a1",
+    "category": "manager",
+    "japanese": "空き容量が足りません（あと ${(need - free + (1 shl 20) - 1) shr 20}MB 必要です）",
+    "english": "Not enough free space (${(need - free + (1 shl 20) - 1) shr 20}MB more required).",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/ModBuild.kt",
+        "line": 33,
+        "encoding": "utf-8",
+        "symbol": ""
+      },
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/ModBuild.kt",
+        "line": 93,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-ff84efdff8",
+    "category": "manager",
+    "japanese": "差分一式を取得しています…",
+    "english": "Downloading the mod patch files...",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/ModBuild.kt",
+        "line": 35,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-97695ec2a8",
+    "category": "manager",
+    "japanese": "AndroidManifest.xml がありません",
+    "english": "AndroidManifest.xml is missing.",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/ModBuild.kt",
+        "line": 40,
+        "encoding": "utf-8",
+        "symbol": ""
+      },
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/ModBuild.kt",
+        "line": 97,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-c9ad8de8de",
+    "category": "manager",
+    "japanese": "正規版の manifest が想定と違います",
+    "english": "The original game's manifest does not match the expected version.",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/ModBuild.kt",
+        "line": 42,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-ba051593d6",
+    "category": "manager",
+    "japanese": "manifest の書き換えの結果が想定と違います",
+    "english": "The patched manifest does not match the expected result.",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/ModBuild.kt",
+        "line": 44,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-8273d32799",
+    "category": "manager",
+    "japanese": "$name を作っています…",
+    "english": "Building $name...",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/ModBuild.kt",
+        "line": 54,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-2d3176180b",
+    "category": "manager",
+    "japanese": "この版は更新では入れられません",
+    "english": "This version cannot be installed as an update.",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/ModBuild.kt",
+        "line": 76,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-9aff273425",
+    "category": "manager",
+    "japanese": "fflmod が入っていません",
+    "english": "fflmod is not installed.",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/ModBuild.kt",
+        "line": 82,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-e03e2751c1",
+    "category": "manager",
+    "japanese": "split_config.arm64_v8a.apk がありません",
+    "english": "split_config.arm64_v8a.apk is missing.",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/ModBuild.kt",
+        "line": 86,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-a7a85c0749",
+    "category": "manager",
+    "japanese": "mod の dex が見つかりません",
+    "english": "Could not find the mod's DEX file.",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/ModBuild.kt",
+        "line": 105,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-f39ec316f0",
+    "category": "manager",
+    "japanese": "${src.name} を作っています…",
+    "english": "Building ${src.name}...",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/ModBuild.kt",
+        "line": 115,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-584e19c1d4",
+    "category": "manager",
+    "japanese": "files.json の形式 ${info.getInt(\"format\")} には対応していません",
+    "english": "Unsupported files.json format: ${info.getInt(\"format\")}",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/Release.kt",
+        "line": 35,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-99795bac71",
+    "category": "manager",
+    "japanese": "interface ${info.getInt(\"interface\")} には対応していません",
+    "english": "Unsupported interface version: ${info.getInt(\"interface\")}",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/Release.kt",
+        "line": 36,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-91c5e10d32",
+    "category": "manager",
+    "japanese": "この Release は、管理アプリが対応しているゲームの版と違います",
+    "english": "This release targets a different game version from the one supported by the manager.",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/Release.kt",
+        "line": 41,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-e2a333a2c7",
+    "category": "manager",
+    "japanese": "$name が Release にありません",
+    "english": "$name is missing from the release.",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/Release.kt",
+        "line": 46,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-622863d65c",
+    "category": "manager",
+    "japanese": "$name が files.json と一致しません",
+    "english": "$name does not match files.json.",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/Release.kt",
+        "line": 49,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-8db746790c",
+    "category": "manager",
+    "japanese": "Release が見つかりません",
+    "english": "Could not find a release.",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/Release.kt",
+        "line": 74,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-c0aca8b5e6",
+    "category": "manager",
+    "japanese": "転送先が多すぎます: $url",
+    "english": "Too many redirects: $url",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/Release.kt",
+        "line": 109,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-6f92cf3c15",
+    "category": "manager",
+    "japanese": "fflmod ${version(ctx)} に更新しました。",
+    "english": "Updated to fflmod ${version(ctx)}.",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/Store.kt",
+        "line": 47,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "manager-bd23c7dc4a",
+    "category": "manager",
+    "japanese": "fflmod ${version(ctx)} を導入しました。\nセーブを取り込むときは「セーブを取り込む」を押してください。",
+    "english": "Installed fflmod ${version(ctx)}.\nTo import your save data, select \"Import save\".",
+    "occurrences": [
+      {
+        "file": "manager/app/src/main/java/io/github/fflmod/fflmod/Store.kt",
+        "line": 48,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "save-dialog-4d7c60b538",
+    "category": "save_dialog",
+    "japanese": "セーブデータが見つかりません。ゲームで一度セーブしてから書き出してください。",
+    "english": "No save data found. Save in the game at least once before exporting.",
+    "occurrences": [
+      {
+        "file": "src/smali/FFLModSaveActivity.smali",
+        "line": 362,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "save-dialog-0f63abbcef",
+    "category": "save_dialog",
+    "japanese": "書き出しに失敗しました。保存先を変えてもう一度お試しください。",
+    "english": "Export failed. Choose a different location and try again.",
+    "occurrences": [
+      {
+        "file": "src/smali/FFLModSaveActivity.smali",
+        "line": 431,
+        "encoding": "utf-8",
+        "symbol": ""
+      },
+      {
+        "file": "src/smali/FFLModSaveActivity.smali",
+        "line": 494,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "save-dialog-c181bb0788",
+    "category": "save_dialog",
+    "japanese": "セーブデータを書き出しました。",
+    "english": "Save data exported.",
+    "occurrences": [
+      {
+        "file": "src/smali/FFLModSaveActivity.smali",
+        "line": 484,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "save-dialog-e1f2ac561c",
+    "category": "save_dialog",
+    "japanese": "ファイルを読み込めませんでした。",
+    "english": "Could not read the file.",
+    "occurrences": [
+      {
+        "file": "src/smali/FFLModSaveActivity.smali",
+        "line": 531,
+        "encoding": "utf-8",
+        "symbol": ""
+      },
+      {
+        "file": "src/smali/FFLModSaveActivity.smali",
+        "line": 618,
+        "encoding": "utf-8",
+        "symbol": ""
+      },
+      {
+        "file": "src/smali/FFLModSaveActivity.smali",
+        "line": 823,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "save-dialog-4c0c678f5d",
+    "category": "save_dialog",
+    "japanese": "このファイルはFFレジェンズのセーブデータではありません。",
+    "english": "This file is not FF Dimensions save data.",
+    "occurrences": [
+      {
+        "file": "src/smali/FFLModSaveActivity.smali",
+        "line": 608,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "save-dialog-7d0775b142",
+    "category": "save_dialog",
+    "japanese": "Google データ エクスポートのクラウドセーブ",
+    "english": "The cloud save from Google Takeout",
+    "occurrences": [
+      {
+        "file": "src/smali/FFLModSaveActivity.smali",
+        "line": 771,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "save-dialog-250bd3ad36",
+    "category": "save_dialog",
+    "japanese": "（最終更新：",
+    "english": " （Last updated: ",
+    "occurrences": [
+      {
+        "file": "src/smali/FFLModSaveActivity.smali",
+        "line": 777,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "save-dialog-597919fc78",
+    "category": "save_dialog",
+    "japanese": "を取り込みます。",
+    "english": " will be imported.",
+    "occurrences": [
+      {
+        "file": "src/smali/FFLModSaveActivity.smali",
+        "line": 788,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "save-dialog-c585303770",
+    "category": "save_dialog",
+    "japanese": "このファイルにはセーブデータが入っていません。一緒に届いたもう一つのzipファイルを選んでください。",
+    "english": "This file contains no save data. Select the other ZIP file included in your export.",
+    "occurrences": [
+      {
+        "file": "src/smali/FFLModSaveActivity.smali",
+        "line": 805,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "save-dialog-9c1dec2d3e",
+    "category": "save_dialog",
+    "japanese": "このzipファイルにはFFレジェンズのセーブデータが入っていません。",
+    "english": "This ZIP file contains no FF Dimensions save data.",
+    "occurrences": [
+      {
+        "file": "src/smali/FFLModSaveActivity.smali",
+        "line": 814,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "save-dialog-9c7c18ecb5",
+    "category": "save_dialog",
+    "japanese": "選んだセーブデータを取り込みます。",
+    "english": "The selected save data will be imported.",
+    "occurrences": [
+      {
+        "file": "src/smali/FFLModSaveActivity.smali",
+        "line": 845,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "save-dialog-2962a5338c",
+    "category": "save_dialog",
+    "japanese": "今のセーブデータは上書きされます。必要な場合は、先に書き出しておいてください。取り込んだあと、ゲームを終了します。",
+    "english": "Your current save data will be overwritten. Export it first if you want to keep it. The game will close after the import.",
+    "occurrences": [
+      {
+        "file": "src/smali/FFLModSaveActivity.smali",
+        "line": 851,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "save-dialog-d535dca5e3",
+    "category": "save_dialog",
+    "japanese": "セーブデータの取り込み",
+    "english": "Import save data",
+    "occurrences": [
+      {
+        "file": "src/smali/FFLModSaveActivity.smali",
+        "line": 865,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "save-dialog-94ad857900",
+    "category": "save_dialog",
+    "japanese": "取り込む",
+    "english": "Import",
+    "occurrences": [
+      {
+        "file": "src/smali/FFLModSaveActivity.smali",
+        "line": 881,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "save-dialog-a56331c3d8",
+    "category": "save_dialog",
+    "japanese": "やめる",
+    "english": "Cancel",
+    "occurrences": [
+      {
+        "file": "src/smali/FFLModSaveActivity.smali",
+        "line": 891,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "save-dialog-78087f06a3",
+    "category": "save_dialog",
+    "japanese": "取り込みの準備ができました。ゲームを終了します。次にゲームを起動したときに反映されます。",
+    "english": "The import is ready. The game will now close. Your save data will be applied the next time you start the game.",
+    "occurrences": [
+      {
+        "file": "src/smali/FFLModSaveActivity.smali",
+        "line": 953,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "save-dialog-a30871d8bb",
+    "category": "save_dialog",
+    "japanese": "取り込みに失敗しました。",
+    "english": "Import failed.",
+    "occurrences": [
+      {
+        "file": "src/smali/FFLModSaveActivity.smali",
+        "line": 965,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "save-dialog-e532b24c6b",
+    "category": "save_dialog",
+    "japanese": "取り込みを取りやめました。",
+    "english": "Import canceled.",
+    "occurrences": [
+      {
+        "file": "src/smali/FFLModSaveActivity.smali",
+        "line": 989,
+        "encoding": "utf-8",
+        "symbol": ""
+      },
+      {
+        "file": "src/smali/FFLModSaveActivity.smali",
+        "line": 1057,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  },
+  {
+    "id": "save-dialog-603127c025",
+    "category": "save_dialog",
+    "japanese": "書き出しを取りやめました。",
+    "english": "Export canceled.",
+    "occurrences": [
+      {
+        "file": "src/smali/FFLModSaveActivity.smali",
+        "line": 1052,
+        "encoding": "utf-8",
+        "symbol": ""
+      }
+    ]
+  }
+]

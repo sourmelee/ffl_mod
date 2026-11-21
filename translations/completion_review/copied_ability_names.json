@@ -1,0 +1,68 @@
+[
+  {
+    "new_id": 73,
+    "copy_from": 432,
+    "japanese": "ウォータ",
+    "english": "Water"
+  },
+  {
+    "new_id": 74,
+    "copy_from": 433,
+    "japanese": "ウォタガ",
+    "english": "Waterga"
+  },
+  {
+    "new_id": 76,
+    "copy_from": 431,
+    "japanese": "ウンディーネの叫び",
+    "english": "Undine Cry"
+  },
+  {
+    "new_id": 77,
+    "copy_from": 435,
+    "japanese": "ローレライの悲涙",
+    "english": "Lorelei's Tears"
+  },
+  {
+    "new_id": 78,
+    "copy_from": 393,
+    "japanese": "ゆうわく",
+    "english": "Entice"
+  },
+  {
+    "new_id": 79,
+    "copy_from": 434,
+    "japanese": "ディスチャージ",
+    "english": "Discharge"
+  },
+  {
+    "new_id": 80,
+    "copy_from": 469,
+    "japanese": "セイレーンの呪歌",
+    "english": "Siren Song"
+  },
+  {
+    "new_id": 81,
+    "copy_from": 437,
+    "japanese": "テンプテーション",
+    "english": "Temptation"
+  },
+  {
+    "new_id": 204,
+    "copy_from": 30,
+    "japanese": "トード",
+    "english": "Toad"
+  },
+  {
+    "new_id": 205,
+    "copy_from": 6,
+    "japanese": "ミニマム",
+    "english": "Mini"
+  },
+  {
+    "new_id": 206,
+    "copy_from": 5,
+    "japanese": "サイレス",
+    "english": "Silence"
+  }
+]

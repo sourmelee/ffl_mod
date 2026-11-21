@@ -1,0 +1,1608 @@
+[
+  {
+    "bank": 0,
+    "id": 32,
+    "slot": 2,
+    "source": "msg0.dat:32:text",
+    "japanese": "「ボクはみなさんを\n　さらなる戦いの場に導く\n　モーグリですクポ。\n　もうちょっと冒険を進めたら\n　忘れずにまた\n　会いにきてほしいクポ！」",
+    "english": "Mog can take you somewhere to find further challenges! Come see me again once you've done a bit more adventuring, kupo!",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 1,
+    "id": 490,
+    "slot": 2,
+    "source": "msg1.dat:490:text",
+    "japanese": "「ボクはみなさんを\n　さらなる戦いの場に導く\n　モーグリですクポ。\n　もうちょっと冒険を進めたら\n　忘れずにまた\n　会いにきてほしいクポ！」",
+    "english": "Mog can take you somewhere to find further challenges! Come see me again once you've done a bit more adventuring, kupo!",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 2,
+    "id": 490,
+    "slot": 2,
+    "source": "msg2.dat:490:text",
+    "japanese": "「ボクはみなさんを\n　さらなる戦いの場に導く\n　モーグリですクポ。\n　もうちょっと冒険を進めたら\n　忘れずにまた\n　会いにきてほしいクポ！」",
+    "english": "Mog can take you somewhere to find further challenges! Come see me again once you've done a bit more adventuring, kupo!",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 3,
+    "id": 33,
+    "slot": 2,
+    "source": "msg3.dat:33:text",
+    "japanese": "「ボクはみなさんを\n　さらなる戦いの場に導く\n　モーグリですクポ。\n　もうちょっと冒険を進めたら\n　忘れずにまた\n　会いにきてほしいクポ！」",
+    "english": "Mog can take you somewhere to find further challenges! Come see me again once you've done a bit more adventuring, kupo!",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 4,
+    "id": 580,
+    "slot": 2,
+    "source": "msg4.dat:580:text",
+    "japanese": "「ボクはみなさんを\n　さらなる戦いの場に導く\n　モーグリですクポ。\n　もうちょっと冒険を進めたら\n　忘れずにまた\n　会いにきてほしいクポ！」",
+    "english": "Mog can take you somewhere to find further challenges! Come see me again once you've done a bit more adventuring, kupo!",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 4,
+    "id": 581,
+    "slot": 2,
+    "source": "msg4.dat:581:text",
+    "japanese": "「ボクはみなさんを\n　さらなる戦いの場に導く\n　モーグリですクポ。\n　もうちょっと冒険を進めたら\n　忘れずにまた\n　会いにきてほしいクポ！」",
+    "english": "Mog can take you somewhere to find further challenges! Come see me again once you've done a bit more adventuring, kupo!",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 5,
+    "id": 40,
+    "slot": 2,
+    "source": "msg5.dat:40:text",
+    "japanese": "「ボクはみなさんを\n　さらなる戦いの場に導く\n　モーグリですクポ。\n　もうちょっと冒険を進めたら\n　忘れずにまた\n　会いにきてほしいクポ！」",
+    "english": "Mog can take you somewhere to find further challenges! Come see me again once you've done a bit more adventuring, kupo!",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 6,
+    "id": 33,
+    "slot": 2,
+    "source": "msg6.dat:33:text",
+    "japanese": "「ボクはみなさんを\n　さらなる戦いの場に導く\n　モーグリですクポ。\n　もうちょっと冒険を進めたら\n　忘れずにまた\n　会いにきてほしいクポ！」",
+    "english": "Mog can take you somewhere to find further challenges! Come see me again once you've done a bit more adventuring, kupo!",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 7,
+    "id": 33,
+    "slot": 2,
+    "source": "msg7.dat:33:text",
+    "japanese": "「ボクはみなさんを\n　さらなる戦いの場に導く\n　モーグリですクポ。\n　もうちょっと冒険を進めたら\n　忘れずにまた\n　会いにきてほしいクポ！」",
+    "english": "Mog can take you somewhere to find further challenges! Come see me again once you've done a bit more adventuring, kupo!",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 8,
+    "id": 33,
+    "slot": 2,
+    "source": "msg8.dat:33:text",
+    "japanese": "「ボクはみなさんを\n　さらなる戦いの場に導く\n　モーグリですクポ。\n　もうちょっと冒険を進めたら\n　忘れずにまた\n　会いにきてほしいクポ！」",
+    "english": "Mog can take you somewhere to find further challenges! Come see me again once you've done a bit more adventuring, kupo!",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 9,
+    "id": 33,
+    "slot": 2,
+    "source": "msg9.dat:33:text",
+    "japanese": "「ボクはみなさんを\n　さらなる戦いの場に導く\n　モーグリですクポ。\n　もうちょっと冒険を進めたら\n　忘れずにまた\n　会いにきてほしいクポ！」",
+    "english": "Mog can take you somewhere to find further challenges! Come see me again once you've done a bit more adventuring, kupo!",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 0,
+    "id": 33,
+    "slot": 2,
+    "source": "msg0.dat:33:text",
+    "japanese": "「クポポ！\n　お待ちしてましたクポ！\n\n　ボクはみなさんを\n　さらなる戦いの場に\n　導くことができるクポ。",
+    "english": "Kupopo! Mog has been waiting for you to come back and see him! I can bring you new challenges, kupo!",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 1,
+    "id": 491,
+    "slot": 2,
+    "source": "msg1.dat:491:text",
+    "japanese": "「クポポ！\n　お待ちしてましたクポ！\n\n　ボクはみなさんを\n　さらなる戦いの場に\n　導くことができるクポ。",
+    "english": "Kupopo! Mog has been waiting for you to come back and see him! I can bring you new challenges, kupo!",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 2,
+    "id": 491,
+    "slot": 2,
+    "source": "msg2.dat:491:text",
+    "japanese": "「クポポ！\n　お待ちしてましたクポ！\n\n　ボクはみなさんを\n　さらなる戦いの場に\n　導くことができるクポ。",
+    "english": "Kupopo! Mog has been waiting for you to come back and see him! I can bring you new challenges, kupo!",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 3,
+    "id": 34,
+    "slot": 2,
+    "source": "msg3.dat:34:text",
+    "japanese": "「クポポ！\n　お待ちしてましたクポ！\n\n　ボクはみなさんを\n　さらなる戦いの場に\n　導くことができるクポ。",
+    "english": "Kupopo! Mog has been waiting for you to come back and see him! I can bring you new challenges, kupo!",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 4,
+    "id": 582,
+    "slot": 2,
+    "source": "msg4.dat:582:text",
+    "japanese": "「クポポ！\n　お待ちしてましたクポ！\n\n　ボクはみなさんを\n　さらなる戦いの場に\n　導くことができるクポ。",
+    "english": "Kupopo! Mog has been waiting for you to come back and see him! I can bring you new challenges, kupo!",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 5,
+    "id": 41,
+    "slot": 2,
+    "source": "msg5.dat:41:text",
+    "japanese": "「クポポ！\n　お待ちしてましたクポ！\n\n　ボクはみなさんを\n　さらなる戦いの場に\n　導くことができるクポ。",
+    "english": "Kupopo! Mog has been waiting for you to come back and see him! I can bring you new challenges, kupo!",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 6,
+    "id": 34,
+    "slot": 2,
+    "source": "msg6.dat:34:text",
+    "japanese": "「クポポ！\n　お待ちしてましたクポ！\n\n　ボクはみなさんを\n　さらなる戦いの場に\n　導くことができるクポ。",
+    "english": "Kupopo! Mog has been waiting for you to come back and see him! I can bring you new challenges, kupo!",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 7,
+    "id": 34,
+    "slot": 2,
+    "source": "msg7.dat:34:text",
+    "japanese": "「クポポ！\n　お待ちしてましたクポ！\n\n　ボクはみなさんを\n　さらなる戦いの場に\n　導くことができるクポ。",
+    "english": "Kupopo! Mog has been waiting for you to come back and see him! I can bring you new challenges, kupo!",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 8,
+    "id": 34,
+    "slot": 2,
+    "source": "msg8.dat:34:text",
+    "japanese": "「クポポ！\n　お待ちしてましたクポ！\n\n　ボクはみなさんを\n　さらなる戦いの場に\n　導くことができるクポ。",
+    "english": "Kupopo! Mog has been waiting for you to come back and see him! I can bring you new challenges, kupo!",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 9,
+    "id": 34,
+    "slot": 2,
+    "source": "msg9.dat:34:text",
+    "japanese": "「クポポ！\n　お待ちしてましたクポ！\n\n　ボクはみなさんを\n　さらなる戦いの場に\n　導くことができるクポ。",
+    "english": "Kupopo! Mog has been waiting for you to come back and see him! I can bring you new challenges, kupo!",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 0,
+    "id": 34,
+    "slot": 2,
+    "source": "msg0.dat:34:text",
+    "japanese": "　さあ、『チャレンジダンジョン』に\n　挑戦するクポ？」",
+    "english": "Ready to take on the\nChallenge Dungeon, kupo?",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 1,
+    "id": 492,
+    "slot": 2,
+    "source": "msg1.dat:492:text",
+    "japanese": "　さあ、『チャレンジダンジョン』に\n　挑戦するクポ？」",
+    "english": "Ready to take on the\nChallenge Dungeon, kupo?",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 2,
+    "id": 492,
+    "slot": 2,
+    "source": "msg2.dat:492:text",
+    "japanese": "　さあ、『チャレンジダンジョン』に\n　挑戦するクポ？」",
+    "english": "Ready to take on the\nChallenge Dungeon, kupo?",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 3,
+    "id": 35,
+    "slot": 2,
+    "source": "msg3.dat:35:text",
+    "japanese": "　さあ、『チャレンジダンジョン』に\n　挑戦するクポ？」",
+    "english": "Ready to take on the\nChallenge Dungeon, kupo?",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 4,
+    "id": 583,
+    "slot": 2,
+    "source": "msg4.dat:583:text",
+    "japanese": "　さあ、『チャレンジダンジョン』に\n　挑戦するクポ？」",
+    "english": "Ready to take on the\nChallenge Dungeon, kupo?",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 5,
+    "id": 42,
+    "slot": 2,
+    "source": "msg5.dat:42:text",
+    "japanese": "　さあ、『チャレンジダンジョン』に\n　挑戦するクポ？」",
+    "english": "Ready to take on the\nChallenge Dungeon, kupo?",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 6,
+    "id": 35,
+    "slot": 2,
+    "source": "msg6.dat:35:text",
+    "japanese": "　さあ、『チャレンジダンジョン』に\n　挑戦するクポ？」",
+    "english": "Ready to take on the\nChallenge Dungeon, kupo?",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 7,
+    "id": 35,
+    "slot": 2,
+    "source": "msg7.dat:35:text",
+    "japanese": "　さあ、『チャレンジダンジョン』に\n　挑戦するクポ？」",
+    "english": "Ready to take on the\nChallenge Dungeon, kupo?",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 8,
+    "id": 35,
+    "slot": 2,
+    "source": "msg8.dat:35:text",
+    "japanese": "　さあ、『チャレンジダンジョン』に\n　挑戦するクポ？」",
+    "english": "Ready to take on the\nChallenge Dungeon, kupo?",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 9,
+    "id": 35,
+    "slot": 2,
+    "source": "msg9.dat:35:text",
+    "japanese": "　さあ、『チャレンジダンジョン』に\n　挑戦するクポ？」",
+    "english": "Ready to take on the\nChallenge Dungeon, kupo?",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 0,
+    "id": 35,
+    "slot": 2,
+    "source": "msg0.dat:35:text",
+    "japanese": "「わかりましたクポ！\n　では、気をつけて\n　いってらっしゃいクポ～！」",
+    "english": "Okay! Make sure you don't get hurt, kupo!",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 1,
+    "id": 493,
+    "slot": 2,
+    "source": "msg1.dat:493:text",
+    "japanese": "「わかりましたクポ！\n　では、気をつけて\n　いってらっしゃいクポ～！」",
+    "english": "Okay! Make sure you don't get hurt, kupo!",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 2,
+    "id": 493,
+    "slot": 2,
+    "source": "msg2.dat:493:text",
+    "japanese": "「わかりましたクポ！\n　では、気をつけて\n　いってらっしゃいクポ～！」",
+    "english": "Okay! Make sure you don't get hurt, kupo!",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 3,
+    "id": 36,
+    "slot": 2,
+    "source": "msg3.dat:36:text",
+    "japanese": "「わかりましたクポ！\n　では、気をつけて\n　いってらっしゃいクポ～！」",
+    "english": "Okay! Make sure you don't get hurt, kupo!",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 4,
+    "id": 584,
+    "slot": 2,
+    "source": "msg4.dat:584:text",
+    "japanese": "「わかりましたクポ！\n　では、気をつけて\n　いってらっしゃいクポ～！」",
+    "english": "Okay! Make sure you don't get hurt, kupo!",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 5,
+    "id": 43,
+    "slot": 2,
+    "source": "msg5.dat:43:text",
+    "japanese": "「わかりましたクポ！\n　では、気をつけて\n　いってらっしゃいクポ～！」",
+    "english": "Okay! Make sure you don't get hurt, kupo!",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 6,
+    "id": 36,
+    "slot": 2,
+    "source": "msg6.dat:36:text",
+    "japanese": "「わかりましたクポ！\n　では、気をつけて\n　いってらっしゃいクポ～！」",
+    "english": "Okay! Make sure you don't get hurt, kupo!",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 7,
+    "id": 36,
+    "slot": 2,
+    "source": "msg7.dat:36:text",
+    "japanese": "「わかりましたクポ！\n　では、気をつけて\n　いってらっしゃいクポ～！」",
+    "english": "Okay! Make sure you don't get hurt, kupo!",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 8,
+    "id": 36,
+    "slot": 2,
+    "source": "msg8.dat:36:text",
+    "japanese": "「わかりましたクポ！\n　では、気をつけて\n　いってらっしゃいクポ～！」",
+    "english": "Okay! Make sure you don't get hurt, kupo!",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 9,
+    "id": 36,
+    "slot": 2,
+    "source": "msg9.dat:36:text",
+    "japanese": "「わかりましたクポ！\n　では、気をつけて\n　いってらっしゃいクポ～！」",
+    "english": "Okay! Make sure you don't get hurt, kupo!",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 0,
+    "id": 36,
+    "slot": 2,
+    "source": "msg0.dat:36:text",
+    "japanese": "「クポポ…残念ですクポ。\n　行きたくなったら\n　また話しかけてほしいクポ！」",
+    "english": "Awww...\n\n\nWell, Mog is always here if you change your mind, kupo!",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 1,
+    "id": 494,
+    "slot": 2,
+    "source": "msg1.dat:494:text",
+    "japanese": "「クポポ…残念ですクポ。\n　行きたくなったら\n　また話しかけてほしいクポ！」",
+    "english": "Awww...\n\n\nWell, Mog is always here if you change your mind, kupo!",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 2,
+    "id": 494,
+    "slot": 2,
+    "source": "msg2.dat:494:text",
+    "japanese": "「クポポ…残念ですクポ。\n　行きたくなったら\n　また話しかけてほしいクポ！」",
+    "english": "Awww...\n\n\nWell, Mog is always here if you change your mind, kupo!",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 3,
+    "id": 37,
+    "slot": 2,
+    "source": "msg3.dat:37:text",
+    "japanese": "「クポポ…残念ですクポ。\n　行きたくなったら\n　また話しかけてほしいクポ！」",
+    "english": "Awww...\n\n\nWell, Mog is always here if you change your mind, kupo!",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 4,
+    "id": 585,
+    "slot": 2,
+    "source": "msg4.dat:585:text",
+    "japanese": "「クポポ…残念ですクポ。\n　行きたくなったら\n　また話しかけてほしいクポ！」",
+    "english": "Awww...\n\n\nWell, Mog is always here if you change your mind, kupo!",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 5,
+    "id": 44,
+    "slot": 2,
+    "source": "msg5.dat:44:text",
+    "japanese": "「クポポ…残念ですクポ。\n　行きたくなったら\n　また話しかけてほしいクポ！」",
+    "english": "Awww...\n\n\nWell, Mog is always here if you change your mind, kupo!",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 6,
+    "id": 37,
+    "slot": 2,
+    "source": "msg6.dat:37:text",
+    "japanese": "「クポポ…残念ですクポ。\n　行きたくなったら\n　また話しかけてほしいクポ！」",
+    "english": "Awww...\n\n\nWell, Mog is always here if you change your mind, kupo!",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 7,
+    "id": 37,
+    "slot": 2,
+    "source": "msg7.dat:37:text",
+    "japanese": "「クポポ…残念ですクポ。\n　行きたくなったら\n　また話しかけてほしいクポ！」",
+    "english": "Awww...\n\n\nWell, Mog is always here if you change your mind, kupo!",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 8,
+    "id": 37,
+    "slot": 2,
+    "source": "msg8.dat:37:text",
+    "japanese": "「クポポ…残念ですクポ。\n　行きたくなったら\n　また話しかけてほしいクポ！」",
+    "english": "Awww...\n\n\nWell, Mog is always here if you change your mind, kupo!",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 9,
+    "id": 37,
+    "slot": 2,
+    "source": "msg9.dat:37:text",
+    "japanese": "「クポポ…残念ですクポ。\n　行きたくなったら\n　また話しかけてほしいクポ！」",
+    "english": "Awww...\n\n\nWell, Mog is always here if you change your mind, kupo!",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 0,
+    "id": 48,
+    "slot": 2,
+    "source": "msg0.dat:48:text",
+    "japanese": "「お待ちしてましたクポ！\n　さあ、『チャレンジダンジョン』に\n　挑戦するクポ？」",
+    "english": "Mog has been waiting for you, kupo!\nReady to take on the\nChallenge Dungeon?",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 1,
+    "id": 495,
+    "slot": 2,
+    "source": "msg1.dat:495:text",
+    "japanese": "「お待ちしてましたクポ！\n　さあ、『チャレンジダンジョン』に\n　挑戦するクポ？」",
+    "english": "Mog has been waiting for you, kupo!\nReady to take on the\nChallenge Dungeon?",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 2,
+    "id": 495,
+    "slot": 2,
+    "source": "msg2.dat:495:text",
+    "japanese": "「お待ちしてましたクポ！\n　さあ、『チャレンジダンジョン』に\n　挑戦するクポ？」",
+    "english": "Mog has been waiting for you, kupo!\nReady to take on the\nChallenge Dungeon?",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 3,
+    "id": 38,
+    "slot": 2,
+    "source": "msg3.dat:38:text",
+    "japanese": "「お待ちしてましたクポ！\n　さあ、『チャレンジダンジョン』に\n　挑戦するクポ？」",
+    "english": "Mog has been waiting for you, kupo!\nReady to take on the\nChallenge Dungeon?",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 4,
+    "id": 586,
+    "slot": 2,
+    "source": "msg4.dat:586:text",
+    "japanese": "「お待ちしてましたクポ！\n　さあ、『チャレンジダンジョン』に\n　挑戦するクポ？」",
+    "english": "Mog has been waiting for you, kupo!\nReady to take on the\nChallenge Dungeon?",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 5,
+    "id": 45,
+    "slot": 2,
+    "source": "msg5.dat:45:text",
+    "japanese": "「お待ちしてましたクポ！\n　さあ、『チャレンジダンジョン』に\n　挑戦するクポ？」",
+    "english": "Mog has been waiting for you, kupo!\nReady to take on the\nChallenge Dungeon?",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 6,
+    "id": 38,
+    "slot": 2,
+    "source": "msg6.dat:38:text",
+    "japanese": "「お待ちしてましたクポ！\n　さあ、『チャレンジダンジョン』に\n　挑戦するクポ？」",
+    "english": "Mog has been waiting for you, kupo!\nReady to take on the\nChallenge Dungeon?",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 7,
+    "id": 38,
+    "slot": 2,
+    "source": "msg7.dat:38:text",
+    "japanese": "「お待ちしてましたクポ！\n　さあ、『チャレンジダンジョン』に\n　挑戦するクポ？」",
+    "english": "Mog has been waiting for you, kupo!\nReady to take on the\nChallenge Dungeon?",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 8,
+    "id": 38,
+    "slot": 2,
+    "source": "msg8.dat:38:text",
+    "japanese": "「お待ちしてましたクポ！\n　さあ、『チャレンジダンジョン』に\n　挑戦するクポ？」",
+    "english": "Mog has been waiting for you, kupo!\nReady to take on the\nChallenge Dungeon?",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 9,
+    "id": 38,
+    "slot": 2,
+    "source": "msg9.dat:38:text",
+    "japanese": "「お待ちしてましたクポ！\n　さあ、『チャレンジダンジョン』に\n　挑戦するクポ？」",
+    "english": "Mog has been waiting for you, kupo!\nReady to take on the\nChallenge Dungeon?",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 0,
+    "id": 49,
+    "slot": 2,
+    "source": "msg0.dat:49:text",
+    "japanese": "ダンジョンから脱出しますか？",
+    "english": "Leave the dungeon?",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 3,
+    "id": 39,
+    "slot": 2,
+    "source": "msg3.dat:39:text",
+    "japanese": "ダンジョンから脱出しますか？",
+    "english": "Leave the dungeon?",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 4,
+    "id": 49,
+    "slot": 2,
+    "source": "msg4.dat:49:text",
+    "japanese": "ダンジョンから脱出しますか？",
+    "english": "Leave the dungeon?",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 5,
+    "id": 49,
+    "slot": 2,
+    "source": "msg5.dat:49:text",
+    "japanese": "ダンジョンから脱出しますか？",
+    "english": "Leave the dungeon?",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 6,
+    "id": 39,
+    "slot": 2,
+    "source": "msg6.dat:39:text",
+    "japanese": "ダンジョンから脱出しますか？",
+    "english": "Leave the dungeon?",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 7,
+    "id": 39,
+    "slot": 2,
+    "source": "msg7.dat:39:text",
+    "japanese": "ダンジョンから脱出しますか？",
+    "english": "Leave the dungeon?",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 8,
+    "id": 39,
+    "slot": 2,
+    "source": "msg8.dat:39:text",
+    "japanese": "ダンジョンから脱出しますか？",
+    "english": "Leave the dungeon?",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 9,
+    "id": 39,
+    "slot": 2,
+    "source": "msg9.dat:39:text",
+    "japanese": "ダンジョンから脱出しますか？",
+    "english": "Leave the dungeon?",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 3,
+    "id": 24,
+    "slot": 2,
+    "source": "msg3.dat:24:text",
+    "japanese": "獣の動きを思い出しますか？",
+    "english": "Recall the beast's movements?",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 4,
+    "id": 39,
+    "slot": 2,
+    "source": "msg4.dat:39:text",
+    "japanese": "経度：<tmp0>\n緯度：<tmp1>",
+    "english": "Lon: <tmp0>\nLat: <tmp1>",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 4,
+    "id": 40,
+    "slot": 2,
+    "source": "msg4.dat:40:text",
+    "japanese": "幽霊船の位置\n　　経度：<tmp2>\n　　緯度：<tmp3>",
+    "english": "Ghost ship location\nLon: <tmp2>\nLat: <tmp3>",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 4,
+    "id": 41,
+    "slot": 2,
+    "source": "msg4.dat:41:text",
+    "japanese": "宝箱には\n【コンパス】が入っていた！\n\n船に乗って決定キーを押すと\n幽霊船の位置を調べることができます。",
+    "english": "Found a Compass in the chest!\n\nWhile aboard the ship, press\nthe confirm button to check\nthe ghost ship's location.",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 4,
+    "id": 42,
+    "slot": 2,
+    "source": "msg4.dat:42:text",
+    "japanese": "「海をさまよう幽霊船を見つけて\n　お宝をゲットするクポ！\n\n　まずは外にある船に乗って\n　【コンパス】を探すといいクポ。\n\n　【コンパス】を使えば\n　幽霊船の位置がわかるクポ！」",
+    "english": "Find the ghost ship roaming\nthe seas and claim its treasure, kupo!\n\nFirst, board the ship outside\nand look for a Compass.\n\nThe Compass will show you\nthe ghost ship's location, kupo!",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 4,
+    "id": 43,
+    "slot": 2,
+    "source": "msg4.dat:43:text",
+    "japanese": "「海をさまよう幽霊船を見つけて\n　お宝をゲットするクポ！\n\n　【コンパス】を手に入れたクポ？\n　船に乗って決定キーを押せば\n　幽霊船の位置がわかるクポ！」",
+    "english": "Find the ghost ship roaming\nthe seas and claim its treasure, kupo!\n\nHave you found a Compass?\nBoard the ship and press\nthe confirm button to check\nthe ghost ship's location, kupo!",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 5,
+    "id": 46,
+    "slot": 2,
+    "source": "msg5.dat:46:text",
+    "japanese": "カルマ\n<tmp0>点",
+    "english": "Karma\n<tmp0>",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 5,
+    "id": 430,
+    "slot": 2,
+    "source": "msg5.dat:430:text",
+    "japanese": "「たくさんいる魔物を倒して\n　カルマ（得点）をためるクポ！\n\n　カルマをたくさんためてから\n　ボスを倒すと良いものがもらえる\n　確率が上がるクポ。\n　でもカルマが下がっちゃう\n　魔物もいるから\n　戦いすぎには注意するクポ！」",
+    "english": "Defeat monsters to earn\nKarma points, kupo!\n\nThe more Karma you have when\nyou defeat the boss, the better\nyour chances of a valuable reward.\n\nBut some monsters lower your Karma,\nso don't get carried away, kupo!",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 5,
+    "id": 431,
+    "slot": 2,
+    "source": "msg5.dat:431:text",
+    "japanese": "「カルマ（得点）の基準は…\n　　Ｓ　９００点以上\n　　Ａ　６００点以上\n　　Ｂ　４００点以上\n　　Ｃ　２００点以上\n　　Ｄ　１００点以上\n　こんな感じになってるクポ！\n　最低でも１００点あれば\n　ゲットできないお宝はないクポ」",
+    "english": "Here are the Karma ranks, kupo!\nS: 900 points or more\nA: 600 points or more\nB: 400 points or more\nC: 200 points or more\nD: 100 points or more\n\nWith at least 100 points,\nyou have a chance at any treasure!",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 5,
+    "id": 435,
+    "slot": 2,
+    "source": "msg5.dat:435:text",
+    "japanese": "カルマ：<tmp0>点",
+    "english": "Karma: <tmp0>",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 5,
+    "id": 438,
+    "slot": 2,
+    "source": "msg5.dat:438:text",
+    "japanese": "ダンジョンから脱出しますか？\nカルマは次回に持ち越せません。",
+    "english": "Leave the dungeon?\nYour Karma will not carry over\nto your next visit.",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 5,
+    "id": 439,
+    "slot": 2,
+    "source": "msg5.dat:439:text",
+    "japanese": "現在のカルマでボスへ行きますか？",
+    "english": "Face the boss with your current Karma?",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 12,
+    "id": 1315,
+    "slot": 2,
+    "source": "msg12.dat:1315:text",
+    "japanese": "【<ite<tmp0>>】を手に入れた！",
+    "english": "You receive <ite<tmp0>>!",
+    "reason": "fill_empty_English_story_text",
+    "expected_english": ""
+  },
+  {
+    "bank": 0,
+    "id": 32,
+    "slot": 3,
+    "source": "msg0.dat:32:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 0,
+    "id": 33,
+    "slot": 3,
+    "source": "msg0.dat:33:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 0,
+    "id": 34,
+    "slot": 3,
+    "source": "msg0.dat:34:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 0,
+    "id": 35,
+    "slot": 3,
+    "source": "msg0.dat:35:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 0,
+    "id": 36,
+    "slot": 3,
+    "source": "msg0.dat:36:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 0,
+    "id": 48,
+    "slot": 3,
+    "source": "msg0.dat:48:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 1,
+    "id": 490,
+    "slot": 3,
+    "source": "msg1.dat:490:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 1,
+    "id": 491,
+    "slot": 3,
+    "source": "msg1.dat:491:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 1,
+    "id": 492,
+    "slot": 3,
+    "source": "msg1.dat:492:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 1,
+    "id": 493,
+    "slot": 3,
+    "source": "msg1.dat:493:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 1,
+    "id": 494,
+    "slot": 3,
+    "source": "msg1.dat:494:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 1,
+    "id": 495,
+    "slot": 3,
+    "source": "msg1.dat:495:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 2,
+    "id": 490,
+    "slot": 3,
+    "source": "msg2.dat:490:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 2,
+    "id": 491,
+    "slot": 3,
+    "source": "msg2.dat:491:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 2,
+    "id": 492,
+    "slot": 3,
+    "source": "msg2.dat:492:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 2,
+    "id": 493,
+    "slot": 3,
+    "source": "msg2.dat:493:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 2,
+    "id": 494,
+    "slot": 3,
+    "source": "msg2.dat:494:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 2,
+    "id": 495,
+    "slot": 3,
+    "source": "msg2.dat:495:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 3,
+    "id": 33,
+    "slot": 3,
+    "source": "msg3.dat:33:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 3,
+    "id": 34,
+    "slot": 3,
+    "source": "msg3.dat:34:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 3,
+    "id": 35,
+    "slot": 3,
+    "source": "msg3.dat:35:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 3,
+    "id": 36,
+    "slot": 3,
+    "source": "msg3.dat:36:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 3,
+    "id": 37,
+    "slot": 3,
+    "source": "msg3.dat:37:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 3,
+    "id": 38,
+    "slot": 3,
+    "source": "msg3.dat:38:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 4,
+    "id": 42,
+    "slot": 3,
+    "source": "msg4.dat:42:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 4,
+    "id": 43,
+    "slot": 3,
+    "source": "msg4.dat:43:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 4,
+    "id": 580,
+    "slot": 3,
+    "source": "msg4.dat:580:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 4,
+    "id": 581,
+    "slot": 3,
+    "source": "msg4.dat:581:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 4,
+    "id": 582,
+    "slot": 3,
+    "source": "msg4.dat:582:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 4,
+    "id": 583,
+    "slot": 3,
+    "source": "msg4.dat:583:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 4,
+    "id": 584,
+    "slot": 3,
+    "source": "msg4.dat:584:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 4,
+    "id": 585,
+    "slot": 3,
+    "source": "msg4.dat:585:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 4,
+    "id": 586,
+    "slot": 3,
+    "source": "msg4.dat:586:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 5,
+    "id": 40,
+    "slot": 3,
+    "source": "msg5.dat:40:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 5,
+    "id": 41,
+    "slot": 3,
+    "source": "msg5.dat:41:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 5,
+    "id": 42,
+    "slot": 3,
+    "source": "msg5.dat:42:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 5,
+    "id": 43,
+    "slot": 3,
+    "source": "msg5.dat:43:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 5,
+    "id": 44,
+    "slot": 3,
+    "source": "msg5.dat:44:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 5,
+    "id": 45,
+    "slot": 3,
+    "source": "msg5.dat:45:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 5,
+    "id": 430,
+    "slot": 3,
+    "source": "msg5.dat:430:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 5,
+    "id": 431,
+    "slot": 3,
+    "source": "msg5.dat:431:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 6,
+    "id": 24,
+    "slot": 3,
+    "source": "msg6.dat:24:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 6,
+    "id": 33,
+    "slot": 3,
+    "source": "msg6.dat:33:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 6,
+    "id": 34,
+    "slot": 3,
+    "source": "msg6.dat:34:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 6,
+    "id": 35,
+    "slot": 3,
+    "source": "msg6.dat:35:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 6,
+    "id": 36,
+    "slot": 3,
+    "source": "msg6.dat:36:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 6,
+    "id": 37,
+    "slot": 3,
+    "source": "msg6.dat:37:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 6,
+    "id": 38,
+    "slot": 3,
+    "source": "msg6.dat:38:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 6,
+    "id": 40,
+    "slot": 3,
+    "source": "msg6.dat:40:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 6,
+    "id": 41,
+    "slot": 3,
+    "source": "msg6.dat:41:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 7,
+    "id": 33,
+    "slot": 3,
+    "source": "msg7.dat:33:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 7,
+    "id": 34,
+    "slot": 3,
+    "source": "msg7.dat:34:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 7,
+    "id": 35,
+    "slot": 3,
+    "source": "msg7.dat:35:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 7,
+    "id": 36,
+    "slot": 3,
+    "source": "msg7.dat:36:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 7,
+    "id": 37,
+    "slot": 3,
+    "source": "msg7.dat:37:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 7,
+    "id": 38,
+    "slot": 3,
+    "source": "msg7.dat:38:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 7,
+    "id": 41,
+    "slot": 3,
+    "source": "msg7.dat:41:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 10,
+    "id": 29,
+    "slot": 3,
+    "source": "msg10.dat:29:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 10,
+    "id": 30,
+    "slot": 3,
+    "source": "msg10.dat:30:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 10,
+    "id": 33,
+    "slot": 3,
+    "source": "msg10.dat:33:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 10,
+    "id": 34,
+    "slot": 3,
+    "source": "msg10.dat:34:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 10,
+    "id": 35,
+    "slot": 3,
+    "source": "msg10.dat:35:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 10,
+    "id": 36,
+    "slot": 3,
+    "source": "msg10.dat:36:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 10,
+    "id": 37,
+    "slot": 3,
+    "source": "msg10.dat:37:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 10,
+    "id": 38,
+    "slot": 3,
+    "source": "msg10.dat:38:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 10,
+    "id": 39,
+    "slot": 3,
+    "source": "msg10.dat:39:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 13,
+    "id": 29,
+    "slot": 3,
+    "source": "msg13.dat:29:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 13,
+    "id": 30,
+    "slot": 3,
+    "source": "msg13.dat:30:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 13,
+    "id": 33,
+    "slot": 3,
+    "source": "msg13.dat:33:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 13,
+    "id": 34,
+    "slot": 3,
+    "source": "msg13.dat:34:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 13,
+    "id": 35,
+    "slot": 3,
+    "source": "msg13.dat:35:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 13,
+    "id": 36,
+    "slot": 3,
+    "source": "msg13.dat:36:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 13,
+    "id": 37,
+    "slot": 3,
+    "source": "msg13.dat:37:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 13,
+    "id": 38,
+    "slot": 3,
+    "source": "msg13.dat:38:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 13,
+    "id": 39,
+    "slot": 3,
+    "source": "msg13.dat:39:speaker",
+    "japanese": "モーグリ",
+    "english": "Moogle",
+    "reason": "fill_empty_English_speaker",
+    "expected_english": ""
+  },
+  {
+    "bank": 10,
+    "id": 22,
+    "slot": 2,
+    "japanese": "<cha0>たちは\n６ＪＰ（ジョブポイント）を\n手に入れた！",
+    "english": "<cha0>'s party receives 7 JP (Job Points)!",
+    "reason": "match_mod_7JP_reward",
+    "expected_english": "<cha0>'s party receives 6 JP (Job Points)!"
+  },
+  {
+    "bank": 10,
+    "id": 26,
+    "slot": 2,
+    "japanese": "<cha4>たちは\n６ＪＰ（ジョブポイント）を\n手に入れた！",
+    "english": "<cha4>'s party receives 7 JP (Job Points)!",
+    "reason": "match_mod_7JP_reward",
+    "expected_english": "<cha4>'s party receives 6 JP (Job Points)!"
+  },
+  {
+    "bank": 13,
+    "id": 22,
+    "slot": 2,
+    "japanese": "<cha0>たちは\n６ＪＰ（ジョブポイント）を\n手に入れた！",
+    "english": "<cha0>'s party receives 7 JP (Job Points)!",
+    "reason": "match_mod_7JP_reward",
+    "expected_english": "<cha0>'s party receives 6 JP (Job Points)!"
+  },
+  {
+    "bank": 13,
+    "id": 26,
+    "slot": 2,
+    "japanese": "<cha4>たちは\n６ＪＰ（ジョブポイント）を\n手に入れた！",
+    "english": "<cha4>'s party receives 7 JP (Job Points)!",
+    "reason": "match_mod_7JP_reward",
+    "expected_english": "<cha4>'s party receives 6 JP (Job Points)!"
+  }
+]

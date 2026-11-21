@@ -44,7 +44,7 @@ static void plog(int prio, const char *fmt, ...) __attribute__((format(printf, 2
 #define PROT_WRITE 2
 
 /* 版。公開に向けて 1.0 の系統にそろえた（1.0-pre1・1.0-pre2 は開発時の v4.07 と同じ中身。1.0-pre3 から本当のワイド表示） */
-#define FFLMOD_VERSION "1.1.15"
+#define FFLMOD_VERSION "1.1.15-en1"
 static int g_curMap = -1;
 static void slow_magic_apply(void);     /* v3.32t: LoadMap で読み込み中のマップ番号 */
 
@@ -240,11 +240,15 @@ static int g_cursorMode;
 #define BTN_MAP   1               /* 地図 */
 static void *g_field;            /* FieldClass（MoveCharaControl で覚える） */
 static float g_wideE, g_wideS;   /* 1.0-pre3: ワイド表示の左右の余白（論理座標）と倍率。g_wideE が 0 ならワイドにしない */
+static float g_tallE;           /* Extra logical height above/below a 4:3 view. */
+static void *g_messageField;
+static int g_messageAnchor;
+static float widget_vertical_shift(void *w);
 static int wide_shift_begin(void *g);
 static void wide_shift_end(void *g);
 /* 1.0-pre4: フィールドの右上のボタン（台本ボタンの入れ物）。ワイド表示では右の余白の分だけ右へずらす */
 static int is_field_hud(void *w);
-static void hud_shift(void *w, float dx);
+static void hud_shift(void *w, float dx, float dy);
 static int g_btnPress = -1;      /* 押した扱いにするボタン番号（-1=なし） */
 static int g_btnWait;
 static int g_blockA, g_blockMenu;
@@ -341,6 +345,7 @@ static FillRectFn p_FillRect;
 
 #define RD(T, p, off) (*(volatile T *)((uintptr_t)(p) + (off)))
 #define RDP(p, off) ((void *)RD(uintptr_t, p, off))
+#include "localization.h"
 
 static int remap_for_caller(int bits, uintptr_t ra)
 {
@@ -471,10 +476,11 @@ static void wupdate_inner(void *w);
 static void hook_WUpdate(void *w)
 {
     /* 1.0-pre6: フィールドのボタンはワイド表示で右の余白の分だけ右へ置く（更新・カーソルの候補集めの間だけ位置をずらす） */
-    int sh = g_wideE > 0.0f && is_field_hud(w);
-    if (sh) hud_shift(w, g_wideE);
+    float dx = is_field_hud(w) ? g_wideE : 0.0f, dy = widget_vertical_shift(w);
+    int sh = dx != 0.0f || dy != 0.0f;
+    if (sh) hud_shift(w, dx, dy);
     wupdate_inner(w);
-    if (sh) hud_shift(w, -g_wideE);
+    if (sh) hud_shift(w, -dx, -dy);
 }
 
 static void wupdate_inner(void *w)
@@ -1262,10 +1268,11 @@ static void draw_frame(void *g, int x, int y, int ww, int hh)
 static void wdraw_inner(void *w, void *g);
 static void hook_WDraw(void *w, void *g)
 {
-    int sh = g_wideE > 0.0f && is_field_hud(w);
-    if (sh) hud_shift(w, g_wideE);
+    float dx = is_field_hud(w) ? g_wideE : 0.0f, dy = widget_vertical_shift(w);
+    int sh = dx != 0.0f || dy != 0.0f;
+    if (sh) hud_shift(w, dx, dy);
     wdraw_inner(w, g);
-    if (sh) hud_shift(w, -g_wideE);
+    if (sh) hud_shift(w, -dx, -dy);
     if (g_wideE > 0.0f && !sh && w) {
         /* 調査用：640 の右端の外にはみ出す部品を描く呼び元を1回ずつ記録する（戦闘の AUTO などの欄） */
         float mx = -1e9f;
@@ -1732,6 +1739,8 @@ static void jp_text_fix(void *field)
 {
     void *game = game_inst();
     if (!game || !field) return;
+    /* English uses immutable overlay strings; never edit those bytes. */
+    if (RD(int, game, 0x0c) != 0) return;
     int ch = RD(int, game, 0x19fe0);
     if (ch != 10 && ch != 13) return;
     char **list = *(char ***)((u8 *)field + 0x380);
@@ -2210,363 +2219,7 @@ static void hook_BtlMenu(void *b)
         bq_last_to_front(b);
 }
 
-/* ---------- 1.0-pre3: 本当のワイド表示 ----------
-   ゲームは MainScene::SetViewPort で 640x384 を縦横同じ倍率 s で真ん中に置き、Set2DModeMatrix(640,384) で描く。
-   横長の画面では：
-   ① 描く範囲（glViewport）は窓いっぱいにする（hook_ViewPort。縦長の画面は元のまま）
-   ② 640x384 の画面は ortho(-e, 640+e, 384, 0) で描く（e = 左右の余白を論理座標で）→ 縦横同じ倍率のまま真ん中に。
-      文字（DrawString は論理座標で中央寄せしてから画素に直す）も絵もゆがまない
-   ③ MainScene::SetViewPort の後で、タッチの換算（+0x674 倍率、+0x67c ずれ）をこの置き方に合わせ、
-      App の絵の補正（+0x188/+0x18c、引き伸ばしの打ち消し）を 1 にする
-   ④ フィールドはゲームが画面の比率から横幅を出す（W/s）ので、そのまま広く描かせる。遠景（DrawFar）だけは幅 640 の絵なので、
-      横幅 640 の座標で描いて画面いっぱいに伸ばす
-   ⑤ 640 の幅いっぱいに描く絵と塗り（戦闘の背景、メニューの背景、暗転など。左端 x<=0 かつ右端 >=640）は、
-      真ん中を軸に横へ (640+2e)/640 倍に伸ばして左右の余白を埋める */
-#define OFF_VIEWPORT_FUNC 0x370f3cUL   /* MtxGraphics3D::SetViewPort(int,int,int,int) */
-#define OFF_VIEWPORT_GOT  0x45d8c0UL
-#define OFF_S2DM_FUNC     0x371b98UL   /* MtxGraphics3D::Set2DModeMatrix(float,float) */
-#define OFF_S2DM_GOT      0x45d960UL
-#define OFF_MSVP_FUNC     0x3f6680UL   /* MainScene::SetViewPort(MtxGraphics3D&) */
-#define OFF_MSVP_GOT      0x460360UL
-#define OFF_DIEX_FUNC     0x373aa4UL   /* MtxGraphics3D::DrawImageEx(MtxTexture&, 8 float, int, int, int)（DrawImage もここを通る） */
-#define OFF_DIEX_GOT      0x45d3a0UL
-#define OFF_FILL4_FUNC    0x372c4cUL   /* MtxGraphics3D::FillRect(int,int,int,int) */
-#define OFF_FILL4_GOT     0x45d590UL
-#define OFF_FILL8_FUNC    0x372d44UL   /* MtxGraphics3D::FillRect(int,int,int,int,int,int,int,int) */
-#define OFF_FILL8_GOT     0x45d9f0UL
-#define OFF_DRAWFAR_FUNC  0x3c97dcUL   /* FieldClass::DrawFar(MtxGraphics3D*) */
-#define OFF_DRAWFAR_GOT   0x45f7a8UL
-#define OFF_FSET2D        0x3b5a58UL   /* FieldClass::Set2DMode(MtxGraphics3D*)（直に呼ぶ） */
-#define OFF_SETMMODE      0x370c98UL   /* MtxGraphics3D::SetMatrixMode(int) */
-#define OFF_LOADIDENT     0x370cd4UL   /* MtxGraphics3D::LoadIdentiry() */
-#define OFF_GORTHO        0x370d04UL   /* MtxGraphics3D::Ortho(l,r,b,t,n,f)（今の行列に掛けて読み込む） */
-#define APP_PTR_GOT       0x45ca58UL   /* App のインスタンスへ（2回たどる） */
-#define APP_IMGFIX_X      0x188        /* App: 絵の横の補正（min/sx） */
-#define APP_IMGFIX_Y      0x18c
-#define GFX_VP            0x4c0        /* MtxGraphics3D: 描く範囲 x, y, w, h（float） */
-#define GFX_PROJ          0x5c         /* MtxGraphics3D: 射影の行列（float 16、列優先） */
-#define FIELD_W           0xc          /* FieldClass: フィールドの横幅（float） */
-#define WIDE_HOOKS        9            /* フックの表の末尾にあるワイド表示のフックの数 */
-#define GFX_SCREENRATIO   0x5b4        /* MtxGraphics3D: 論理座標 / 画素（SetScissor が使う） */
-#define OFF_MINIMAP_FUNC  0x3caf38UL   /* FieldClass::DrawMiniMap(MtxGraphics3D*) */
-#define OFF_MINIMAP_GOT   0x45f370UL
-#define OFF_ESC_X1        0x391350UL   /* BattleClass::BattleScaduleEscape：逃げる行き先 x 680.0（mov w8, #0x442a0000）×2 */
-#define OFF_ESC_X2        0x391408UL
-#define INSN_MOV_680      0x52a88548U  /* movz w8, #0x442a, lsl #16 */
-#define INSN_MOV_800      0x52a88908U  /* movz w8, #0x4448, lsl #16（800.0） */
-/* 戦闘の AUTO/PAUSE/ESCAPE の欄（BattleClass の JobsMenuItemListControl、[battle+0x6e40]）。
-   部品は ▶ のつまみ（2,2 54x105）とボタン3つ（56,2/37/72 101x35）。
-   1.0-pre10: つまみを消し、欄を x 536・幅 104 にして、ボタンを欄の左端に置く（ボタンの画面上の位置は今までと同じ） */
-static const struct { unsigned off, orig, now; } k_panelPatch[] = {
-    { 0x3842cc, 0x5290000a, 0x5280000a },   /* BattleMain：閉じたときの x 586.0 → 536.0（movz w10,#0x8000 → #0） */
-    { 0x3842d4, 0x72a8824a, 0x72a880ca },   /*   movk w10,#0x4412 → #0x4406 */
-    { 0x3842ec, 0x5290000a, 0x5280000a },
-    { 0x3842f4, 0x72a8824a, 0x72a880ca },
-    { 0x384288, 0x52a87e0a, 0x52a880ca },   /* BattleMain：開いたときの x 480.0 → 536.0 */
-    { 0x384834, 0x52a87e0a, 0x52a880ca },
-    { 0x382914, 0x52804941, 0x52804301 },   /* BattleSceneInit：欄の SetSize の x 586 → 536 */
-    { 0x38291c, 0x52801403, 0x52800d03 },   /*   幅 160 → 104 */
-    { 0x382958, 0x52800041, 0x52800001 },   /* つまみの部品：種類 2 → 0（JobsMenuButton::Draw が描かない） */
-    { 0x382970, 0x528006c7, 0x52800007 },   /*   幅 54 → 0（触っても当たらない） */
-    { 0x3829e8, 0x52800705, 0x52800005 },   /* ボタン3つの x 56 → 0 */
-    { 0x382a30, 0x52800705, 0x52800005 },
-    { 0x382a78, 0x52800705, 0x52800005 },
-};
-typedef void (*ViewPortFn)(void *g, int x, int y, int w, int h);
-typedef void (*S2DMFn)(void *g, float w, float h);
-typedef void (*MSVPFn)(void *scene, void *g);
-typedef void (*DIExFn)(void *g, void *tex, float x, float y, float w, float h, float u, float v, float uw, float vh,
-                       int flags, int color, int mode);
-typedef void (*Fill4Fn)(void *g, int x, int y, int w, int h);
-typedef void (*Fill8Fn)(void *g, int x, int y, int w, int h, int r, int gg, int b, int a);
-typedef void (*DrawFarFn)(void *field, void *g);
-typedef void (*MiniMapFn)(void *field, void *g);
-typedef void (*FSet2DFn)(void *field, void *g);
-typedef void (*SetMModeFn)(void *g, int mode);
-typedef void (*LoadIdentFn)(void *g);
-typedef void (*GOrthoFn)(void *g, float l, float r, float b, float t, float n, float f);
-static ViewPortFn g_origViewPort;
-static S2DMFn g_origS2DM;
-static MSVPFn g_origMSVP;
-static DIExFn g_origDIEx;
-static Fill4Fn g_origFill4;
-static Fill8Fn g_origFill8;
-static DrawFarFn g_origDrawFar;
-static MiniMapFn g_origMiniMap;
-static float g_wideM0, g_wideM12;   /* ワイドの 2D の射影の行列の [0] と [12]（今その射影かを見分ける） */
-
-static void hook_ViewPort(void *g, int x, int y, int w, int h)
-{
-    /* 横に余白があるとき（横長の画面）だけ窓いっぱいにする。縦に余白があるとき（縦長）は元のまま */
-    if (x <= 0 || y != 0 || w <= 0 || h <= 0) { g_origViewPort(g, x, y, w, h); return; }
-    g_origViewPort(g, 0, 0, w + 2 * x, h);
-}
-
-static void hook_MSVP(void *scene, void *g)
-{
-    g_origMSVP(scene, g);
-    float W = RD(float, g, GFX_VP + 8), H = RD(float, g, GFX_VP + 12);
-    float e = 0.0f, s = 1.0f;
-    if (W > 0.0f && H > 0.0f && W * 384.0f > H * 640.0f + 1.0f) {
-        s = H / 384.0f;
-        e = (W / s - 640.0f) * 0.5f;
-    }
-    if (e != g_wideE) {
-        static int told;
-        if (told < 4) { told++; LOGI("wide: screen %dx%d, margin %d (logical)", (int)W, (int)H, (int)e); }
-    }
-    g_wideE = e;
-    g_wideS = s;
-    if (e <= 0.0f) return;
-    void *tp = p_GetTouchInfo ? p_GetTouchInfo() : 0;
-    if (tp) {
-        *(volatile float *)((uintptr_t)tp + TP_SCALE) = 1.0f / s;
-        *(volatile float *)((uintptr_t)tp + TP_SCALE + 4) = 1.0f / s;
-        *(volatile float *)((uintptr_t)tp + TP_OFFSET) = e * s;
-        *(volatile float *)((uintptr_t)tp + TP_OFFSET + 4) = 0.0f;
-    }
-    uintptr_t v = *(volatile uintptr_t *)(g_base + APP_PTR_GOT);
-    void *app = v ? *(void **)v : 0;
-    if (app) {
-        *(volatile float *)((uintptr_t)app + APP_IMGFIX_X) = 1.0f;
-        *(volatile float *)((uintptr_t)app + APP_IMGFIX_Y) = 1.0f;
-    }
-    /* 1.0-pre4: 切り抜き（SetScissor）は「論理座標 / 倍率 + 描く範囲の左上」で画素に直すので、この置き方に合わせる
-       （描く範囲の左上 +0x4c0 は、ほかには MainScene::SetViewPort がタッチのずれに使うだけ。上で書き直している） */
-    *(volatile float *)((uintptr_t)g + GFX_VP) = e * s;
-    *(volatile float *)((uintptr_t)g + GFX_VP + 4) = 0.0f;
-    *(volatile float *)((uintptr_t)g + GFX_SCREENRATIO) = 1.0f / s;
-    *(volatile float *)((uintptr_t)g + GFX_SCREENRATIO + 4) = 1.0f / s;
-}
-
-/* 2D の射影を ortho(-e - shift, 640 + e - shift, 384, 0) にする（shift > 0 で中身が右へずれる） */
-static void wide_proj(void *g, float shift)
-{
-    float e = g_wideE;
-    ((SetMModeFn)(g_base + OFF_SETMMODE))(g, 1);
-    ((LoadIdentFn)(g_base + OFF_LOADIDENT))(g);
-    ((GOrthoFn)(g_base + OFF_GORTHO))(g, -e - shift, 640.0f + e - shift, 384.0f, 0.0f, 0.0f, 1024.0f);
-    ((SetMModeFn)(g_base + OFF_SETMMODE))(g, 0);
-}
-
-static void hook_S2DM(void *g, float w, float h)
-{
-    float e = g_wideE;
-    if (e <= 0.0f || w != 640.0f || h != 384.0f) { g_origS2DM(g, w, h); return; }
-    wide_proj(g, 0.0f);
-    ((LoadIdentFn)(g_base + OFF_LOADIDENT))(g);
-    g_wideM0 = RD(float, g, GFX_PROJ);
-    g_wideM12 = RD(float, g, GFX_PROJ + 48);
-}
-
-/* 今ワイドの 2D の射影で描いているか */
-static int wide_2d(void *g)
-{
-    return g_wideE > 0.0f && RD(float, g, GFX_PROJ) == g_wideM0 && RD(float, g, GFX_PROJ + 48) == g_wideM12;
-}
-
-/* 1.0-pre9: 背景を伸ばすのは、ワイドの 2D の射影で、しかも動かしたり拡大したりしていない（モデルビューの行列が単位行列の）ときだけ。
-   世界地図は 384x384 の窓の中で地図の絵を拡大して描くので、絵の大きさが 640 を超えても伸ばしてはいけない */
-#define GFX_MODELVIEW 0x1c
-static int wide_2d_plain(void *g)
-{
-    if (!wide_2d(g)) return 0;
-    const float *m = (const float *)((uintptr_t)g + GFX_MODELVIEW);
-    return m[0] == 1.0f && m[5] == 1.0f && m[12] == 0.0f && m[13] == 0.0f && m[1] == 0.0f && m[4] == 0.0f;
-}
-
-static int wide_shift_begin(void *g)
-{
-    if (g_wideE <= 0.0f || !g || !wide_2d(g)) return 0;
-    wide_proj(g, g_wideE);
-    /* 1.0-pre5: 切り抜き（SetScissor）も同じだけ右へずらす（描く範囲の左上 +0x4c0 を e·s → 2e·s） */
-    *(volatile float *)((uintptr_t)g + GFX_VP) = 2.0f * g_wideE * g_wideS;
-    return 1;
-}
-
-static void wide_shift_end(void *g)
-{
-    wide_proj(g, 0.0f);
-    *(volatile float *)((uintptr_t)g + GFX_VP) = g_wideE * g_wideS;
-}
-
-static int is_field_hud(void *w)
-{
-    return g_field && w && w == RDP(g_field, FB_BASE);
-}
-
-/* 1.0-pre6: フィールドのボタン（メニュー・ダッシュ・台本ボタン）の位置を横に dx ずらす。
-   1.0-pre7: 全画面のスワイプ受け（スライドの移動パッド）は、左右の余白まで広げる（パッドは受けの範囲で切り抜かれるため） */
-static void hud_shift(void *w, float dx)
-{
-    void *node = RDP(w, W_HEAD);
-    for (int guard = 0; node && guard < 64; guard++) {
-        void *it = RDP(node, 0x10);
-        node = RDP(node, 0);
-        if (!it) continue;
-        if ((vt_slidepad && (uintptr_t)RDP(it, 0) == vt_slidepad + 0x10) || RD(float, it, I_SIZE) >= 600.0f) {
-            *(volatile float *)((uintptr_t)it + I_POS) = RD(float, it, I_POS) - dx;
-            *(volatile float *)((uintptr_t)it + I_SIZE) = RD(float, it, I_SIZE) + 2.0f * dx;
-            continue;
-        }
-        *(volatile float *)((uintptr_t)it + I_POS) = RD(float, it, I_POS) + dx;
-    }
-}
-
-/* 1.0-pre6: MenuWidget::Update（1.2.0）は、タッチが画面 (0,0,640,384) の中かを IsPointIn で確かめる。
-   ワイド表示では左右の余白も画面の中として扱う（右へ置いたボタンと、余白から始めるスライド移動のため） */
-#define OFF_ISPOINTIN_FUNC 0x363a10UL   /* vector2::IsPointIn(float,float,float,float) */
-#define OFF_ISPOINTIN_GOT  0x45d1d0UL
-typedef int (*IsPointInFn)(void *v, float x, float y, float w, float h);
-static IsPointInFn g_origIsPointIn;
-/* 1.0-pre9: フィールドの画面の覆い（北の洞窟などの暗がり。640x384 を四隅の4枚に分けて描く）は、
-   640 幅を画面いっぱいに引き伸ばして描く（左右の余白まで暗くする） */
-#define OFF_SCRFILTER_FUNC 0x3ca2f8UL   /* FieldClass::DrawScreenFilter(MtxGraphics3D*) */
-#define OFF_SCRFILTER_GOT  0x45f7d0UL
-typedef void (*ScrFilterFn)(void *field, void *g);
-static ScrFilterFn g_origScrFilter;
-static void hook_ScrFilter(void *field, void *g)
-{
-    if (g_wideE <= 0.0f || !wide_2d(g)) { g_origScrFilter(field, g); return; }
-    ((SetMModeFn)(g_base + OFF_SETMMODE))(g, 1);
-    ((LoadIdentFn)(g_base + OFF_LOADIDENT))(g);
-    ((GOrthoFn)(g_base + OFF_GORTHO))(g, 0.0f, 640.0f, 384.0f, 0.0f, 0.0f, 1024.0f);
-    ((SetMModeFn)(g_base + OFF_SETMMODE))(g, 0);
-    g_origScrFilter(field, g);
-    wide_proj(g, 0.0f);
-}
-
-static int hook_IsPointIn(void *v, float x, float y, float w, float h)
-{
-    if (g_wideE > 0.0f && x == 0.0f && y == 0.0f && w == 640.0f && h == 384.0f) {
-        x = -g_wideE;
-        w = 640.0f + 2.0f * g_wideE;
-    }
-    return g_origIsPointIn(v, x, y, w, h);
-}
-
-static void hook_MiniMap(void *field, void *g)
-{
-    int sh = wide_shift_begin(g);
-    g_origMiniMap(field, g);
-    if (sh) wide_shift_end(g);
-}
-
-static void flush_insn(volatile unsigned *ip);
-
-/* 1.0-pre4: 逃げるときの行き先（640 のすぐ外の 680）を、広げた画面でも見えない 800 にする */
-static void wide_escape_patch(void)
-{
-    uintptr_t a[2] = { g_base + OFF_ESC_X1, g_base + OFF_ESC_X2 };
-    for (int i = 0; i < 2; i++) {
-        volatile unsigned *ip = (volatile unsigned *)a[i];
-        if (*ip == INSN_MOV_800) continue;
-        if (*ip != INSN_MOV_680) { LOGE("wide: escape insn %08x, expected %08x, not patched", *ip, INSN_MOV_680); return; }
-    }
-    for (int i = 0; i < 2; i++) {
-        volatile unsigned *ip = (volatile unsigned *)a[i];
-        if (mprotect((void *)(a[i] & ~0xfffUL), 0x1000, PROT_READ | PROT_WRITE | 4) != 0) { LOGE("wide: escape mprotect failed"); return; }
-        *ip = INSN_MOV_800;
-        flush_insn(ip);
-    }
-    LOGI("wide: escape target 680 -> 800");
-}
-
-/* 戦闘の AUTO/PAUSE/ESCAPE の欄をアイテムの下に固定し、▶ のつまみを消す（k_panelPatch） */
-static void wide_panel_patch(void)
-{
-    int n = (int)(sizeof k_panelPatch / sizeof k_panelPatch[0]);
-    for (int i = 0; i < n; i++) {
-        unsigned v = *(volatile unsigned *)(g_base + k_panelPatch[i].off);
-        if (v != k_panelPatch[i].orig && v != k_panelPatch[i].now) {
-            LOGE("wide: panel insn %x = %08x, not patched", k_panelPatch[i].off, v);
-            return;
-        }
-    }
-    for (int i = 0; i < n; i++) {
-        volatile unsigned *ip = (volatile unsigned *)(g_base + k_panelPatch[i].off);
-        if (mprotect((void *)((uintptr_t)ip & ~0xfffUL), 0x1000, PROT_READ | PROT_WRITE | 4) != 0) { LOGE("wide: panel mprotect failed"); return; }
-        *ip = k_panelPatch[i].now;
-        flush_insn(ip);
-    }
-    LOGI("wide: battle panel fixed at 536, tab removed");
-}
-
-static void wide_note(const char *what, uintptr_t id, float x, float y, float w, float h)
-{
-    static uintptr_t seen[48];
-    static int n;
-    for (int i = 0; i < n; i++) if (seen[i] == id) return;
-    if (n >= 48) return;
-    seen[n++] = id;
-    LOGI("wide: %s %lx (%d,%d %dx%d) widened", what, id, (int)x, (int)y, (int)w, (int)h);
-}
-
-static void hook_DIEx(void *g, void *tex, float x, float y, float w, float h, float u, float v, float uw, float vh,
-                      int flags, int color, int mode)
-{
-    if ((flags & 7) == 0 && wide_2d_plain(g)) {
-        if (x <= 0.5f && x + w >= 639.5f) {
-            float k = (640.0f + 2.0f * g_wideE) / 640.0f;
-            wide_note("image", (uintptr_t)tex, x, y, w, h);
-            x = 320.0f + (x - 320.0f) * k;
-            w *= k;
-        } else if (y <= 0.5f && y + h >= 383.5f && (x <= 0.5f || x + w >= 639.5f)) {
-            /* 画面の高さいっぱいで左右どちらかの端に接する絵は、その端の余白まで伸ばす */
-            wide_note("image edge", (uintptr_t)tex, x, y, w, h);
-            if (x <= 0.5f) { x -= g_wideE; w += g_wideE; }
-            else w += g_wideE;
-        }
-    }
-    g_origDIEx(g, tex, x, y, w, h, u, v, uw, vh, flags, color, mode);
-}
-
-static void hook_Fill4(void *g, int x, int y, int w, int h)
-{
-    if (wide_2d_plain(g)) {
-        int e = (int)(g_wideE + 1.0f);
-        if (x <= 0 && x + w >= 640) {
-            wide_note("fill", 4, x, y, w, h);
-            x -= e;
-            w += 2 * e;
-        } else if (y <= 0 && y + h >= 384 && (x <= 0 || x + w >= 640)) {
-            /* メニューの背景（左半分と右半分の色の帯）など：接している端の余白まで伸ばす */
-            wide_note("fill edge", 4, x, y, w, h);
-            if (x <= 0) { x -= e; w += e; } else w += e;
-        }
-    }
-    g_origFill4(g, x, y, w, h);
-}
-
-static void hook_Fill8(void *g, int x, int y, int w, int h, int r, int gg, int b, int a)
-{
-    if (wide_2d_plain(g)) {
-        int e = (int)(g_wideE + 1.0f);
-        if (x <= 0 && x + w >= 640) {
-            wide_note("fill", 8, x, y, w, h);
-            x -= e;
-            w += 2 * e;
-        } else if (y <= 0 && y + h >= 384 && (x <= 0 || x + w >= 640)) {
-            /* メニューの背景（左半分と右半分の色の帯）など：接している端の余白まで伸ばす */
-            wide_note("fill edge", 8, x, y, w, h);
-            if (x <= 0) { x -= e; w += e; } else w += e;
-        }
-    }
-    g_origFill8(g, x, y, w, h, r, gg, b, a);
-}
-
-static void hook_DrawFar(void *field, void *g)
-{
-    volatile float *fw = (volatile float *)((uintptr_t)field + FIELD_W);
-    float w0 = *fw;
-    if (g_wideE <= 0.0f || w0 <= 640.5f) { g_origDrawFar(field, g); return; }
-    FSet2DFn set2d = (FSet2DFn)(g_base + OFF_FSET2D);
-    *fw = 640.0f;
-    set2d(field, g);
-    g_origDrawFar(field, g);
-    *fw = w0;
-    set2d(field, g);
-}
+#include "display_runtime.h"
 
 /* ---------- v3.08: 戦闘終了画面の目印 ----------
    BattleClass::BattleScaduleWin（勝利処理：ギル・経験値の表示からレベルアップの表示まで）が動いたフレームを覚える */
@@ -4226,7 +3879,10 @@ static void slow_magic_apply(void)
     if (slow[offT] == 0x85) slow[offT] = 0x8f;
     if (slow[offD] == 6) slow[offD] = 15;
     const char *d = *(const char **)(slow + 8);
-    if (d && str_eq(d, k_slowOldSJ)) *(const char **)(slow + 8) = k_slowNewSJ;
+    if (text_english(game) && d && (str_eq(d, "Slows one target.") ||
+        d == LOCAL_TEXT(game, k_slowNewSJ, k_slowNewU8, 0)))
+        *(const char **)(slow + 8) = LOCAL_TEXT(game, k_slowNewSJ, k_slowNewU8, 0);
+    else if (d && str_eq(d, k_slowOldSJ)) *(const char **)(slow + 8) = k_slowNewSJ;
     else if (d && str_eq(d, k_slowOldU8)) *(const char **)(slow + 8) = k_slowNewU8;
 }
 
@@ -4421,15 +4077,18 @@ static const char k_empty[] = "";
 static int str_eq(const char *a, const char *b);
 static void styx_encoding(void *game)
 {
-    if (g_sjis >= 0) return;
+    /* The table and language can reload. Encoding and language are distinct. */
+    int previous = g_sjis;
+    g_sjis = -1;
+    if (!game) return;
     u8 *jd = (u8 *)RDP(game, G_JOBDATA);
     if (!jd || RD(int, game, G_JOBCOUNT) < 19) return;
     const char *n = *(const char **)(jd + 18 * JD_SIZE);
     if (!n) return;
     if (str_eq(n, "\x96\x82\x90\x6c")) g_sjis = 1;
-    else if (str_eq(n, "魔人")) g_sjis = 0;
+    else if (str_eq(n, "魔人") || (text_english(game) && str_eq(n, "Magus"))) g_sjis = 0;
     else { static int told; if (!told) { told = 1; LOGE("styx: job 18 name unknown (%02x %02x %02x %02x)", (u8)n[0], (u8)n[1], (u8)n[2], (u8)n[3]); } return; }
-    LOGI("styx: text is %s", g_sjis ? "sjis" : "utf8");
+    if (previous != g_sjis) LOGI("styx: text is %s (language %d)", g_sjis ? "sjis" : "utf8", RD(int, game, 0x0c));
 }
 
 /* 技の写し。from を to に丸ごと写してから欄を直す */
@@ -4495,7 +4154,7 @@ static int styx_magic(void *game)
                       (m->script >= 0 && RD(unsigned short, d, 0x36) != (unsigned short)m->script) ||
                       (m->cat >= 0 ? d[0x10] != (u8)m->cat : d[0x18] != 1) ||
                       (m->wait >= 0 && RD(unsigned short, d, 0x1c) != (unsigned short)m->wait) ||
-                      (m->du8 && *(const char *const *)(d + 8) != (g_sjis ? m->dsj : m->du8)) ||
+                      (m->du8 && *(const char *const *)(d + 8) != LOCAL_TEXT(game, m->dsj, m->du8, g_sjis)) ||
                       (RD(short, d, 0x4a) == 0 && RD(short, d, 0x48) > 0);
             if (!bad) continue;
             LOGE("styx: magic %d changed (cat %d flag %d hit %d target %x status %x script %d wait %d), rewritten", m->to, d[0x10], d[0x18],
@@ -4517,7 +4176,7 @@ static int styx_magic(void *game)
         if (m->status >= 0) *(volatile unsigned short *)(d + 0x40) = (unsigned short)m->status;
         if (m->script >= 0) *(volatile unsigned short *)(d + 0x36) = (unsigned short)m->script;
         if (m->wait >= 0) *(volatile unsigned short *)(d + 0x1c) = (unsigned short)m->wait;
-        if (m->du8) *(const char **)(d + 8) = g_sjis ? m->dsj : m->du8;
+        if (m->du8) *(const char **)(d + 8) = LOCAL_TEXT(game, m->dsj, m->du8, g_sjis);
         /* v3.40t6: 全体のエフェクトは狙う側で別（+0x48/+0x4f＝味方側、+0x4a/+0x50＝敵側、PlayTargetMagicEffect）。
            敵の技は味方側しか持たないので、敵側が空なら味方側を写す（ウンディーネ・ローレライ・ディスチャージ） */
         if (RD(short, d, 0x4a) == 0 && RD(short, d, 0x48) > 0) {
@@ -4550,10 +4209,16 @@ static int styx_ability(void *game)
     }
     if (off < 0) return 0;
     u8 *d = t + 86 * AB_SIZE;
-    const char *nm = g_sjis ? k_bmSJ : k_bmU8;
-    if (*(const char **)d == nm && d[off] == 24) return 1;
+    const char *nm = LOCAL_TEXT(game, k_bmSJ, k_bmU8, g_sjis);
+    if (d[off] == 24 && (text_equal(*(const char **)d, k_bmSJ) ||
+        text_equal(*(const char **)d, k_bmU8) || text_equal(*(const char **)d, "Blue Magic"))) {
+        *(const char **)d = nm;
+        *(const char **)(d + 8) = LOCAL_TEXT(game, k_bmDescSJ, k_bmDescU8, g_sjis);
+        return 1;
+    }
     const char *old = *(const char **)d;
-    if (!old || (!str_eq(old, "DEBUG\x97\x70") && !str_eq(old, "DEBUG用") && old != nm)) {
+    if (!old || (!str_eq(old, "DEBUG\x97\x70") && !str_eq(old, "DEBUG用") &&
+        !(text_english(game) && str_eq(old, "For debugging")) && old != nm)) {
         static int told;
         if (!told) { told = 1; LOGE("styx: ability 86 is not DEBUG (%02x %02x %02x %02x %02x %02x %02x), skipped",
                                     old ? (u8)old[0] : 0, old ? (u8)old[1] : 0, old ? (u8)old[2] : 0, old ? (u8)old[3] : 0,
@@ -4563,7 +4228,7 @@ static int styx_ability(void *game)
     for (int k = 0; k < AB_SIZE; k++) d[k] = t[63 * AB_SIZE + k];
     d[off] = 24;
     *(const char **)d = nm;
-    *(const char **)(d + 8) = g_sjis ? k_bmDescSJ : k_bmDescU8;
+    *(const char **)(d + 8) = LOCAL_TEXT(game, k_bmDescSJ, k_bmDescU8, g_sjis);
     LOGI("styx: ability 86 -> blue magic (command 24 at +%x)", off);
     return 1;
 }
@@ -4581,10 +4246,11 @@ static int styx_command(void *game)
     if (!t) return 0;
     if (g_sjis >= 0) {
         const char **dp = (const char **)(t + 24 * 0x30 + 8);
-        const char *want = g_sjis ? k_bmHelpSJ : k_bmHelpU8;
+        const char *want = LOCAL_TEXT(game, k_bmHelpSJ, k_bmHelpU8, g_sjis);
         if (*dp != want) {
             static int toldH;
-            if (!*dp || !**dp) {
+            if (!*dp || !**dp || text_equal(*dp, k_bmHelpSJ) || text_equal(*dp, k_bmHelpU8) ||
+                text_equal(*dp, "Use or view learned blue magic.")) {
                 *dp = want;
                 if (!toldH) { toldH = 1; LOGI("styx: command 24 help set"); }
             } else if (!toldH) { toldH = 1; LOGE("styx: command 24 help is not empty, kept"); }
@@ -4621,8 +4287,11 @@ static int styx_job(void *game)
     int n = RD(int, game, G_JOBCOUNT);
     u8 *jd = (u8 *)RDP(game, G_JOBDATA);
     if (!jd) return 0;
-    const char *nm = g_sjis ? k_majoSJ : k_majoU8;
-    if (n == STYX_JOB + 1 && jd == g_jobBuf && *(const char **)(jd + STYX_JOB * JD_SIZE) == nm) return 1;
+    const char *nm = LOCAL_TEXT(game, k_majoSJ, k_majoU8, g_sjis);
+    if (n == STYX_JOB + 1 && jd == g_jobBuf) {
+        *(const char **)(jd + STYX_JOB * JD_SIZE) = nm;
+        return 1;
+    }
     if (n != STYX_JOB || jd == g_jobBuf) {
         static int told;
         if (!told) { told = 1; LOGE("styx: job count %d, skipped", n); }
@@ -4746,7 +4415,7 @@ static void styx_member(void *game)
     if (!p_SetLV) return;
     u8 *src = member_at(game, 18);
     for (int i = 0; i < 0x4c4; i++) m[i] = src[i];
-    const char *nm = g_sjis ? k_styxSJ : k_styxU8;
+    const char *nm = LOCAL_TEXT(game, k_styxSJ, k_styxU8, g_sjis);
     for (int i = 0; i < 0x30; i++) m[i] = 0;
     for (int i = 0; nm[i] && i < 0x2f; i++) m[i] = (u8)nm[i];
     m[0x30] = STYX_ID;
@@ -4962,6 +4631,16 @@ static void styx_tick(void)
     static int last = -1;
     if (last != (a | b << 1 | c << 2)) { last = a | b << 1 | c << 2; LOGI("styx: magic %d ability %d job %d", a, b, c); }
     if (a && b && c && g_guestOn) styx_member(game);
+    /* Migrate only the mod's default name, preserving player nicknames. */
+    if (styx_ready(game)) {
+        u8 *m = member_at(game, STYX_ID);
+        const char *want = LOCAL_TEXT(game, k_styxSJ, k_styxU8, g_sjis);
+        if (!text_equal((const char *)m, want) && (text_equal((const char *)m, k_styxSJ) ||
+            text_equal((const char *)m, k_styxU8) || text_equal((const char *)m, "Styx"))) {
+            for (int i = 0; i < 0x30; i++) m[i] = 0;
+            for (int i = 0; want[i] && i < 0x2f; i++) m[i] = (u8)want[i];
+        }
+    }
 }
 
 /* v3.40t: 戦闘の台本 bsc.dat を読んだ直後、スティクス用の台本 80/81 を後ろに足し、目次の 80/81 をそこへ向ける。
@@ -5086,6 +4765,11 @@ static long hook_AppRun(void *self, void *g)
     g_benchTrig = __atomic_exchange_n(&g_benchLatch, 0, __ATOMIC_SEQ_CST);
     cursor_tick();
     dash_restore();                                /* イベントなどほかの処理が動かす前にも戻しておく */
+    if (g_installed) {
+        void *game = game_inst();
+        if (game) __atomic_store_n(&g_displayLanguage, RD(int, game, 0x0c), __ATOMIC_RELEASE);
+        english_story_apply(game, g_fieldp);
+    }
     if (g_installed && (g_frame % 30) == 0) guest_tick();
     if (g_installed && (g_frame % 30) == 10) jp_text_fix(g_fieldp);
     if (g_installed && (g_frame % 30) == 15) styx_tick();
@@ -5425,10 +5109,14 @@ static DmiFn g_origDmi;
 /* アイテム 489（名前のない空き、種類 0x19）をテントの写しから作る。名前・説明・値段 100・イベントなし・どこでも選べる印 */
 static void alarm_item(void *game)
 {
+    styx_encoding(game);
     if (g_sjis < 0) return;
     u8 *a = (u8 *)game + G_ITEMDATA + ALARM_ID * ITEM_SZ, *t = (u8 *)game + G_ITEMDATA + TENT_ID * ITEM_SZ;
-    const char *nm = g_sjis ? k_alarmNameSJ : k_alarmNameU8;
-    if (*(const char **)a == nm) {
+    const char *nm = LOCAL_TEXT(game, k_alarmNameSJ, k_alarmNameU8, g_sjis);
+    if (text_equal(*(const char **)a, k_alarmNameSJ) || text_equal(*(const char **)a, k_alarmNameU8) ||
+        text_equal(*(const char **)a, "Alarm")) {
+        *(const char **)a = nm;
+        *(const char **)(a + 8) = LOCAL_TEXT(game, k_alarmHelpSJ, k_alarmHelpU8, g_sjis);
         if (RD(unsigned short, a, 0x1a) != ALARM_EVENT) RD(unsigned short, a, 0x1a) = ALARM_EVENT;
         return;
     }
@@ -5441,7 +5129,7 @@ static void alarm_item(void *game)
     }
     for (int k = 0; k < ITEM_SZ; k++) a[k] = t[k];
     *(const char **)a = nm;
-    *(const char **)(a + 8) = g_sjis ? k_alarmHelpSJ : k_alarmHelpU8;
+    *(const char **)(a + 8) = LOCAL_TEXT(game, k_alarmHelpSJ, k_alarmHelpU8, g_sjis);
     RD(unsigned, a, 0x14) = 100;
     RD(unsigned short, a, 0x1a) = ALARM_EVENT;
     RD(unsigned short, a, 0x20) = (RD(unsigned short, t, 0x20) & ~8) | 1;   /* テントのセーブポイント限定（bit3）を外し、いつでも選べる（bit0） */
@@ -5696,8 +5384,8 @@ static void hook_SMES(void *game, u8 *m)
 static const char k_memSJ[] = "\x83\x81\x83\x82\x83\x8a\x81\x5b\x83\x59", k_memU8[] = "メモリーズ";
 static void memories_cost_tick(void *game)
 {
-    static int done;
-    if (done || !game) return;
+    static unsigned warned;
+    if (!game) return;
     styx_encoding(game);
     if (g_sjis < 0) return;
     u8 *t = (u8 *)RDP(game, G_PASSIVE_TBL);
@@ -5705,21 +5393,20 @@ static void memories_cost_tick(void *game)
     u8 *d = t + AB_MEMORIES * AB_SIZE;
     const char *nm = *(const char **)d;
     if (!nm) return;
-    if (!str_eq(nm, g_sjis ? k_memSJ : k_memU8)) {
-        done = 1;
-        LOGE("memories: ability %d is not メモリーズ (%02x %02x %02x %02x), cost unchanged", AB_MEMORIES,
+    if (!str_eq(nm, g_sjis ? k_memSJ : k_memU8) && !(text_english(game) && str_eq(nm, "Recollect"))) {
+        if (!(warned & 1)) LOGE("memories: ability %d is not Recollect (%02x %02x %02x %02x), cost unchanged", AB_MEMORIES,
              (u8)nm[0], (u8)nm[1], (u8)nm[2], (u8)nm[3]);
+        warned |= 1;
         return;
     }
-    if (d[AB_COST] == 2) { done = 1; return; }
+    if (d[AB_COST] == 2) return;
     if (d[AB_COST] == 3 && t[AB_MEMORANDUM * AB_SIZE + AB_COST] == 3) {
         d[AB_COST] = 2;
-        done = 1;
         LOGI("memories: cost 3 -> 2");
         return;
     }
-    done = 1;
-    LOGE("memories: cost field %d / memorandum %d, unchanged", d[AB_COST], t[AB_MEMORANDUM * AB_SIZE + AB_COST]);
+    if (!(warned & 2)) LOGE("memories: cost field %d / memorandum %d, unchanged", d[AB_COST], t[AB_MEMORANDUM * AB_SIZE + AB_COST]);
+    warned |= 2;
 }
 
 /* ---------- v4.01: ダッシュの ON/OFF ボタン（フィールド） ----------
@@ -5796,10 +5483,13 @@ static void hook_SyncSB(void *field)
     uintptr_t S = (uintptr_t)field + FB_BASE;
     if (!RDP(S, 0)) return;
     if (!g_dashLoaded) dash_load();
-    if (g_sjis < 0) { void *game = game_inst(); if (game) styx_encoding(game); if (g_sjis < 0) return; }
+    void *game = game_inst();
+    styx_encoding(game);
+    if (g_sjis < 0) return;
+    static int labelLanguage = -1;
     u8 *it = dash_item(field);
-    if (!it || g_dashLabel != g_dashOn) {
-        const char *txt = g_sjis ? (g_dashOn ? k_dashOnSJ : k_dashOffSJ) : (g_dashOn ? k_dashOnU8 : k_dashOffU8);
+    if (!it || g_dashLabel != g_dashOn || labelLanguage != RD(int, game, 0x0c)) {
+        const char *txt = LOCAL_TEXT(game, g_dashOn ? k_dashOnSJ : k_dashOffSJ, g_dashOn ? k_dashOnU8 : k_dashOffU8, g_sjis);
         /* 最後の引数 1：SyncScriptButton がメニューボタン（field+0xf3d8+0x810）の見え方・透明度・文字色を写す */
         p_AddSB(field, DASH_BTN_ID, txt, DASH_X, DASH_Y, DASH_W, DASH_H, 0, 1);
         it = dash_item(field);
@@ -5813,6 +5503,7 @@ static void hook_SyncSB(void *field)
            ずれた分（OFF と ON で違う）を文字の位置 +0x84 に足す */
         *(volatile float *)(it + 0x84) = g_dashOn ? DASH_SHIFT_ON : DASH_SHIFT_OFF;
         g_dashLabel = g_dashOn;
+        labelLanguage = RD(int, game, 0x0c);
         /* 作った直後は SyncScriptButton がまだ見ていないので、次のフレームまで隠す */
         it[0xc] = it[0xd] = 0;
         return;
@@ -6096,7 +5787,7 @@ static void boost_build(void *mc)
     int sj = g_sjis == 1;
     for (int r = 0; r < 3; r++) {
         int ry = 74 + 65 * r;
-        u8 *row = (u8 *)boost_button(w, 7, BOOST_ROW + r, sj ? k_boostRowSJ[r] : k_boostRowU8[r], 2, ry, 636, 65);
+        u8 *row = (u8 *)boost_button(w, 7, BOOST_ROW + r, LOCAL_TEXT(game, k_boostRowSJ[r], k_boostRowU8[r], sj), 2, ry, 636, 65);
         u8 *seg = (u8 *)p_Znwm(0xc0);
         if (seg) {
             p_BtnCtor(seg, 7, BOOST_ROW + r, -1, 0, 2 + 0xaa, ry, 468 - 2, 65);
@@ -6161,12 +5852,12 @@ static void hook_DrawConf(void *mc, void *g)
     }
     char **tbl = game ? *(char ***)((u8 *)game + G_SYSMSG) : 0;
     char *save = tbl ? tbl[519] : 0;
-    if (tbl) tbl[519] = (char *)(sj ? k_boostTitleSJ : k_boostTitleU8);
+    if (tbl) tbl[519] = (char *)LOCAL_TEXT(game, k_boostTitleSJ, k_boostTitleU8, sj);
     g_origDrawConf(mc, g);
     if (tbl) tbl[519] = save;
     if (hrow >= 0 && game && p_SetUMsg && p_DrawLD && p_SetColor) {
         p_SetColor(game, -1);
-        p_SetUMsg(game, 0, sj ? k_boostHelpSJ[hrow] : k_boostHelpU8[hrow]);
+        p_SetUMsg(game, 0, LOCAL_TEXT(game, k_boostHelpSJ[hrow], k_boostHelpU8[hrow], sj));
         p_DrawLD(game, 0x1a1, 0, 0);
     }
 }
@@ -6683,6 +6374,8 @@ void Java_com_square_1enix_android_1googleplay_ffl_1gp_FFLMod_install(void *env,
     else { wide_escape_patch(); wide_panel_patch(); }   /* 1.0-pre3: ワイド表示ではフィールドを広く描く（遠景は hook_DrawFar で伸ばす） */
     menu_step_init();
     g_installed = 1;
+    english_install(h);
+    if (wideOk) display_install(h);
     LOGI("installed v" FFLMOD_VERSION ": base=%lx cursor=%d", base, cursorOk);
     import_save();
     export_save();
@@ -6763,4 +6456,11 @@ void Java_com_square_1enix_android_1googleplay_ffl_1gp_FFLMod_nativeReset(void *
     g_keyBits = 0;
     g_axisBits = 0;
     export_save();
+}
+
+/* Read only a game-thread snapshot from Android's UI thread. */
+int Java_com_square_1enix_android_1googleplay_ffl_1gp_FFLMod_nativeLanguage(void *env, void *cls)
+{
+    (void)env; (void)cls;
+    return __atomic_load_n(&g_displayLanguage, __ATOMIC_ACQUIRE);
 }

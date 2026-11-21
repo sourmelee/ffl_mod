@@ -57,13 +57,13 @@ class MainActivity : Activity() {
         root.addView(versions, lp())
         result = TextView(this).apply { textSize = 16f; setPadding(0, pad / 2, 0, pad / 2) }
         root.addView(result, lp())
-        install = Button(this).apply { text = "modを導入"; setOnClickListener { onInstall() } }
+        install = Button(this).apply { text = Texts.get(R.string.manager_2b226235e6); setOnClickListener { onInstall() } }
         root.addView(install, lp())
-        update = Button(this).apply { text = "modを更新"; setOnClickListener { onUpdate() } }
+        update = Button(this).apply { text = Texts.get(R.string.manager_4d317c8ecb); setOnClickListener { onUpdate() } }
         root.addView(update, lp())
-        export = Button(this).apply { text = "セーブを書き出す"; setOnClickListener { openSave("fflmod.intent.action.EXPORT_SAVE") } }
+        export = Button(this).apply { text = Texts.get(R.string.manager_0c56af39c8); setOnClickListener { openSave("fflmod.intent.action.EXPORT_SAVE") } }
         root.addView(export, lp())
-        importBtn = Button(this).apply { text = "セーブを取り込む"; setOnClickListener { openSave("fflmod.intent.action.IMPORT_SAVE") } }
+        importBtn = Button(this).apply { text = Texts.get(R.string.manager_70a602ed0c); setOnClickListener { openSave("fflmod.intent.action.IMPORT_SAVE") } }
         root.addView(importBtn, lp())
         /* ボタンの英字を大文字にしない（Android の既定は大文字にする） */
         for (b in listOf(install, update, export, importBtn)) b.isAllCaps = false
@@ -102,7 +102,7 @@ class MainActivity : Activity() {
         val on = !Store.testing(this)
         Store.setTesting(this, on)
         Release.includePre = on
-        Toast.makeText(this, if (on) "試験版を受け取ります" else "試験版を受け取りません", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, if (on) Texts.get(R.string.manager_5b0fb11e05) else Texts.get(R.string.manager_b96d1ec1fa), Toast.LENGTH_SHORT).show()
         latest = null
         showVersions()
         refresh()
@@ -112,20 +112,20 @@ class MainActivity : Activity() {
     private fun showVersions() {
         val st = state
         val have = when (st) {
-            is GameState.Modded -> st.version ?: "（版を読めませんでした）"
-            null -> "（調べられませんでした）"
-            else -> "なし"
+            is GameState.Modded -> st.version ?: Texts.get(R.string.manager_fc885bbb4d)
+            null -> Texts.get(R.string.manager_23b9b1c924)
+            else -> Texts.get(R.string.manager_44ff697ecd)
         }
         val l = latest
-        val sb = StringBuilder("現在バージョン：").append(have).append("\n最新バージョン：")
+        val sb = StringBuilder(Texts.get(R.string.manager_54b1f3d50f)).append(have).append(Texts.get(R.string.manager_a98e734b90))
         when {
-            l == null -> sb.append("確認しています…")
-            l.isEmpty() -> sb.append("確認できませんでした")
+            l == null -> sb.append(Texts.get(R.string.manager_2c201069ad))
+            l.isEmpty() -> sb.append(Texts.get(R.string.manager_8312c0f9f9))
             else -> {
                 sb.append(l)
-                if (Release.includePre) sb.append("（試験版を含む）")
+                if (Release.includePre) sb.append(Texts.get(R.string.manager_0fc0b5593c))
                 if (st is GameState.Modded && st.version != null)
-                    sb.append(if (st.version == l) "\n最新版です。" else "\nアップデートがあります。「modを更新」から入れられます。")
+                    sb.append(if (st.version == l) Texts.get(R.string.manager_321771e517) else Texts.get(R.string.manager_35981549ed))
             }
         }
         versions.text = sb
@@ -140,21 +140,21 @@ class MainActivity : Activity() {
     private fun show(st: GameState?) {
         state = st
         status.text = when (st) {
-            null -> "ゲームの状態を調べられませんでした。"
-            is GameState.NotInstalled -> "FFレジェンズが入っていません。"
+            null -> Texts.get(R.string.manager_e5cd356be8)
+            is GameState.NotInstalled -> Texts.get(R.string.manager_70dfd1dddb)
             is GameState.Original ->
-                if (st.ok) "正規版（1.2.0）が入っています。\nmodを導入できます。"
-                else "正規版が入っていますが、対応していない版です。"
+                if (st.ok) Texts.get(R.string.manager_8cb1797535)
+                else Texts.get(R.string.manager_40464cf82e)
             is GameState.Modded ->
-                "modが導入されています。"
-            is GameState.Unknown -> "正規版とも fflmod とも違う署名のアプリが入っています。"
+                Texts.get(R.string.manager_3cc336541f)
+            is GameState.Unknown -> Texts.get(R.string.manager_93769bcac1)
         }
         // 導入の途中から続ける（アプリが閉じられていたときなど）
         when (Store.phase(this)) {
             "uninstall" -> if (!waitingUninstall) {
                 if (st is GameState.NotInstalled) { startInstall(); return }
                 Store.setPhase(this, "")
-                Store.setMessage(this, "正規版の削除が取り消されました。", Store.log(this))
+                Store.setMessage(this, Texts.get(R.string.manager_483c1721e2), Store.log(this))
             }
             "perm" -> {
                 Store.setPhase(this, "")
@@ -208,7 +208,7 @@ class MainActivity : Activity() {
         logBuf.setLength(0)
         log.text = ""
         result.text = ""
-        status.text = "modを入れたAPKを作っています…"
+        status.text = Texts.get(R.string.manager_c457019e38)
         Thread {
             val r = try {
                 ModBuild.run(this) { addLog(it) }
@@ -219,7 +219,7 @@ class MainActivity : Activity() {
             main.post {
                 setBusy(false)
                 if (r == null) {
-                    Store.setMessage(this, "APKを作成できませんでした。", logBuf.toString())
+                    Store.setMessage(this, Texts.get(R.string.manager_c7e6687460), logBuf.toString())
                     refresh()
                 } else {
                     Store.setVersion(this, r.version)
@@ -239,7 +239,7 @@ class MainActivity : Activity() {
         logBuf.setLength(0)
         log.text = ""
         result.text = ""
-        status.text = "modの更新を準備しています…"
+        status.text = Texts.get(R.string.manager_6f02e58234)
         Thread {
             val p = try {
                 Release.fetchLatest { addLog(it) }
@@ -250,14 +250,14 @@ class MainActivity : Activity() {
             main.post {
                 if (p == null) {
                     setBusy(false)
-                    Store.setMessage(this, "更新できませんでした。", logBuf.toString())
+                    Store.setMessage(this, Texts.get(R.string.manager_130897d40e), logBuf.toString())
                     refresh()
                 } else if (st.version == p.version) {
                     AlertDialog.Builder(this)
-                        .setTitle("同じ版です")
-                        .setMessage("fflmod ${p.version} はすでに入っています。入れ直しますか？")
-                        .setPositiveButton("入れ直す") { _, _ -> buildUpdate(p) }
-                        .setNegativeButton("やめる") { _, _ -> setBusy(false); refresh() }
+                        .setTitle(Texts.get(R.string.manager_109b75d0fa))
+                        .setMessage(Texts.get(R.string.manager_a580145ee5, p.version))
+                        .setPositiveButton(Texts.get(R.string.manager_1230dda998)) { _, _ -> buildUpdate(p) }
+                        .setNegativeButton(Texts.get(R.string.manager_3eefdf40e6)) { _, _ -> setBusy(false); refresh() }
                         .setCancelable(false)
                         .show()
                 } else {
@@ -269,11 +269,11 @@ class MainActivity : Activity() {
 
     private fun buildUpdate(p: Release.Patch) {
         Thread {
-            var msg = "更新できませんでした。"
+            var msg = Texts.get(R.string.manager_130897d40e)
             val r = try {
                 ModBuild.update(this, p) { addLog(it) }
             } catch (e: ModBuild.NeedReinstall) {
-                msg = "この版は「modを更新」では入れられません。セーブを書き出してから、modを入れ直してください。"
+                msg = Texts.get(R.string.manager_a33a1528a2)
                 null
             } catch (e: Exception) {
                 addLog(e.toString())
@@ -296,18 +296,18 @@ class MainActivity : Activity() {
 
     private fun confirmUninstall() {
         AlertDialog.Builder(this)
-            .setTitle("正規版を削除します")
-            .setMessage("modを導入するには、いま入っている正規版をいったん削除する必要があります。削除すると、この端末にあるセーブデータも消えます。先にゲームのクラウドセーブで保存しておくと、導入後に Google データ エクスポートを使って取り込めます。")
-            .setPositiveButton("続ける") { _, _ ->
+            .setTitle(Texts.get(R.string.manager_a7372f32aa))
+            .setMessage(Texts.get(R.string.manager_96d9f3a967))
+            .setPositiveButton(Texts.get(R.string.manager_56b8d59b66)) { _, _ ->
                 AlertDialog.Builder(this)
-                    .setTitle("セーブデータは保存しましたか？")
-                    .setMessage("削除したセーブデータは元に戻せません。")
-                    .setPositiveButton("削除する") { _, _ -> uninstall() }
-                    .setNegativeButton("やめる") { _, _ -> refresh() }
+                    .setTitle(Texts.get(R.string.manager_3c072ca7b3))
+                    .setMessage(Texts.get(R.string.manager_abfd1659d9))
+                    .setPositiveButton(Texts.get(R.string.manager_f17ccd9811)) { _, _ -> uninstall() }
+                    .setNegativeButton(Texts.get(R.string.manager_3eefdf40e6)) { _, _ -> refresh() }
                     .setCancelable(false)
                     .show()
             }
-            .setNegativeButton("やめる") { _, _ -> refresh() }
+            .setNegativeButton(Texts.get(R.string.manager_3eefdf40e6)) { _, _ -> refresh() }
             .setCancelable(false)
             .show()
     }
@@ -342,7 +342,7 @@ class MainActivity : Activity() {
                     startInstall()
                 } else {
                     Store.setPhase(this, "")
-                    Store.setMessage(this, "正規版の削除が取り消されました。", Store.log(this))
+                    Store.setMessage(this, Texts.get(R.string.manager_483c1721e2), Store.log(this))
                     refresh()
                 }
             }
@@ -355,20 +355,20 @@ class MainActivity : Activity() {
         val apks = list ?: Store.builtApks(this)
         if (apks == null) {
             Store.setPhase(this, "")
-            Store.setMessage(this, "導入できませんでした。正規版は Google Play から入れ直せます。", "作ったAPKが見つかりません")
+            Store.setMessage(this, Texts.get(R.string.manager_9c6a140bd3), Texts.get(R.string.manager_e216616b97))
             refresh()
             return
         }
         if (!canInstall()) {
             Store.setPhase(this, "perm")
-            Store.setMessage(this, "このアプリにアプリのインストールを許可してください。", Store.log(this))
+            Store.setMessage(this, Texts.get(R.string.manager_05bd258fe5), Store.log(this))
             result.text = Store.message(this)
             startActivity(Intent(Settings.ACTION_MANAGE_UNKNOWN_APP_SOURCES, Uri.parse("package:$packageName")))
             return
         }
         Store.setPhase(this, "install")
         setBusy(true)
-        status.text = if (Store.mode(this) == "update") "modを更新しています…" else "modを導入しています…"
+        status.text = if (Store.mode(this) == "update") Texts.get(R.string.manager_81ddfa9624) else Texts.get(R.string.manager_f568d6d810)
         Thread {
             try {
                 Installer.install(this, apks)
@@ -395,9 +395,9 @@ class MainActivity : Activity() {
 
     private fun openSave(action: String) {
         try {
-            startActivity(Intent(action).setClassName(Game.PKG, Game.PKG + ".FFLModSaveActivity"))
+            startActivity(Intent(action).setClassName(Game.PKG, Game.PKG + ".FFLModSaveActivity").putExtra("fflmod.language", Texts.language()))
         } catch (e: Exception) {
-            result.text = "ゲームの画面を開けませんでした。"
+            result.text = Texts.get(R.string.manager_fcf6e26970)
             log.text = e.toString()
         }
     }

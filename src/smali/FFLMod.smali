@@ -30,6 +30,9 @@
 .method public static native nativeReset()V
 .end method
 
+.method public static native nativeLanguage()I
+.end method
+
 # MainActivity が作られたとき（libjniproxy の読み込み直後）に FFLModApp から1回だけ呼ぶ。失敗してもゲームは通常どおり動く
 .method public static init()V
     .locals 2
