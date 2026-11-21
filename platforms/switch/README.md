@@ -1,5 +1,13 @@
 # Switch portable enhancements — uploaded ARM64 candidate for game version 1.1.9
 
+## Original port authors and licenses
+
+**This is an experimental enhancement to [NaGaa95's original Nintendo Switch port, ffd_nx](https://github.com/NaGaa95/ffd_nx), not a new Switch port.** NaGaa95 created and maintains the foundational Switch loader and its game/platform integration. The experimental controller and expanded-rendering logic derives from the **[original Android fflmod/ffl_mod project](https://github.com/fflmod/ffl_mod)**.
+
+The original Switch README additionally credits **[fgsfds's max_nx](https://github.com/fgsfdsfgs/max_nx)** as its loader base, **[TheOfficialFloW](https://github.com/TheOfficialFloW)** for pioneering Vita porting techniques, and **[Rinnegatamante's original ffd-vita](https://github.com/Rinnegatamante/ffd-vita)**. The original Switch MIT license names **Andy Nguyen and fgsfds** as copyright holders.
+
+See [complete attribution and source links](../../PORTABLE_CONSOLE_CREDITS.md) and [copyright and license notices](../../PORTABLE_CONSOLE_NOTICES.txt). These upstream authors are not implied to have endorsed this experimental build.
+
 **Status: experimental controller and 16:9 rendering adapters; a development NRO has compiled successfully, not a stable release.** The user's library is an Android ELF64 AArch64 shared object with many native engine exports. The supplied version is believed to be 1.1.9, but **version 1.1.9 is not independently encoded or verified in the ELF**. Compatibility is instead pinned to the full binary hash.
 
 - SHA-256: `4c6dec4cec9cb58dddcb85a7dd70e289356d55564902949da2a21844b38ef93e`
