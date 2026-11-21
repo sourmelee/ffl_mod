@@ -1,0 +1,88 @@
+{
+  "label": "User-supplied libjniproxy 1.3.0.so",
+  "version_note": "1.3.0 is the uploader-provided label; the ELF does not independently confirm the Android app version.",
+  "source_sha256": "37a5e9fb3b5038f662f8ed67bca9004a4af9d7b540b98309931066a33d30a79f",
+  "elf_build_id": "071d80506d9f9c5fa03f7a7eb6964994a58b2f48",
+  "elf_class": "ELF32",
+  "machine": "ARM",
+  "cpu_arch": "v5TE",
+  "thumb": "Thumb-1",
+  "abi": "EABI5 soft-float",
+  "symbols": {
+    "key_state": {
+      "elf_symbol": "_ZN9GameClass8KeyStateEi",
+      "thumb_entry": "0x000ca6a5",
+      "jump_slot": "0x0028ad24"
+    },
+    "key_trigger": {
+      "elf_symbol": "_ZN9GameClass10KeyTriggerEi",
+      "thumb_entry": "0x000bf4b5",
+      "jump_slot": "0x0028a288"
+    },
+    "key_repeat": {
+      "elf_symbol": "_ZN9GameClass9KeyRepeatEi",
+      "thumb_entry": "0x000ca6bd",
+      "jump_slot": "0x0028a32c"
+    },
+    "menu_update": {
+      "elf_symbol": "_ZN10MenuWidget6UpdateEv",
+      "thumb_entry": "0x000e90ed",
+      "jump_slot": "0x0028a2d8"
+    },
+    "menu_draw": {
+      "elf_symbol": "_ZN10MenuWidget4DrawER13MtxGraphics3D",
+      "thumb_entry": "0x000e93af",
+      "jump_slot": "0x0028a3a4"
+    },
+    "main_viewport": {
+      "elf_symbol": "_ZN9MainScene11SetViewPortER13MtxGraphics3D",
+      "thumb_entry": "0x000d1b25",
+      "jump_slot": "0x0028b86c"
+    },
+    "gfx_viewport": {
+      "elf_symbol": "_ZN13MtxGraphics3D11SetViewPortEiiii",
+      "thumb_entry": "0x00071e2d",
+      "jump_slot": "0x0028b85c"
+    },
+    "gfx_2d_matrix": {
+      "elf_symbol": "_ZN13MtxGraphics3D15Set2DModeMatrixEff",
+      "thumb_entry": "0x00072a99",
+      "jump_slot": "0x00289f8c"
+    },
+    "field_draw": {
+      "elf_symbol": "_ZN10FieldClass12DrawMapFieldEP13MtxGraphics3Df",
+      "thumb_entry": "0x000a9ffd",
+      "jump_slot": "0x0028ad40"
+    },
+    "field_far": {
+      "elf_symbol": "_ZN10FieldClass7DrawFarEP13MtxGraphics3D",
+      "thumb_entry": "0x000b1661",
+      "jump_slot": "0x0028af64"
+    },
+    "field_minimap": {
+      "elf_symbol": "_ZN10FieldClass11DrawMiniMapEP13MtxGraphics3D",
+      "thumb_entry": "0x000b27ad",
+      "jump_slot": "0x0028ad48"
+    },
+    "field_message": {
+      "elf_symbol": "_ZN10FieldClass11DrawMessageEP13MtxGraphics3D",
+      "thumb_entry": "0x000ae8d7",
+      "jump_slot": "0x0028ad5c"
+    },
+    "gfx_dest_width": {
+      "elf_symbol": "_ZN13MtxGraphics3D19GetDestinationWidthEv",
+      "thumb_entry": "0x00071c95",
+      "jump_slot": "0x0028aa0c"
+    },
+    "gfx_dest_height": {
+      "elf_symbol": "_ZN13MtxGraphics3D20GetDestinationHeightEv",
+      "thumb_entry": "0x00071cab",
+      "jump_slot": "0x0028aa10"
+    },
+    "game_touch_panel": {
+      "elf_symbol": "_Z12GetTouchInfov",
+      "thumb_entry": "0x0007c341",
+      "jump_slot": "0x0028a2a0"
+    }
+  }
+}
