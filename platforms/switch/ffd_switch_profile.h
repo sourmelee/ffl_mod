@@ -67,7 +67,7 @@ static const FfdSwitchSite ffd_switch_sites[FFD_SWITCH_SITE_COUNT] = {
 static int ffd_switch_validate_site(so_module *mod, unsigned index)
 {
     if (!mod || index >= FFD_SWITCH_SITE_COUNT || !mod->load_base || !mod->load_virtbase ||
-        !mod->syms || !mod->dynstr) return 0;
+        !mod->syms || !mod->dynstrtab) return 0;
     const FfdSwitchSite *s = &ffd_switch_sites[index];
     if (s->got_offset > mod->load_size ||
         mod->load_size - s->got_offset < sizeof(uintptr_t) ||
