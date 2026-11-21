@@ -123,7 +123,7 @@ def main():
         if original.count(insert) != 1:
             parser.error("unexpected so_util includes")
         so_util.write_text(original.replace(insert,
-            insert + '\\n/* Legacy vitaGL resolver declaration. */\\n'
+            insert + '\n/* Legacy vitaGL resolver declaration. */\n'
             'void *vglGetProcAddress(const char *name);'))
     print("Experimental Vita 1.1.3 source patched. Both features off by default.")
 
