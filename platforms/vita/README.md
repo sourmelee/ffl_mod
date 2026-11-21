@@ -14,4 +14,4 @@ The 15 native functions and their R_ARM_JUMP_SLOT positions are in [vita_113_pro
 
 **Widescreen:** MtxGraphics3D::SetViewPort stores x/y/width/height as floats at gfx+0x4ac, +0x4b0, +0x4b4, +0x4b8. Full expanded field still needs projection, camera/culling, backgrounds, HUD/dialogue, minimap, touch/scissor alignment, and handling of the original Vita loader's borders.png overlay after every frame. Expanding glViewport alone is not sufficient.
 
-The original game shared library is not modified or committed. No Vita VPK build or gameplay verification has been performed.
+The original game shared library is not modified or committed. The experimental Vita VPK **successfully cross-compiled** with the VitaSDK softfp Docker image (GitHub Actions [build 44945275143](https://github.com/sourmelee/ffl_mod/actions/runs/44945275143)), but **boot, navigation, widescreen and save behavior remain unverified on real Vita hardware**. The compiled VPK is not a stable release.
