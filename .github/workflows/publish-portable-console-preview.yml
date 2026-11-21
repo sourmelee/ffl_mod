@@ -43,6 +43,8 @@ jobs:
           mkdir -p release-files
           cp release-input/switch/ffd_nx.nro release-files/ffd_nx_enhanced_experimental.nro
           cp release-input/vita/ffd.vpk release-files/ffd_vita_enhanced_experimental.vpk
+          cp PORTABLE_CONSOLE_CREDITS.md release-files/PORTABLE_CONSOLE_CREDITS.md
+          cp PORTABLE_CONSOLE_NOTICES.txt release-files/PORTABLE_CONSOLE_NOTICES.txt
 
           printf '%s  %s\n' \
             '77b015ae652f42acf2cbd1cf375be3a23ba70c0a9a88a32e4af6f87d505b0047' \
@@ -96,6 +98,22 @@ jobs:
 
           **The release contains no Square Enix game binary or game data.** Each port still needs the legally obtained original `libjniproxy.so`, `main.obb` and assets specified by the upstream projects.
 
+          ### Original port authors and proper attribution
+
+          These are **experimental modifications of existing ports**, **not independently created Switch or Vita ports**. Please credit the original authors first:
+
+          - **[NaGaa95 — original Final Fantasy Dimensions Nintendo Switch port (ffd_nx)](https://github.com/NaGaa95/ffd_nx)**. The Switch wrapper, game/platform integration, controls, renderer, and NRO project originate from NaGaa95's work.
+          - **[Rinnegatamante — original Final Fantasy Dimensions PS Vita port (ffd-vita)](https://github.com/Rinnegatamante/ffd-vita)**. The Vita loader, game/platform integration, controls, renderer, and VPK project originate from Rinnegatamante's work.
+          - **[fflmod — original Android FFLmod](https://github.com/fflmod/ffl_mod)**. Game-aware controller navigation and expanded-display techniques were developed in this upstream Android mod and adapted experimentally here; the sourmelee fork is not its original upstream.
+
+          The original ports also acknowledge the foundational work of **[fgsfds — max_nx](https://github.com/fgsfdsfgs/max_nx)**, **[TheOfficialFloW / TheFloW](https://github.com/TheOfficialFloW)** (Vita shared-library loading techniques), and **[frangarcj — ff5_vita](https://github.com/frangarcj/ff5_vita)**. The Vita README credits **withLogic** and **Hans** for testing and **Brandonheat8** for LiveArea assets. The original MIT license files name **Andy Nguyen** and **fgsfds** as applicable copyright holders.
+
+          **[Full credits, project links, and authorship explanations](https://github.com/sourmelee/ffl_mod/blob/feature/portable-controller-widescreen/PORTABLE_CONSOLE_CREDITS.md)**
+
+          **[Original copyright and MIT license notices](https://github.com/sourmelee/ffl_mod/blob/feature/portable-controller-widescreen/PORTABLE_CONSOLE_NOTICES.txt)**
+
+          Downloadable copies of both credit/notice documents are attached to this pre-release. The upstream authors are not implied to have reviewed or endorsed this experimental build. FINAL FANTASY DIMENSIONS and its game assets are owned by SQUARE ENIX CO., LTD.
+
           ### Source and reproducible build records
           - Source branch: [feature/portable-controller-widescreen](https://github.com/sourmelee/ffl_mod/tree/feature/portable-controller-widescreen)
           - Draft source PR: [#1](https://github.com/sourmelee/ffl_mod/pull/1)
@@ -117,13 +135,19 @@ jobs:
           set -euo pipefail
           TAG='console-preview-2026-11-21'
           if gh release view "$TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
-            echo "Release exists; refreshing only the two console binary assets."
-            gh release upload "$TAG" release-files/ffd_nx_enhanced_experimental.nro release-files/ffd_vita_enhanced_experimental.vpk \
+            echo "Release already exists; updating credits and notices without replacing compiled binaries."
+            gh release edit "$TAG" --repo "$GITHUB_REPOSITORY" \
+              --notes-file RELEASE_NOTES.md --prerelease
+            gh release upload "$TAG" \
+              release-files/PORTABLE_CONSOLE_CREDITS.md \
+              release-files/PORTABLE_CONSOLE_NOTICES.txt \
               --repo "$GITHUB_REPOSITORY" --clobber
           else
             gh release create "$TAG" \
               release-files/ffd_nx_enhanced_experimental.nro \
               release-files/ffd_vita_enhanced_experimental.vpk \
+              release-files/PORTABLE_CONSOLE_CREDITS.md \
+              release-files/PORTABLE_CONSOLE_NOTICES.txt \
               --repo "$GITHUB_REPOSITORY" \
               --target "$GITHUB_SHA" \
               --title 'Portable Console Enhancements — Switch + Vita Preview (2026-11-21)' \
@@ -140,3 +164,7 @@ jobs:
           gh release view console-preview-2026-11-21 --repo "$GITHUB_REPOSITORY" \
              --json tagName,isPrerelease,targetCommitish,assets \
              --jq '{tag:.tagName,prerelease:.isPrerelease,target:.targetCommitish,assets:[.assets[].name]}'
+          for asset in ffd_nx_enhanced_experimental.nro ffd_vita_enhanced_experimental.vpk PORTABLE_CONSOLE_CREDITS.md PORTABLE_CONSOLE_NOTICES.txt; do
+            gh release view console-preview-2026-11-21 --repo "$GITHUB_REPOSITORY" --json assets \
+              --jq '.assets[].name' | grep -Fxq "$asset" || { echo "Missing release asset: $asset"; exit 1; }
+          done
