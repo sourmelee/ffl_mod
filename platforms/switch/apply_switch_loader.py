@@ -18,6 +18,7 @@ SOURCES = (
     "platforms/switch/ffd_switch_profile.h",
     "platforms/switch/ffd_switch_menu_layout.h",
     "platforms/switch/ffd_switch_nav_experiment.h",
+    "platforms/switch/ffd_switch_wide_experiment.h",
 )
 
 def change(source: str, old: str, new: str) -> str:
@@ -28,9 +29,9 @@ def change(source: str, old: str, new: str) -> str:
 
 def patch(content: str) -> str:
     content = change(content, '#include "opensles.h"',
-                     '#include "opensles.h"\n#include "../platforms/switch/ffd_switch_nav_experiment.h"')
+                     '#include "opensles.h"\n#include "../platforms/switch/ffd_switch_nav_experiment.h"\n#include "../platforms/switch/ffd_switch_wide_experiment.h"')
     content = change(content, '  so_finalize(&game_mod);',
-                     '  ffd_nx_install_navigation(&game_mod); /* optional and fail-closed */\n  so_finalize(&game_mod);')
+                     '  ffd_nx_install_navigation(&game_mod); /* optional and fail-closed */\n  ffd_nx_install_widescreen(&game_mod); /* separate opt-in experiment */\n  so_finalize(&game_mod);')
     content = change(content, '  int dn    = (d & HidNpadButton_Down)  || ls.y < -DZ;',
                      '  int dn    = (d & HidNpadButton_Down)  || ls.y < -DZ;\n'
                      '  int nxnav = ffd_nx_navigation_input((d & HidNpadButton_ZL) != 0,\n'
@@ -77,7 +78,7 @@ def main():
         shutil.copy2(ROOT / source, dst)
     main_path.write_text(output, encoding="utf-8")
     print("Patched ffd_nx sources. Review git diff before compilation.")
-    print("Experimental feature remains OFF unless enhanced.txt contains game_aware_navigation=1")
+    print("Experimental features remain OFF unless enabled in enhanced.txt")
 
 if __name__ == "__main__":
     main()
