@@ -116,6 +116,12 @@ def main():
         parser.error("unexpected vitaGL draw API")
     modified = modified.replace(needle, 'vglDrawObjects(GL_TRIANGLE_STRIP, 4);')
     loader.write_text(modified)
+    # The contemporary softfp SDK no longer ships the obsolete bridge stub.
+    # The direct Vita SDK imports are supplied by the other platform stubs.
+    cmake_file = directory / "CMakeLists.txt"
+    cmake_data = cmake_file.read_text()
+    if "  SceLibcBridge_stub\\n" in cmake_data:
+        cmake_file.write_text(cmake_data.replace("  SceLibcBridge_stub\\n", ""))
     so_util = directory / "loader" / "so_util.c"
     original = so_util.read_text()
     if "void *vglGetProcAddress(const char *name);" not in original:
