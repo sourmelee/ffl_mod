@@ -1,5 +1,9 @@
 # FFD Portable Controls + True Widescreen (development prototype)
 
+## Installation and launch
+
+Before testing the compiled preview packages, follow **[Portable console installation, launch, configuration, and rollback instructions](../PORTABLE_CONSOLE_INSTALLATION.md)**, based on the upstream [Switch](https://github.com/NaGaa95/ffd_nx) and [Vita](https://github.com/Rinnegatamante/ffd-vita) READMEs. Both packages are cross-compiled but remain hardware-unverified.
+
 ## Upstream authorship
 
 The Switch and Vita executables in this preview are built from **[NaGaa95's ffd_nx](https://github.com/NaGaa95/ffd_nx)** and **[Rinnegatamante's ffd-vita](https://github.com/Rinnegatamante/ffd-vita)**, respectively. Both preexisting community ports and their original authors must remain prominently credited. The controller and widescreen enhancements adapt work from **[fflmod/ffl_mod](https://github.com/fflmod/ffl_mod)**. These are derivative experiments, not newly written console ports.
