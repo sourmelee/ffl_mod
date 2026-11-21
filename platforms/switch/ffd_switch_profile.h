@@ -3,6 +3,7 @@
  * SHA-256 4c6dec4cec9cb58dddcb85a7dd70e289356d55564902949da2a21844b38ef93e
  * This is a preflight/patch primitive only, NOT an installed game mod.
  * All slot updates must occur after ffd_resolve_imports and before so_finalize.
+ * This loader relocates the writable image at load_base, not load_virtbase.
  */
 #ifndef FFD_SWITCH_PROFILE_H
 #define FFD_SWITCH_PROFILE_H
@@ -65,7 +66,7 @@ static const FfdSwitchSite ffd_switch_sites[FFD_SWITCH_SITE_COUNT] = {
  * This cannot substitute for a cryptographic hash of the complete ELF. */
 static int ffd_switch_validate_site(so_module *mod, unsigned index)
 {
-    if (!mod || index >= FFD_SWITCH_SITE_COUNT || !mod->load_virtbase ||
+    if (!mod || index >= FFD_SWITCH_SITE_COUNT || !mod->load_base || !mod->load_virtbase ||
         !mod->syms || !mod->dynstr) return 0;
     const FfdSwitchSite *s = &ffd_switch_sites[index];
     if (s->got_offset > mod->load_size ||
@@ -74,7 +75,9 @@ static int ffd_switch_validate_site(so_module *mod, unsigned index)
     uintptr_t base = (uintptr_t)mod->load_virtbase;
     uintptr_t actual = so_try_find_addr_rx(mod, s->symbol);
     if (actual != base + s->entry_offset) return 0;
-    return *(const volatile uintptr_t *)(base + s->got_offset) == actual;
+    /* Relocations are applied to load_base before so_finalize maps it at
+     * load_virtbase. Never dereference unmapped load_virtbase here. */
+    return *(const volatile uintptr_t *)((uintptr_t)mod->load_base + s->got_offset) == actual;
 }
 
 typedef struct {
@@ -101,7 +104,7 @@ static int ffd_switch_install_patches(so_module *mod, const FfdSwitchPatch *patc
     for (size_t i = 0; i < count; ++i) {
         const FfdSwitchSite *s = &ffd_switch_sites[patches[i].site_index];
         *patches[i].original = base + s->entry_offset;
-        *(volatile uintptr_t *)(base + s->got_offset) = patches[i].replacement;
+        *(volatile uintptr_t *)((uintptr_t)mod->load_base + s->got_offset) = patches[i].replacement;
     }
     return 1;
 }
