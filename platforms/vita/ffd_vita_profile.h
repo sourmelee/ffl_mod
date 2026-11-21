@@ -1,4 +1,4 @@
-/* Source: uploader-labelled 1.3.0 ELF32 ARM soft-float libjniproxy.so.
+/* Source: user-specified Vita 1.1.3 ELF32 ARM soft-float libjniproxy.so.
  * SHA256 37a5e9fb3b5038f662f8ed67bca9004a4af9d7b540b98309931066a33d30a79f
  * This is game-binary compatibility metadata, not the proprietary binary.
  * Integration: include after ffd-vita/loader/so_util.h.
