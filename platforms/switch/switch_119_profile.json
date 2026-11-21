@@ -1,0 +1,107 @@
+{
+  "label": "User-supplied libjniproxy(2).so — Switch candidate",
+  "version_note": "Consistent with Switch Android 1.1.9 target; ELF contains no authoritative Android application version label.",
+  "sha256": "4c6dec4cec9cb58dddcb85a7dd70e289356d55564902949da2a21844b38ef93e",
+  "build_id": "ed387bde786c58d236de2ac14f6953c224326d34",
+  "elf_class": "ELF64",
+  "machine": "AArch64",
+  "abi": "Android min API 21",
+  "toolchain": "Android NDK r25b / clang 14.0.6",
+  "symbols": {
+    "key_state": {
+      "elf_symbol": "_ZN9GameClass8KeyStateEi",
+      "entry": "0x3ec7bc",
+      "jump_slot": "0x45c2a8"
+    },
+    "key_trigger": {
+      "elf_symbol": "_ZN9GameClass10KeyTriggerEi",
+      "entry": "0x3dd08c",
+      "jump_slot": "0x45b208"
+    },
+    "key_repeat": {
+      "elf_symbol": "_ZN9GameClass9KeyRepeatEi",
+      "entry": "0x3ec7d4",
+      "jump_slot": "0x45b2f0"
+    },
+    "menu_update": {
+      "elf_symbol": "_ZN10MenuWidget6UpdateEv",
+      "entry": "0x413478",
+      "jump_slot": "0x45b288"
+    },
+    "menu_draw": {
+      "elf_symbol": "_ZN10MenuWidget4DrawER13MtxGraphics3D",
+      "entry": "0x413878",
+      "jump_slot": "0x45b388"
+    },
+    "main_viewport": {
+      "elf_symbol": "_ZN9MainScene11SetViewPortER13MtxGraphics3D",
+      "entry": "0x3f6654",
+      "jump_slot": "0x45d2e0"
+    },
+    "gfx_viewport": {
+      "elf_symbol": "_ZN13MtxGraphics3D11SetViewPortEiiii",
+      "entry": "0x370f28",
+      "jump_slot": "0x45a840"
+    },
+    "gfx_2d_matrix": {
+      "elf_symbol": "_ZN13MtxGraphics3D15Set2DModeMatrixEff",
+      "entry": "0x371b84",
+      "jump_slot": "0x45a8e0"
+    },
+    "field_draw": {
+      "elf_symbol": "_ZN10FieldClass12DrawMapFieldEP13MtxGraphics3Df",
+      "entry": "0x3beb08",
+      "jump_slot": "0x45c2e0"
+    },
+    "field_far": {
+      "elf_symbol": "_ZN10FieldClass7DrawFarEP13MtxGraphics3D",
+      "entry": "0x3c97c8",
+      "jump_slot": "0x45c728"
+    },
+    "field_minimap": {
+      "elf_symbol": "_ZN10FieldClass11DrawMiniMapEP13MtxGraphics3D",
+      "entry": "0x3caf24",
+      "jump_slot": "0x45c2f0"
+    },
+    "field_message": {
+      "elf_symbol": "_ZN10FieldClass11DrawMessageEP13MtxGraphics3D",
+      "entry": "0x3c5170",
+      "jump_slot": "0x45c318"
+    },
+    "gfx_dest_width": {
+      "elf_symbol": "_ZN13MtxGraphics3D19GetDestinationWidthEv",
+      "entry": "0x370d7c",
+      "jump_slot": "0x45a818"
+    },
+    "gfx_dest_height": {
+      "elf_symbol": "_ZN13MtxGraphics3D20GetDestinationHeightEv",
+      "entry": "0x370da8",
+      "jump_slot": "0x45a820"
+    },
+    "get_touch_info": {
+      "elf_symbol": "_Z12GetTouchInfov",
+      "entry": "0x37ff10",
+      "jump_slot": "0x45afc0"
+    },
+    "touch_set_data": {
+      "elf_symbol": "_ZN13MtxTouchPanel7SetDataEiffi",
+      "entry": "0x37f7a8",
+      "jump_slot": "0x45af40"
+    },
+    "gfx_draw_image_ex": {
+      "elf_symbol": "_ZN13MtxGraphics3D11DrawImageExER10MtxTextureffffffffiii",
+      "entry": "0x373a90",
+      "jump_slot": "0x45a320"
+    },
+    "gfx_fill4": {
+      "elf_symbol": "_ZN13MtxGraphics3D8FillRectEiiii",
+      "entry": "0x372c38",
+      "jump_slot": "0x45a510"
+    },
+    "gfx_fill8": {
+      "elf_symbol": "_ZN13MtxGraphics3D8FillRectEiiiiiiii",
+      "entry": "0x372d30",
+      "jump_slot": "0x45a970"
+    }
+  }
+}
